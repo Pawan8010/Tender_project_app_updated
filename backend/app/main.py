@@ -54,19 +54,46 @@ app.include_router(health_router.router, prefix="/api/health", tags=["Health"])
 app.include_router(help_router.router, prefix="/api/help", tags=["Help"])
 app.include_router(ml_search.router, prefix="/api/ml", tags=["ML Search"])
 
+from fastapi.responses import FileResponse, HTMLResponse
+import os
+
 static_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static")
 if os.path.exists(static_dir):
     app.mount("/assets", StaticFiles(directory=os.path.join(static_dir, "assets")), name="assets")
 
-    @app.get("/{full_path:path}")
-    async def serve_frontend(full_path: str):
-        if full_path.startswith("api/"):
-            raise HTTPException(status_code=404, detail="Not Found")
-            
+@app.get("/{full_path:path}")
+async def serve_frontend(full_path: str):
+    if full_path.startswith("api/"):
+        raise HTTPException(status_code=404, detail="Not Found")
+        
+    if os.path.exists(static_dir):
         path = os.path.join(static_dir, full_path)
         if os.path.isfile(path):
             return FileResponse(path)
         return FileResponse(os.path.join(static_dir, "index.html"))
+    else:
+        # Frontend not built or wrong Dockerfile used
+        if full_path == "" or full_path == "/":
+            html_content = """
+            <html>
+                <head><title>Setup Incomplete</title></head>
+                <body style="font-family: sans-serif; padding: 2rem;">
+                    <h2>API is running, but Frontend is missing</h2>
+                    <p>It looks like Render built this using the <code>backend/Dockerfile</code> instead of the new root <code>Dockerfile</code>.</p>
+                    <p>To fix this, please go to your Render Dashboard:</p>
+                    <ol>
+                        <li>Open your Web Service settings.</li>
+                        <li>Set <strong>Root Directory</strong> to empty or <code>.</code> (if it is set to backend).</li>
+                        <li>Set <strong>Docker Build Context</strong> to <code>.</code></li>
+                        <li>Set <strong>Dockerfile Path</strong> to <code>./Dockerfile</code> (or just <code>Dockerfile</code>).</li>
+                        <li>Save Changes and click <strong>Manual Deploy &gt; Deploy latest commit</strong>.</li>
+                    </ol>
+                    <p>Once you do this, Render will build both the frontend and backend together.</p>
+                </body>
+            </html>
+            """
+            return HTMLResponse(content=html_content, status_code=200)
+        raise HTTPException(status_code=404, detail="Not Found")
 
 
 async def _auto_scrape_loop():
