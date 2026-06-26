@@ -1,9 +1,12 @@
 import asyncio
 from contextlib import suppress
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+import os
 
 from app.config import settings
 from app.database import SessionLocal, init_db
@@ -50,6 +53,20 @@ app.include_router(users.router, prefix="/api/users", tags=["Users"])
 app.include_router(health_router.router, prefix="/api/health", tags=["Health"])
 app.include_router(help_router.router, prefix="/api/help", tags=["Help"])
 app.include_router(ml_search.router, prefix="/api/ml", tags=["ML Search"])
+
+static_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "static")
+if os.path.exists(static_dir):
+    app.mount("/assets", StaticFiles(directory=os.path.join(static_dir, "assets")), name="assets")
+
+    @app.get("/{full_path:path}")
+    async def serve_frontend(full_path: str):
+        if full_path.startswith("api/"):
+            raise HTTPException(status_code=404, detail="Not Found")
+            
+        path = os.path.join(static_dir, full_path)
+        if os.path.isfile(path):
+            return FileResponse(path)
+        return FileResponse(os.path.join(static_dir, "index.html"))
 
 
 async def _auto_scrape_loop():
