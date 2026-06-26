@@ -647,6 +647,10 @@ async def run_all_scrapers(db: Session) -> dict:
         cfg = settings()
         timeout = cfg["scraper_portal_timeout_seconds"]
         semaphore = asyncio.Semaphore(cfg["scraper_concurrency"])
+        
+        # End the current transaction before long-running network requests
+        db.commit()
+        
         results = await asyncio.gather(*(_scrape_with_limit(scraper, semaphore, timeout) for scraper in scrapers), return_exceptions=True)
         logs = []
         total_new = 0
@@ -764,7 +768,8 @@ async def run_one_scraper(db: Session, portal_name: str) -> dict:
             _push_scrape_event(f"Started {selected.portal_name} scrape")
             portal_run = PortalRun(portal=selected.portal_name, status="running", started_at=datetime.utcnow())
             db.add(portal_run)
-            db.flush()
+            db.commit() # Commit before long-running scrape
+            
             result = await asyncio.wait_for(selected.scrape(), timeout=settings()["scraper_portal_timeout_seconds"])
         except Exception as exc:
             message = clean_scrape_error(str(exc) or exc.__class__.__name__)
