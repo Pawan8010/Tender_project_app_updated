@@ -1,0 +1,17 @@
+export const GLOSSARY = {
+  Thermal: "Heat-sensing cameras and equipment that work in darkness or smoke.",
+  NVD: "Night Vision Device, used to see in low light or at night.",
+  PTZ: "Pan-Tilt-Zoom camera that can rotate and zoom remotely.",
+  EOSS: "Electro-Optical Surveillance System for long-range observation.",
+  Portal: "Government website where tenders are published.",
+  "Matched keywords": "Words from your tender watch list found in a tender.",
+  Categories: "Equipment type detected from the tender text.",
+  "Match score": "How closely a tender matches your target keywords, from 0 to 100.",
+  "Closing Date": "Last date to submit the bid.",
+  "Opening Date": "Date when bids are opened by the department, if published.",
+  "Published Date": "Date when the tender was announced.",
+  "Counter-UAV": "Equipment to detect or stop unauthorized drones.",
+  Backup: "Saved copy of tender data that can be restored later.",
+  Scraper: "Automated checker that collects tender data from government portals.",
+  ScraperAPI: "Proxy service used when public portals block local requests.",
+};

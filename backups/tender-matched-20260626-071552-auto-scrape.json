@@ -1,0 +1,3268 @@
+{
+  "schema_version": 1,
+  "backup_type": "matched",
+  "reason": "auto-scrape",
+  "created_at": "2026-06-26T07:15:52.855090",
+  "active_tender_count": 1334,
+  "active_matched_count": 67,
+  "tender_count": 67,
+  "tenders": [
+    {
+      "tender_id": "776d30e4283e46b0831e6631",
+      "title": "WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76495 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 311473 | IFB/Tender Notice Number WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76495 | Last Date & Time of Bid Submission 30-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "311473",
+        "tender_display_id": "311473",
+        "procurement_id": "WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76495",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "30-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:48.563897",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76495 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:48.570981"
+      },
+      "scraped_at": "2026-06-26T07:15:48.561200",
+      "is_active": true
+    },
+    {
+      "tender_id": "d2acc8fbc0afbec27088a1ce",
+      "title": "WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76419 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 311471 | IFB/Tender Notice Number WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76419 | Last Date & Time of Bid Submission 30-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "311471",
+        "tender_display_id": "311471",
+        "procurement_id": "WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76419",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "30-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:48.547830",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76419 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:48.555646"
+      },
+      "scraped_at": "2026-06-26T07:15:48.545200",
+      "is_active": true
+    },
+    {
+      "tender_id": "a3c16b641dddd91149a7f476",
+      "title": "WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76332 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 311469 | IFB/Tender Notice Number WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76332 | Last Date & Time of Bid Submission 30-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "311469",
+        "tender_display_id": "311469",
+        "procurement_id": "WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76332",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "30-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:48.533553",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76332 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:48.540247"
+      },
+      "scraped_at": "2026-06-26T07:15:48.530438",
+      "is_active": true
+    },
+    {
+      "tender_id": "8dfbb4455f729add910df40f",
+      "title": "WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76384 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 311466 | IFB/Tender Notice Number WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76384 | Last Date & Time of Bid Submission 30-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "311466",
+        "tender_display_id": "311466",
+        "procurement_id": "WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76384",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "30-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:48.519570",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/W/ET/02/2026-10 for WORKS RFQ NO-76384 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:48.526031"
+      },
+      "scraped_at": "2026-06-26T07:15:48.515558",
+      "is_active": true
+    },
+    {
+      "tender_id": "7a4cd964a5b4bdc4865a6db0",
+      "title": "WTPS/S/ET/02/2026/SUPPLY-03 RFQ NO 75881M - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 299179 | IFB/Tender Notice Number WTPS/S/ET/02/2026/SUPPLY-03 RFQ NO 75881M | Last Date & Time of Bid Submission 30-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "299179",
+        "tender_display_id": "299179",
+        "procurement_id": "WTPS/S/ET/02/2026/SUPPLY-03 RFQ NO 75881M",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "30-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:48.504504",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/S/ET/02/2026/SUPPLY-03 RFQ NO 75881M - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:48.511710"
+      },
+      "scraped_at": "2026-06-26T07:15:48.501738",
+      "is_active": true
+    },
+    {
+      "tender_id": "0b4fe9aaa326302b99c3974d",
+      "title": "WTPS/S/ET/02/2026/SUPPLY-03 RFQ NO 75944 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 299178 | IFB/Tender Notice Number WTPS/S/ET/02/2026/SUPPLY-03 RFQ NO 75944 | Last Date & Time of Bid Submission 30-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "299178",
+        "tender_display_id": "299178",
+        "procurement_id": "WTPS/S/ET/02/2026/SUPPLY-03 RFQ NO 75944",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "30-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:48.488848",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/S/ET/02/2026/SUPPLY-03 RFQ NO 75944 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:48.496099"
+      },
+      "scraped_at": "2026-06-26T07:15:48.486191",
+      "is_active": true
+    },
+    {
+      "tender_id": "5927b26d03dd4ff312c26bb2",
+      "title": "WTPS/S/ET/02/2026/SUPPLY-01 RFQ NO 75573M - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 293523 | IFB/Tender Notice Number WTPS/S/ET/02/2026/SUPPLY-01 RFQ NO 75573M | Last Date & Time of Bid Submission 30-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "293523",
+        "tender_display_id": "293523",
+        "procurement_id": "WTPS/S/ET/02/2026/SUPPLY-01 RFQ NO 75573M",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "30-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:48.474296",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/S/ET/02/2026/SUPPLY-01 RFQ NO 75573M - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:48.481169"
+      },
+      "scraped_at": "2026-06-26T07:15:48.471606",
+      "is_active": true
+    },
+    {
+      "tender_id": "0fe346e3571dd2625a2d90e5",
+      "title": "ME-432/07 (EMD-I-75149) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 280526 | IFB/Tender Notice Number ME-432/07 (EMD-I-75149) | Last Date & Time of Bid Submission 30-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "280526",
+        "tender_display_id": "280526",
+        "procurement_id": "ME-432/07 (EMD-I-75149)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "30-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:48.326719",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for ME-432/07 (EMD-I-75149) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:48.332303"
+      },
+      "scraped_at": "2026-06-26T07:15:48.323118",
+      "is_active": true
+    },
+    {
+      "tender_id": "5d6cd67d721c5bd76799ca15",
+      "title": "ME-432/01 (Chem Lab-75359) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 280119 | IFB/Tender Notice Number ME-432/01 (Chem Lab-75359) | Last Date & Time of Bid Submission 30-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "280119",
+        "tender_display_id": "280119",
+        "procurement_id": "ME-432/01 (Chem Lab-75359)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "30-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:48.311279",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for ME-432/01 (Chem Lab-75359) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:48.319041"
+      },
+      "scraped_at": "2026-06-26T07:15:48.307168",
+      "is_active": true
+    },
+    {
+      "tender_id": "a6a96d14a4dd85c14ba0a768",
+      "title": "ME-265 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station | Tender ID 304074 | IFB/Tender Notice Number ME-265 | Last Date & Time of Bid Submission 30-06-2026 17:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "304074",
+        "tender_display_id": "304074",
+        "procurement_id": "ME-265",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station",
+        "closing_datetime": "30-06-2026 17:00",
+        "last_seen_at": "2026-06-26T07:15:48.296250",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for ME-265 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:48.303068"
+      },
+      "scraped_at": "2026-06-26T07:15:48.293619",
+      "is_active": true
+    },
+    {
+      "tender_id": "deb29c787002b262076fb61d",
+      "title": "WE-331 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station | Tender ID 303954 | IFB/Tender Notice Number WE-331 | Last Date & Time of Bid Submission 30-06-2026 17:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "303954",
+        "tender_display_id": "303954",
+        "procurement_id": "WE-331",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station",
+        "closing_datetime": "30-06-2026 17:00",
+        "last_seen_at": "2026-06-26T07:15:48.277762",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-331 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:48.287739"
+      },
+      "scraped_at": "2026-06-26T07:15:48.273926",
+      "is_active": true
+    },
+    {
+      "tender_id": "91f0470a670583a46d456890",
+      "title": "TENDER NO.: GMRC/AMC-CCTV/PH-I/2026 - Gujarat Metro Rail Corporation (GMRC) Ltd.-Urban Development & Urban Housing Development-GMRC Limited Commercial Department",
+      "description": "Gujarat Metro Rail Corporation (GMRC) Ltd.-Urban Development & Urban Housing Development-GMRC Limited Commercial Department | Tender ID 307583 | IFB/Tender Notice Number TENDER NO.: GMRC/AMC-CCTV/PH-I/2026 | Last Date & Time of Bid Submission 30-06-2026 15:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "307583",
+        "tender_display_id": "307583",
+        "procurement_id": "TENDER NO.: GMRC/AMC-CCTV/PH-I/2026",
+        "department": "Gujarat Metro Rail Corporation (GMRC) Ltd.-Urban Development & Urban Housing Development-GMRC Limited Commercial Department",
+        "closing_datetime": "30-06-2026 15:00",
+        "last_seen_at": "2026-06-26T07:15:48.232022",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for TENDER NO.: GMRC/AMC-CCTV/PH-I/2026 - Gujarat Metro Rail Corporation (GMRC) Ltd.-Urban Development & Urban Housing Development-GMRC Limited Commercial Department. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-26T07:15:48.238998"
+      },
+      "scraped_at": "2026-06-26T07:15:48.229401",
+      "is_active": true
+    },
+    {
+      "tender_id": "b3c41eee23334db11f29fc29",
+      "title": "Tender Notice No. 3 of 2026-27 - Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia",
+      "description": "Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia | Tender ID 314352 | IFB/Tender Notice Number Tender Notice No. 3 of 2026-27 | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Protection"
+      ],
+      "matched_keywords": [
+        "Riot Control"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "314352",
+        "tender_display_id": "314352",
+        "procurement_id": "Tender Notice No. 3 of 2026-27",
+        "department": "Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:44.607990",
+        "match_score": 3,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Riot Control"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for Tender Notice No. 3 of 2026-27 - Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia. It is grouped under Protection. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Riot Control.",
+        "alert_attempted_at": "2026-06-26T07:15:44.611114"
+      },
+      "scraped_at": "2026-06-26T07:15:44.605336",
+      "is_active": true
+    },
+    {
+      "tender_id": "64088ba479b48d2ef27a9c8f",
+      "title": "Tender Notice No. 3 of 2026-27 - Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia",
+      "description": "Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia | Tender ID 314285 | IFB/Tender Notice Number Tender Notice No. 3 of 2026-27 | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Protection"
+      ],
+      "matched_keywords": [
+        "Riot Control"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "314285",
+        "tender_display_id": "314285",
+        "procurement_id": "Tender Notice No. 3 of 2026-27",
+        "department": "Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:44.599962",
+        "match_score": 3,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Riot Control"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for Tender Notice No. 3 of 2026-27 - Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia. It is grouped under Protection. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Riot Control.",
+        "alert_attempted_at": "2026-06-26T07:15:44.603314"
+      },
+      "scraped_at": "2026-06-26T07:15:44.597355",
+      "is_active": true
+    },
+    {
+      "tender_id": "f7f36da39c7874428b543623",
+      "title": "Tender Notice No. 3 of 2026-27 - Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia",
+      "description": "Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia | Tender ID 314273 | IFB/Tender Notice Number Tender Notice No. 3 of 2026-27 | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Protection"
+      ],
+      "matched_keywords": [
+        "Riot Control"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "314273",
+        "tender_display_id": "314273",
+        "procurement_id": "Tender Notice No. 3 of 2026-27",
+        "department": "Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:44.591874",
+        "match_score": 3,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Riot Control"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for Tender Notice No. 3 of 2026-27 - Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia. It is grouped under Protection. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Riot Control.",
+        "alert_attempted_at": "2026-06-26T07:15:44.595444"
+      },
+      "scraped_at": "2026-06-26T07:15:44.589237",
+      "is_active": true
+    },
+    {
+      "tender_id": "57a870714a9bee39d7632ef0",
+      "title": "Tender Notice No. 3 of 2026-27 - Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia",
+      "description": "Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia | Tender ID 314234 | IFB/Tender Notice Number Tender Notice No. 3 of 2026-27 | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Protection"
+      ],
+      "matched_keywords": [
+        "Riot Control"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "314234",
+        "tender_display_id": "314234",
+        "procurement_id": "Tender Notice No. 3 of 2026-27",
+        "department": "Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:44.582926",
+        "match_score": 3,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Riot Control"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for Tender Notice No. 3 of 2026-27 - Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia. It is grouped under Protection. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Riot Control.",
+        "alert_attempted_at": "2026-06-26T07:15:44.586903"
+      },
+      "scraped_at": "2026-06-26T07:15:44.580324",
+      "is_active": true
+    },
+    {
+      "tender_id": "77a025e9ee67a6efd94ded3a",
+      "title": "Tender Notice No. 3 of 2026-27 - Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia",
+      "description": "Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia | Tender ID 314202 | IFB/Tender Notice Number Tender Notice No. 3 of 2026-27 | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Protection"
+      ],
+      "matched_keywords": [
+        "Riot Control"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "314202",
+        "tender_display_id": "314202",
+        "procurement_id": "Tender Notice No. 3 of 2026-27",
+        "department": "Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:44.575385",
+        "match_score": 3,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Riot Control"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for Tender Notice No. 3 of 2026-27 - Narmada Water Resources-Narmada and Water Resources, Water Supply and Kalpsar Department-Salinity Control Division Jam-Khambhalia. It is grouped under Protection. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Riot Control.",
+        "alert_attempted_at": "2026-06-26T07:15:44.578599"
+      },
+      "scraped_at": "2026-06-26T07:15:44.572761",
+      "is_active": true
+    },
+    {
+      "tender_id": "59c35353426e42eaaaea5bea",
+      "title": "MGVCL/IT/2025-26/100035/CCTV-SDO - Madhya Gujarat Vij Company Limited-Energy And Petrochemicals Department-CE PROJECT - VADODARA",
+      "description": "Madhya Gujarat Vij Company Limited-Energy And Petrochemicals Department-CE PROJECT - VADODARA | Tender ID 301636 | IFB/Tender Notice Number MGVCL/IT/2025-26/100035/CCTV-SDO | Last Date & Time of Bid Submission 29-06-2026 16:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "301636",
+        "tender_display_id": "301636",
+        "procurement_id": "MGVCL/IT/2025-26/100035/CCTV-SDO",
+        "department": "Madhya Gujarat Vij Company Limited-Energy And Petrochemicals Department-CE PROJECT - VADODARA",
+        "closing_datetime": "29-06-2026 16:00",
+        "last_seen_at": "2026-06-26T07:15:43.990274",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for MGVCL/IT/2025-26/100035/CCTV-SDO - Madhya Gujarat Vij Company Limited-Energy And Petrochemicals Department-CE PROJECT - VADODARA. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-26T07:15:43.995012"
+      },
+      "scraped_at": "2026-06-26T07:15:43.987031",
+      "is_active": true
+    },
+    {
+      "tender_id": "e088b282e0528b042c148337",
+      "title": "WTPS/S/ET/02/2026/SUPPLY-09 RFQ NO 76418M - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 311016 | IFB/Tender Notice Number WTPS/S/ET/02/2026/SUPPLY-09 RFQ NO 76418M | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "311016",
+        "tender_display_id": "311016",
+        "procurement_id": "WTPS/S/ET/02/2026/SUPPLY-09 RFQ NO 76418M",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.761499",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/S/ET/02/2026/SUPPLY-09 RFQ NO 76418M - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.763832"
+      },
+      "scraped_at": "2026-06-26T07:15:43.757575",
+      "is_active": true
+    },
+    {
+      "tender_id": "b5122c92d93a4674549e138c",
+      "title": "WTPS/S/ET/02/2026/SUPPLY-09 RFQ NO 76546E - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 311014 | IFB/Tender Notice Number WTPS/S/ET/02/2026/SUPPLY-09 RFQ NO 76546E | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "311014",
+        "tender_display_id": "311014",
+        "procurement_id": "WTPS/S/ET/02/2026/SUPPLY-09 RFQ NO 76546E",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.750130",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/S/ET/02/2026/SUPPLY-09 RFQ NO 76546E - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.753502"
+      },
+      "scraped_at": "2026-06-26T07:15:43.747516",
+      "is_active": true
+    },
+    {
+      "tender_id": "a033830cc5760e6f391bef6b",
+      "title": "WTPS/S/ET/02/2026/SUPPLY-09 RFQ NO 76402E - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 311013 | IFB/Tender Notice Number WTPS/S/ET/02/2026/SUPPLY-09 RFQ NO 76402E | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "311013",
+        "tender_display_id": "311013",
+        "procurement_id": "WTPS/S/ET/02/2026/SUPPLY-09 RFQ NO 76402E",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.739531",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/S/ET/02/2026/SUPPLY-09 RFQ NO 76402E - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.741492"
+      },
+      "scraped_at": "2026-06-26T07:15:43.736774",
+      "is_active": true
+    },
+    {
+      "tender_id": "c68f6ac2f357e2158ffc802d",
+      "title": "E-Tender Notice No:- WTPS/W/ET/01/2026/For civil works-08/RFQ 76651 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 308811 | IFB/Tender Notice Number E-Tender Notice No:- WTPS/W/ET/01/2026/For civil works-08/RFQ 76651 | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "308811",
+        "tender_display_id": "308811",
+        "procurement_id": "E-Tender Notice No:- WTPS/W/ET/01/2026/For civil works-08/RFQ 76651",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.729271",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for E-Tender Notice No:- WTPS/W/ET/01/2026/For civil works-08/RFQ 76651 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Sta. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.731569"
+      },
+      "scraped_at": "2026-06-26T07:15:43.723298",
+      "is_active": true
+    },
+    {
+      "tender_id": "00e6a201123c56d957216dc0",
+      "title": "E-Tender Notice No:- WTPS/W/ET/01/2026/For civil works-07/RFQ 76630 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 307998 | IFB/Tender Notice Number E-Tender Notice No:- WTPS/W/ET/01/2026/For civil works-07/RFQ 76630 | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "307998",
+        "tender_display_id": "307998",
+        "procurement_id": "E-Tender Notice No:- WTPS/W/ET/01/2026/For civil works-07/RFQ 76630",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.707798",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for E-Tender Notice No:- WTPS/W/ET/01/2026/For civil works-07/RFQ 76630 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Sta. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.713212"
+      },
+      "scraped_at": "2026-06-26T07:15:43.701205",
+      "is_active": true
+    },
+    {
+      "tender_id": "52f08e4cbadb9bbac0051f41",
+      "title": "WTPS/S/ET/02/2026/SUPPLY-06 RFQ NO 76351E - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 306378 | IFB/Tender Notice Number WTPS/S/ET/02/2026/SUPPLY-06 RFQ NO 76351E | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306378",
+        "tender_display_id": "306378",
+        "procurement_id": "WTPS/S/ET/02/2026/SUPPLY-06 RFQ NO 76351E",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.691047",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/S/ET/02/2026/SUPPLY-06 RFQ NO 76351E - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.695058"
+      },
+      "scraped_at": "2026-06-26T07:15:43.683291",
+      "is_active": true
+    },
+    {
+      "tender_id": "dc8d1f722fdd63fdc31402d3",
+      "title": "WTPS/S/ET/02/2026/SUPPLY-06 RFQ NO 76251E - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 306377 | IFB/Tender Notice Number WTPS/S/ET/02/2026/SUPPLY-06 RFQ NO 76251E | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306377",
+        "tender_display_id": "306377",
+        "procurement_id": "WTPS/S/ET/02/2026/SUPPLY-06 RFQ NO 76251E",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.673167",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/S/ET/02/2026/SUPPLY-06 RFQ NO 76251E - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.675425"
+      },
+      "scraped_at": "2026-06-26T07:15:43.670476",
+      "is_active": true
+    },
+    {
+      "tender_id": "44e8f59af994c10a63f53e57",
+      "title": "WTPS/S/ET/02/2026/SUPPLY-06 RFQ NO 76286M - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 306376 | IFB/Tender Notice Number WTPS/S/ET/02/2026/SUPPLY-06 RFQ NO 76286M | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306376",
+        "tender_display_id": "306376",
+        "procurement_id": "WTPS/S/ET/02/2026/SUPPLY-06 RFQ NO 76286M",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.662798",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/S/ET/02/2026/SUPPLY-06 RFQ NO 76286M - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.665129"
+      },
+      "scraped_at": "2026-06-26T07:15:43.658895",
+      "is_active": true
+    },
+    {
+      "tender_id": "4b4c6e39b5228abf4e2d08ad",
+      "title": "WTPS/S/ET/01/2026/SUPPLY-20 RFQ NO 75682 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 291456 | IFB/Tender Notice Number WTPS/S/ET/01/2026/SUPPLY-20 RFQ NO 75682 | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "291456",
+        "tender_display_id": "291456",
+        "procurement_id": "WTPS/S/ET/01/2026/SUPPLY-20 RFQ NO 75682",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.650924",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/S/ET/01/2026/SUPPLY-20 RFQ NO 75682 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.654933"
+      },
+      "scraped_at": "2026-06-26T07:15:43.648349",
+      "is_active": true
+    },
+    {
+      "tender_id": "7fa4fcf3c11a08a911e968b2",
+      "title": "WTPS/S/ET/01/2026/SUPPLY-20 RFQ NO 75609 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station | Tender ID 291455 | IFB/Tender Notice Number WTPS/S/ET/01/2026/SUPPLY-20 RFQ NO 75609 | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "291455",
+        "tender_display_id": "291455",
+        "procurement_id": "WTPS/S/ET/01/2026/SUPPLY-20 RFQ NO 75609",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.641363",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WTPS/S/ET/01/2026/SUPPLY-20 RFQ NO 75609 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Wanakbori Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.644769"
+      },
+      "scraped_at": "2026-06-26T07:15:43.638671",
+      "is_active": true
+    },
+    {
+      "tender_id": "c9b11b91d73efa9fe2eedd21",
+      "title": "WE-452/02 (Civil Plant-76927) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 312068 | IFB/Tender Notice Number WE-452/02 (Civil Plant-76927) | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "312068",
+        "tender_display_id": "312068",
+        "procurement_id": "WE-452/02 (Civil Plant-76927)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.545304",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-452/02 (Civil Plant-76927) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.547316"
+      },
+      "scraped_at": "2026-06-26T07:15:43.541383",
+      "is_active": true
+    },
+    {
+      "tender_id": "d9fb53f72df861a406e6202c",
+      "title": "WE-452/01 (Civil Plant-76894) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 311896 | IFB/Tender Notice Number WE-452/01 (Civil Plant-76894) | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "311896",
+        "tender_display_id": "311896",
+        "procurement_id": "WE-452/01 (Civil Plant-76894)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.533784",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-452/01 (Civil Plant-76894) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.537470"
+      },
+      "scraped_at": "2026-06-26T07:15:43.531190",
+      "is_active": true
+    },
+    {
+      "tender_id": "650309ca38ab71c721fa39ac",
+      "title": "WE-444/03 (EMD-II-73366) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 299013 | IFB/Tender Notice Number WE-444/03 (EMD-II-73366) | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "299013",
+        "tender_display_id": "299013",
+        "procurement_id": "WE-444/03 (EMD-II-73366)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.523769",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-444/03 (EMD-II-73366) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.525692"
+      },
+      "scraped_at": "2026-06-26T07:15:43.521108",
+      "is_active": true
+    },
+    {
+      "tender_id": "e3a620982fb13f985c99c601",
+      "title": "WE-444/02 (TMD-76362) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 299007 | IFB/Tender Notice Number WE-444/02 (TMD-76362) | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "299007",
+        "tender_display_id": "299007",
+        "procurement_id": "WE-444/02 (TMD-76362)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.513646",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-444/02 (TMD-76362) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.515712"
+      },
+      "scraped_at": "2026-06-26T07:15:43.510835",
+      "is_active": true
+    },
+    {
+      "tender_id": "8f4a87b739c4cd63b5422c2f",
+      "title": "WE-442/05(Civil-76306) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 298275 | IFB/Tender Notice Number WE-442/05(Civil-76306) | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "298275",
+        "tender_display_id": "298275",
+        "procurement_id": "WE-442/05(Civil-76306)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.503762",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-442/05(Civil-76306) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.506190"
+      },
+      "scraped_at": "2026-06-26T07:15:43.500162",
+      "is_active": true
+    },
+    {
+      "tender_id": "ee254c055ff82daaf1c66d4c",
+      "title": "WE-442/03 (Civil-76303) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 298227 | IFB/Tender Notice Number WE-442/03 (Civil-76303) | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "298227",
+        "tender_display_id": "298227",
+        "procurement_id": "WE-442/03 (Civil-76303)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.492497",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-442/03 (Civil-76303) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.496260"
+      },
+      "scraped_at": "2026-06-26T07:15:43.489572",
+      "is_active": true
+    },
+    {
+      "tender_id": "b7c080d12cb078de1b16923c",
+      "title": "WE-442/01 (Civil - 76308) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 298178 | IFB/Tender Notice Number WE-442/01 (Civil - 76308) | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "298178",
+        "tender_display_id": "298178",
+        "procurement_id": "WE-442/01 (Civil - 76308)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.481367",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-442/01 (Civil - 76308) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.483310"
+      },
+      "scraped_at": "2026-06-26T07:15:43.478869",
+      "is_active": true
+    },
+    {
+      "tender_id": "6e746f106d3cc69d41230809",
+      "title": "ME-441/02 (TMD-76180) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 297583 | IFB/Tender Notice Number ME-441/02 (TMD-76180) | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "297583",
+        "tender_display_id": "297583",
+        "procurement_id": "ME-441/02 (TMD-76180)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.471021",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for ME-441/02 (TMD-76180) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.473274"
+      },
+      "scraped_at": "2026-06-26T07:15:43.467027",
+      "is_active": true
+    },
+    {
+      "tender_id": "c70184b3434c87065d1d56d3",
+      "title": "WE-441/01 (TMD-76275) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 297285 | IFB/Tender Notice Number WE-441/01 (TMD-76275) | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "297285",
+        "tender_display_id": "297285",
+        "procurement_id": "WE-441/01 (TMD-76275)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.459730",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-441/01 (TMD-76275) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.462997"
+      },
+      "scraped_at": "2026-06-26T07:15:43.456716",
+      "is_active": true
+    },
+    {
+      "tender_id": "b19684e35c33a133365a6534",
+      "title": "WE-425/07(TMD-75029) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 265918 | IFB/Tender Notice Number WE-425/07(TMD-75029) | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "265918",
+        "tender_display_id": "265918",
+        "procurement_id": "WE-425/07(TMD-75029)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.449212",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-425/07(TMD-75029) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.451163"
+      },
+      "scraped_at": "2026-06-26T07:15:43.446722",
+      "is_active": true
+    },
+    {
+      "tender_id": "5e2c27e0797534fce2efbfa2",
+      "title": "WE-421/03 (BMD-74832) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station | Tender ID 260630 | IFB/Tender Notice Number WE-421/03 (BMD-74832) | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "260630",
+        "tender_display_id": "260630",
+        "procurement_id": "WE-421/03 (BMD-74832)",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.439501",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-421/03 (BMD-74832) - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Sikka Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.441419"
+      },
+      "scraped_at": "2026-06-26T07:15:43.436860",
+      "is_active": true
+    },
+    {
+      "tender_id": "808788a1c06f92dcd95f64b1",
+      "title": "WE-339 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station | Tender ID 312292 | IFB/Tender Notice Number WE-339 | Last Date & Time of Bid Submission 29-06-2026 17:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "312292",
+        "tender_display_id": "312292",
+        "procurement_id": "WE-339",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station",
+        "closing_datetime": "29-06-2026 17:00",
+        "last_seen_at": "2026-06-26T07:15:43.374196",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-339 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.380546"
+      },
+      "scraped_at": "2026-06-26T07:15:43.368173",
+      "is_active": true
+    },
+    {
+      "tender_id": "05630a6e6fbc252b0c01ca46",
+      "title": "WE-329 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station | Tender ID 303847 | IFB/Tender Notice Number WE-329 | Last Date & Time of Bid Submission 29-06-2026 17:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "303847",
+        "tender_display_id": "303847",
+        "procurement_id": "WE-329",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station",
+        "closing_datetime": "29-06-2026 17:00",
+        "last_seen_at": "2026-06-26T07:15:43.361452",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for WE-329 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Kutch Lignite Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.364632"
+      },
+      "scraped_at": "2026-06-26T07:15:43.357710",
+      "is_active": true
+    },
+    {
+      "tender_id": "5d2b424a46e12666f72eb6b1",
+      "title": "DGBPS_02_120D_S_76201_MMD-III - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station | Tender ID 308102 | IFB/Tender Notice Number DGBPS_02_120D_S_76201_MMD-III | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "308102",
+        "tender_display_id": "308102",
+        "procurement_id": "DGBPS_02_120D_S_76201_MMD-III",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.341022",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for DGBPS_02_120D_S_76201_MMD-III - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.343430"
+      },
+      "scraped_at": "2026-06-26T07:15:43.338408",
+      "is_active": true
+    },
+    {
+      "tender_id": "6496ee1879f27a65d70f4e95",
+      "title": "DGBPS_13_120A_W_75256_MMD-III - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station | Tender ID 307446 | IFB/Tender Notice Number DGBPS_13_120A_W_75256_MMD-III | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "307446",
+        "tender_display_id": "307446",
+        "procurement_id": "DGBPS_13_120A_W_75256_MMD-III",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.329865",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for DGBPS_13_120A_W_75256_MMD-III - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.332290"
+      },
+      "scraped_at": "2026-06-26T07:15:43.325851",
+      "is_active": true
+    },
+    {
+      "tender_id": "d86a3e5def825b9c79782f4f",
+      "title": ". DGBPS_12_120A_W_71604_MMD-III - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station | Tender ID 307429 | IFB/Tender Notice Number . DGBPS_12_120A_W_71604_MMD-III | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "307429",
+        "tender_display_id": "307429",
+        "procurement_id": ". DGBPS_12_120A_W_71604_MMD-III",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.317037",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for . DGBPS_12_120A_W_71604_MMD-III - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.321107"
+      },
+      "scraped_at": "2026-06-26T07:15:43.313753",
+      "is_active": true
+    },
+    {
+      "tender_id": "9beb0b4c64ae6bdd73fc962a",
+      "title": "DGBPS_10_120A_W_75938_MMD-III - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station | Tender ID 307274 | IFB/Tender Notice Number DGBPS_10_120A_W_75938_MMD-III | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "307274",
+        "tender_display_id": "307274",
+        "procurement_id": "DGBPS_10_120A_W_75938_MMD-III",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.305521",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for DGBPS_10_120A_W_75938_MMD-III - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.307699"
+      },
+      "scraped_at": "2026-06-26T07:15:43.301108",
+      "is_active": true
+    },
+    {
+      "tender_id": "275a76949157beb7b1c68ed4",
+      "title": "DGBPS_09_120A_S_76116_MMD-III - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station | Tender ID 306400 | IFB/Tender Notice Number DGBPS_09_120A_S_76116_MMD-III | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306400",
+        "tender_display_id": "306400",
+        "procurement_id": "DGBPS_09_120A_S_76116_MMD-III",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.291342",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for DGBPS_09_120A_S_76116_MMD-III - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.295834"
+      },
+      "scraped_at": "2026-06-26T07:15:43.287503",
+      "is_active": true
+    },
+    {
+      "tender_id": "d002e84c9c00aa1110970b88",
+      "title": "DGBPS_08_120A_S_75918_EMD - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station | Tender ID 306399 | IFB/Tender Notice Number DGBPS_08_120A_S_75918_EMD | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306399",
+        "tender_display_id": "306399",
+        "procurement_id": "DGBPS_08_120A_S_75918_EMD",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.279523",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for DGBPS_08_120A_S_75918_EMD - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.281703"
+      },
+      "scraped_at": "2026-06-26T07:15:43.275144",
+      "is_active": true
+    },
+    {
+      "tender_id": "836a6db38c1abe6f21c89aa4",
+      "title": "DGBPS_04_120A_S_75960_EMD-POWER - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station | Tender ID 306394 | IFB/Tender Notice Number DGBPS_04_120A_S_75960_EMD-POWER | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306394",
+        "tender_display_id": "306394",
+        "procurement_id": "DGBPS_04_120A_S_75960_EMD-POWER",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.266118",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for DGBPS_04_120A_S_75960_EMD-POWER - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.269594"
+      },
+      "scraped_at": "2026-06-26T07:15:43.262025",
+      "is_active": true
+    },
+    {
+      "tender_id": "3b60f1fdebc37f24e9b9f39d",
+      "title": "DGBPS_03_120A_S_75864_IMD - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station | Tender ID 306393 | IFB/Tender Notice Number DGBPS_03_120A_S_75864_IMD | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306393",
+        "tender_display_id": "306393",
+        "procurement_id": "DGBPS_03_120A_S_75864_IMD",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.253943",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for DGBPS_03_120A_S_75864_IMD - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.256404"
+      },
+      "scraped_at": "2026-06-26T07:15:43.249692",
+      "is_active": true
+    },
+    {
+      "tender_id": "1fab1ac2b1a3711dcabde5d2",
+      "title": "DGBPS_02_120A_S_75932_EMD III - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station | Tender ID 306392 | IFB/Tender Notice Number DGBPS_02_120A_S_75932_EMD III | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306392",
+        "tender_display_id": "306392",
+        "procurement_id": "DGBPS_02_120A_S_75932_EMD III",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.241206",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for DGBPS_02_120A_S_75932_EMD III - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.244522"
+      },
+      "scraped_at": "2026-06-26T07:15:43.238453",
+      "is_active": true
+    },
+    {
+      "tender_id": "067bbe7ffd4abb39e331ef3b",
+      "title": "DGBPS_01_120A_S_75697_MMD3 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station | Tender ID 306390 | IFB/Tender Notice Number DGBPS_01_120A_S_75697_MMD3 | Last Date & Time of Bid Submission 29-06-2026 18:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306390",
+        "tender_display_id": "306390",
+        "procurement_id": "DGBPS_01_120A_S_75697_MMD3",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station",
+        "closing_datetime": "29-06-2026 18:00",
+        "last_seen_at": "2026-06-26T07:15:43.230387",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for DGBPS_01_120A_S_75697_MMD3 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Dhuvaran Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.232596"
+      },
+      "scraped_at": "2026-06-26T07:15:43.226327",
+      "is_active": true
+    },
+    {
+      "tender_id": "b56c0143e9d6279cd7187992",
+      "title": "ME-126/13/851/BLTPS/2026 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station | Tender ID 306887 | IFB/Tender Notice Number ME-126/13/851/BLTPS/2026 | Last Date & Time of Bid Submission 29-06-2026 17:30",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306887",
+        "tender_display_id": "306887",
+        "procurement_id": "ME-126/13/851/BLTPS/2026",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station",
+        "closing_datetime": "29-06-2026 17:30",
+        "last_seen_at": "2026-06-26T07:15:43.205126",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for ME-126/13/851/BLTPS/2026 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.210478"
+      },
+      "scraped_at": "2026-06-26T07:15:43.199248",
+      "is_active": true
+    },
+    {
+      "tender_id": "8064ca2aff0025b7ac367894",
+      "title": "ME-126/12/850/BLTPS/2026 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station | Tender ID 306884 | IFB/Tender Notice Number ME-126/12/850/BLTPS/2026 | Last Date & Time of Bid Submission 29-06-2026 17:30",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306884",
+        "tender_display_id": "306884",
+        "procurement_id": "ME-126/12/850/BLTPS/2026",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station",
+        "closing_datetime": "29-06-2026 17:30",
+        "last_seen_at": "2026-06-26T07:15:43.189429",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for ME-126/12/850/BLTPS/2026 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.191858"
+      },
+      "scraped_at": "2026-06-26T07:15:43.185990",
+      "is_active": true
+    },
+    {
+      "tender_id": "e780a8dd301174a1f6499bca",
+      "title": "ME-126/11/849/BLTPS/2026 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station | Tender ID 306877 | IFB/Tender Notice Number ME-126/11/849/BLTPS/2026 | Last Date & Time of Bid Submission 29-06-2026 17:30",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306877",
+        "tender_display_id": "306877",
+        "procurement_id": "ME-126/11/849/BLTPS/2026",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station",
+        "closing_datetime": "29-06-2026 17:30",
+        "last_seen_at": "2026-06-26T07:15:43.175445",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for ME-126/11/849/BLTPS/2026 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.179401"
+      },
+      "scraped_at": "2026-06-26T07:15:43.172562",
+      "is_active": true
+    },
+    {
+      "tender_id": "89123f7f9c0eef6a7aefb4a5",
+      "title": "ME-126/10/848/BLTPS/2026 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station | Tender ID 306875 | IFB/Tender Notice Number ME-126/10/848/BLTPS/2026 | Last Date & Time of Bid Submission 29-06-2026 17:30",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306875",
+        "tender_display_id": "306875",
+        "procurement_id": "ME-126/10/848/BLTPS/2026",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station",
+        "closing_datetime": "29-06-2026 17:30",
+        "last_seen_at": "2026-06-26T07:15:43.159638",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for ME-126/10/848/BLTPS/2026 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.165058"
+      },
+      "scraped_at": "2026-06-26T07:15:43.156744",
+      "is_active": true
+    },
+    {
+      "tender_id": "e175eb314753af19e4ea2b55",
+      "title": "ME-126/09/847/BLTPS/2026 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station | Tender ID 306872 | IFB/Tender Notice Number ME-126/09/847/BLTPS/2026 | Last Date & Time of Bid Submission 29-06-2026 17:30",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306872",
+        "tender_display_id": "306872",
+        "procurement_id": "ME-126/09/847/BLTPS/2026",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station",
+        "closing_datetime": "29-06-2026 17:30",
+        "last_seen_at": "2026-06-26T07:15:43.146615",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for ME-126/09/847/BLTPS/2026 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.148948"
+      },
+      "scraped_at": "2026-06-26T07:15:43.141359",
+      "is_active": true
+    },
+    {
+      "tender_id": "4bf2259369dfa67b56cb9cf7",
+      "title": "ME-126/08/846/BLTPS/2026 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station",
+      "description": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station | Tender ID 306869 | IFB/Tender Notice Number ME-126/08/846/BLTPS/2026 | Last Date & Time of Bid Submission 29-06-2026 17:30",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "306869",
+        "tender_display_id": "306869",
+        "procurement_id": "ME-126/08/846/BLTPS/2026",
+        "department": "Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station",
+        "closing_datetime": "29-06-2026 17:30",
+        "last_seen_at": "2026-06-26T07:15:43.133558",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for ME-126/08/846/BLTPS/2026 - Gujarat State Electricity Corporation Limited-Energy And Petrochemicals Department-Bhavnagar Lignite Thermal Power Station. It is grouped under Thermal. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:43.138223"
+      },
+      "scraped_at": "2026-06-26T07:15:43.129111",
+      "is_active": true
+    },
+    {
+      "tender_id": "dd185856a2b19845cb2b084b",
+      "title": "GNFC/HO/CCTV/2026-27/001 - (n)Code Solutions - A Div.Of GNFC Ltd-IT Division-IT Division",
+      "description": "(n)Code Solutions - A Div.Of GNFC Ltd-IT Division-IT Division | Tender ID 304481 | IFB/Tender Notice Number GNFC/HO/CCTV/2026-27/001 | Last Date & Time of Bid Submission 29-06-2026 17:00",
+      "portal": "nProcure",
+      "state": "Gujarat",
+      "tender_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "open_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.nprocure.com/beforeLoginBidSubmissionClosingReport",
+        "calendar_url": "https://tender.nprocure.com/dashboard/getTenderClosingData",
+        "scrape_method": "nprocure_closing_report",
+        "tender_number": "304481",
+        "tender_display_id": "304481",
+        "procurement_id": "GNFC/HO/CCTV/2026-27/001",
+        "department": "(n)Code Solutions - A Div.Of GNFC Ltd-IT Division-IT Division",
+        "closing_datetime": "29-06-2026 17:00",
+        "last_seen_at": "2026-06-26T07:15:41.470852",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "ml_used": true,
+        "plain_summary": "nProcure published a Gujarat tender for GNFC/HO/CCTV/2026-27/001 - (n)Code Solutions - A Div.Of GNFC Ltd-IT Division-IT Division. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-29. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-26T07:15:41.472833"
+      },
+      "scraped_at": "2026-06-26T07:15:41.467383",
+      "is_active": true
+    },
+    {
+      "tender_id": "dfaa3da270ae92ae4cfe120e",
+      "title": "Graveling of the farm access Pandan road for a length of 1 km under the Matoshri Pandan Road Scheme, from the agricultural field of Mr Rajesh Asaram Kadale Gat No 105 to the agricultural field of MR Anil Devidas Kadale Gram Panchayat saraswati",
+      "description": "7. 17-Jun-2026 01:30 PM 26-Jun-2026 01:15 PM 27-Jun-2026 01:15 PM [Graveling of the farm access Pandan road for a length of 1 km under the Matoshri Pandan Road Scheme, from the agricultural field of Mr Rajesh Asaram Kadale Gat No 105 to the agricultural field of MR Anil Devidas Kadale Gram Panchayat saraswati] [2026-27/1][2026_BULDH_1309293_1] RDD-CEO-BULDHANA||BULDHANA-Dy. CEO V.P.||LONAR||SARSWATI",
+      "portal": "MahaTenders",
+      "state": "Maharashtra",
+      "tender_url": "https://mahatenders.gov.in/nicgep/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=SO0R%2FHbfKwB0iEjptBeS00A%3D%3D",
+      "open_url": "https://mahatenders.gov.in/nicgep/app",
+      "published_date": "2026-06-17",
+      "opening_date": "2026-06-27",
+      "closing_date": "2026-06-26",
+      "estimated_value": null,
+      "categories": [
+        "General"
+      ],
+      "matched_keywords": [
+        "access control"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://mahatenders.gov.in/nicgep/app?page=FrontEndListTendersbyDate&service=page",
+        "stable_url": "https://mahatenders.gov.in/nicgep/app",
+        "detail_link_resolved": true,
+        "scrape_method": "nic_static_fallback",
+        "api_proxy_used": false,
+        "language": "en",
+        "original_language": "en",
+        "opening_date": "2026-06-27",
+        "last_seen_at": "2026-06-26T07:15:40.907404",
+        "match_score": 3,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "access control"
+        ],
+        "ml_used": true,
+        "plain_summary": "MahaTenders published a Maharashtra tender for Graveling of the farm access Pandan road for a length of 1 km under the Matoshri Pandan Road Scheme, from the agricultural field of Mr Rajesh Asaram Kadale Gat No 105 to the agricu. It is grouped under General. Opening date: 2026-06-27. Closing date: 2026-06-26. It matched your watch list for access control.",
+        "alert_attempted_at": "2026-06-26T07:15:40.908907"
+      },
+      "scraped_at": "2026-06-26T07:15:40.903678",
+      "is_active": true
+    },
+    {
+      "tender_id": "3d36a2f90be052f30dbacb2a",
+      "title": "Procurement of spares for Rexroth hydraulic power pack of plough feeder for CHP-210 MW ATPS MPPGCL Chachai",
+      "description": "6. 19-Jun-2026 06:00 PM 26-Jun-2026 03:00 PM 29-Jun-2026 03:30 PM [Procurement of spares for Rexroth hydraulic power pack of plough feeder for CHP-210 MW ATPS MPPGCL Chachai] [664][2026_MPPGC_514135_1] Madhya Pradesh Power Generating Company Limited||Chief Engineer(Gen.)-Amarkantak Thermal Power Station-Chachai - MPPGCL",
+      "portal": "MP Tenders",
+      "state": "Madhya Pradesh",
+      "tender_url": "https://mptenders.gov.in/nicgep/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=SUlU06tRooUs8VtjX8Ge8wg%3D%3D",
+      "open_url": "https://mptenders.gov.in/nicgep/app",
+      "published_date": "2026-06-19",
+      "opening_date": "2026-06-29",
+      "closing_date": "2026-06-26",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://mptenders.gov.in/nicgep/app?page=FrontEndListTendersbyDate&service=page",
+        "stable_url": "https://mptenders.gov.in/nicgep/app",
+        "detail_link_resolved": true,
+        "scrape_method": "nic_static_fallback",
+        "api_proxy_used": false,
+        "language": "en",
+        "original_language": "en",
+        "opening_date": "2026-06-29",
+        "last_seen_at": "2026-06-26T07:15:40.822033",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "MP Tenders published a Madhya Pradesh tender for Procurement of spares for Rexroth hydraulic power pack of plough feeder for CHP-210 MW ATPS MPPGCL Chachai. It is grouped under Thermal. Opening date: 2026-06-29. Closing date: 2026-06-26. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:40.823535"
+      },
+      "scraped_at": "2026-06-26T07:15:40.817703",
+      "is_active": true
+    },
+    {
+      "tender_id": "ee833f3b39a52f5efa09578e",
+      "title": "Procurement of Spares for New Allenberry make 5APC Gear box of APH of Unit No.10 and 11 STPS, Sarni",
+      "description": "4. 11-Jun-2026 03:00 PM 26-Jun-2026 03:00 PM 30-Jun-2026 03:30 PM [Procurement of Spares for New Allenberry make 5APC Gear box of APH of Unit No.10 and 11 STPS, Sarni ] [PE-1712][2026_MPPGC_514457_1] Madhya Pradesh Power Generating Company Limited||Chief Engineer(Gen.)-Satpura Thermal Power Station-Sarni - MPPGCL",
+      "portal": "MP Tenders",
+      "state": "Madhya Pradesh",
+      "tender_url": "https://mptenders.gov.in/nicgep/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=SiVegd4eNjOKo36ySkXjgOw%3D%3D",
+      "open_url": "https://mptenders.gov.in/nicgep/app",
+      "published_date": "2026-06-11",
+      "opening_date": "2026-06-30",
+      "closing_date": "2026-06-26",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://mptenders.gov.in/nicgep/app?page=FrontEndListTendersbyDate&service=page",
+        "stable_url": "https://mptenders.gov.in/nicgep/app",
+        "detail_link_resolved": true,
+        "scrape_method": "nic_static_fallback",
+        "api_proxy_used": false,
+        "language": "en",
+        "original_language": "en",
+        "opening_date": "2026-06-30",
+        "last_seen_at": "2026-06-26T07:15:40.804603",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "MP Tenders published a Madhya Pradesh tender for Procurement of Spares for New Allenberry make 5APC Gear box of APH of Unit No.10 and 11 STPS, Sarni. It is grouped under Thermal. Opening date: 2026-06-30. Closing date: 2026-06-26. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:40.806826"
+      },
+      "scraped_at": "2026-06-26T07:15:40.799598",
+      "is_active": true
+    },
+    {
+      "tender_id": "09ee51d86c15b7a6ef33a860",
+      "title": "GEM/2026/R/686927 - binocular",
+      "description": "GEM/2026/R/686927 binocular Ministry of Defence 14",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9511982",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9511982",
+      "published_date": "2026-06-25",
+      "opening_date": null,
+      "closing_date": "2026-06-26",
+      "estimated_value": null,
+      "categories": [
+        "NVD"
+      ],
+      "matched_keywords": [
+        "night vision binocular"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9511982",
+        "scrape_method": "gem_json_api",
+        "search_term": "unfiltered_public_listing",
+        "bid_number": "GEM/2026/R/686927",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-26T07:15:40.525182",
+        "match_score": 3,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "night vision binocular"
+        ],
+        "ml_used": true,
+        "plain_summary": "GeM published a National tender for GEM/2026/R/686927 - binocular. It is grouped under NVD. Opening date: no date published. Closing date: 2026-06-26. It matched your watch list for night vision binocular.",
+        "alert_attempted_at": "2026-06-26T07:15:40.526375"
+      },
+      "scraped_at": "2026-06-26T07:15:40.523654",
+      "is_active": true
+    },
+    {
+      "tender_id": "87fd2998513b0d41bf255649",
+      "title": "Strengthening all weak and defective weld joints through proper re-welding to store structural stability and extend the service life, along with installation of suitable stoppers to provide protection against physical damage, including replacement of",
+      "description": "4. 15-Jun-2026 06:50 PM 26-Jun-2026 05:00 PM 27-Jun-2026 11:00 AM [Strengthening all weak and defective weld joints through proper re-welding to store structural stability and extend the service life, along with installation of suitable stoppers to provide protection against physical damage, including replacement of] [GM(MS)/SO(EnM)/e-NIT/26-27/17][2026_CCL_361097_1] Central Coalfields Limited||Magadh and Amrapali",
+      "portal": "Coal India Tenders",
+      "state": "National",
+      "tender_url": "https://coalindiatenders.nic.in/nicgep/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=SmP%2FbA70QyDx14P%2BWPtY8kw%3D%3D",
+      "open_url": "https://coalindiatenders.nic.in/nicgep/app",
+      "published_date": "2026-06-15",
+      "opening_date": "2026-06-27",
+      "closing_date": "2026-06-26",
+      "estimated_value": null,
+      "categories": [
+        "General"
+      ],
+      "matched_keywords": [
+        "perimeter protection"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://coalindiatenders.nic.in/nicgep/app?page=FrontEndListTendersbyDate&service=page",
+        "stable_url": "https://coalindiatenders.nic.in/nicgep/app",
+        "detail_link_resolved": true,
+        "scrape_method": "nic_static_fallback",
+        "api_proxy_used": false,
+        "language": "en",
+        "original_language": "en",
+        "opening_date": "2026-06-27",
+        "last_seen_at": "2026-06-26T07:15:40.409405",
+        "match_score": 3,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "perimeter protection"
+        ],
+        "ml_used": true,
+        "plain_summary": "Coal India Tenders published a National tender for Strengthening all weak and defective weld joints through proper re-welding to store structural stability and extend the service life, along with installation of suitable stoppers t. It is grouped under General. Opening date: 2026-06-27. Closing date: 2026-06-26. It matched your watch list for perimeter protection.",
+        "alert_attempted_at": "2026-06-26T07:15:40.410984"
+      },
+      "scraped_at": "2026-06-26T07:15:40.406109",
+      "is_active": true
+    },
+    {
+      "tender_id": "585732c020eaec119f272f37",
+      "title": "Heightening of OFC cables of CCTV Surveillance system at road crossing portion of ILBL OCP, Lakhanpur Area, MCL",
+      "description": "2. 10-Jun-2026 06:55 PM 26-Jun-2026 05:00 PM 29-Jun-2026 11:00 AM [Heightening of OFC cables of CCTV Surveillance system at road crossing portion of ILBL OCP, Lakhanpur Area, MCL ] [MCL/LKPA/EnM/eNIT/26-27/81, Dt-10.06.2026][2026_MCL_360972_1] Mahanadi Coalfields Limited||LAKHANPUR AREA||LKP_E AND M||E AND M",
+      "portal": "Coal India Tenders",
+      "state": "National",
+      "tender_url": "https://coalindiatenders.nic.in/nicgep/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=SJzb2BmdPl7bnfg%2Bbxk9Hyw%3D%3D",
+      "open_url": "https://coalindiatenders.nic.in/nicgep/app",
+      "published_date": "2026-06-10",
+      "opening_date": "2026-06-29",
+      "closing_date": "2026-06-26",
+      "estimated_value": null,
+      "categories": [
+        "Camera",
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Security Equipment",
+        "Surveillance Equipment",
+        "Border Surveillance System",
+        "Battlefield Surveillance Radar",
+        "Battlefield Surveillance Radar EO",
+        "Electro Optical Surveillance System"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://coalindiatenders.nic.in/nicgep/app?page=FrontEndListTendersbyDate&service=page",
+        "stable_url": "https://coalindiatenders.nic.in/nicgep/app",
+        "detail_link_resolved": true,
+        "scrape_method": "nic_static_fallback",
+        "api_proxy_used": false,
+        "language": "en",
+        "original_language": "en",
+        "opening_date": "2026-06-29",
+        "last_seen_at": "2026-06-26T07:15:40.393408",
+        "match_score": 27,
+        "match_aliases": [
+          "cctv",
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "semantic_matches": [
+          "Border Surveillance System",
+          "Battlefield Surveillance Radar",
+          "Battlefield Surveillance Radar EO",
+          "Electro Optical Surveillance System"
+        ],
+        "ml_used": true,
+        "plain_summary": "Coal India Tenders published a National tender for Heightening of OFC cables of CCTV Surveillance system at road crossing portion of ILBL OCP, Lakhanpur Area, MCL. It is grouped under Camera, EOSS. Opening date: 2026-06-29. Closing date: 2026-06-26. It matched your watch list for Security Equipment, Surveillance Equipment, Border Surveillance System, Battlefield Surveillance Radar.",
+        "alert_attempted_at": "2026-06-26T07:15:40.396604"
+      },
+      "scraped_at": "2026-06-26T07:15:40.390842",
+      "is_active": true
+    },
+    {
+      "tender_id": "45d472f36afa405a893c150e",
+      "title": "Purchase of Thermal Comfort Analyzer and Data Loggers",
+      "description": "10. 05-Jun-2026 03:00 PM 26-Jun-2026 03:00 PM 29-Jun-2026 03:00 PM [Purchase of Thermal Comfort Analyzer and Data Loggers] [NITJ/PUR/ME/25/26/e-tender No. 29/2026][2026_NITJ_910034_1] Dr.B.R.Ambedkar National Institute of Technology-Jalandhar",
+      "portal": "CPPP",
+      "state": "National",
+      "tender_url": "https://eprocure.gov.in/eprocure/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=SMnWI7MVKU%2F%2B7wSHBtT3xMQ%3D%3D",
+      "open_url": "https://eprocure.gov.in/eprocure/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=SMnWI7MVKU%2F%2B7wSHBtT3xMQ%3D%3D",
+      "published_date": "2026-06-05",
+      "opening_date": "2026-06-29",
+      "closing_date": "2026-06-26",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imager",
+        "Cooled Thermal",
+        "Thermal Camera",
+        "Uncooled Thermal",
+        "Thermal Weapon Sight"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://eprocure.gov.in/eprocure/app?page=FrontEndListTendersbyDate&service=page",
+        "stable_url": "https://eprocure.gov.in/eprocure/app",
+        "detail_link_resolved": true,
+        "scrape_method": "nic_static_fallback",
+        "api_proxy_used": false,
+        "language": "en",
+        "original_language": "en",
+        "opening_date": "2026-06-29",
+        "last_seen_at": "2026-06-26T07:15:40.378303",
+        "match_score": 15,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "Thermal Imager",
+          "Cooled Thermal",
+          "Thermal Camera",
+          "Uncooled Thermal",
+          "Thermal Weapon Sight"
+        ],
+        "ml_used": true,
+        "plain_summary": "CPPP published a National tender for Purchase of Thermal Comfort Analyzer and Data Loggers. It is grouped under Thermal. Opening date: 2026-06-29. Closing date: 2026-06-26. It matched your watch list for Thermal Imager, Cooled Thermal, Thermal Camera, Uncooled Thermal.",
+        "alert_attempted_at": "2026-06-26T07:15:40.380198"
+      },
+      "scraped_at": "2026-06-26T07:15:40.375525",
+      "is_active": true
+    },
+    {
+      "tender_id": "819d5794e7b2dcecde237093",
+      "title": "SITC of PA system at Nursing counter PET Centre, Apheresis Section Blood Bank Nehru Hospital and Hepatalogy, Transplant ICU, NHE, PGIMER, Chandigarh",
+      "description": "6. 10-Jun-2026 01:00 PM 26-Jun-2026 03:00 PM 27-Jun-2026 03:30 PM [SITC of PA system at Nursing counter PET Centre, Apheresis Section Blood Bank Nehru Hospital and Hepatalogy, Transplant ICU, NHE, PGIMER, Chandigarh] [PGI/Engg/Bio/Analy/2026-27/03][2026_PGIME_912400_1] Postgraduate Institute of Medical and Education and Research Chandigarh||Engineering department - PGIMER Chandigarh||H.E.(Biomedical) - PGIMER Chandigarh||A.E. (Bio-3) - PGIMER Chandigarh",
+      "portal": "CPPP",
+      "state": "National",
+      "tender_url": "https://eprocure.gov.in/eprocure/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=STay5aYVcL%2FzOZtmNms08AQ%3D%3D",
+      "open_url": "https://eprocure.gov.in/eprocure/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=STay5aYVcL%2FzOZtmNms08AQ%3D%3D",
+      "published_date": "2026-06-10",
+      "opening_date": "2026-06-27",
+      "closing_date": "2026-06-26",
+      "estimated_value": null,
+      "categories": [
+        "Counter-UAV",
+        "General"
+      ],
+      "matched_keywords": [
+        "counter drone",
+        "surveillance system"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://eprocure.gov.in/eprocure/app?page=FrontEndListTendersbyDate&service=page",
+        "stable_url": "https://eprocure.gov.in/eprocure/app",
+        "detail_link_resolved": true,
+        "scrape_method": "nic_static_fallback",
+        "api_proxy_used": false,
+        "language": "en",
+        "original_language": "en",
+        "opening_date": "2026-06-27",
+        "last_seen_at": "2026-06-26T07:15:40.352521",
+        "match_score": 6,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "counter drone",
+          "surveillance system"
+        ],
+        "ml_used": true,
+        "plain_summary": "CPPP published a National tender for SITC of PA system at Nursing counter PET Centre, Apheresis Section Blood Bank Nehru Hospital and Hepatalogy, Transplant ICU, NHE, PGIMER, Chandigarh. It is grouped under Counter-UAV, General. Opening date: 2026-06-27. Closing date: 2026-06-26. It matched your watch list for counter drone, surveillance system.",
+        "alert_attempted_at": "2026-06-26T07:15:40.355117"
+      },
+      "scraped_at": "2026-06-26T07:15:40.349574",
+      "is_active": true
+    },
+    {
+      "tender_id": "7de4e96f3ef02718bb34613f",
+      "title": "Annual, Repair and Maintenance of Heat Ventilation and Air Conditioning (HVAC) system of IIT Jodhpur",
+      "description": "5. 05-Jun-2026 04:00 PM 26-Jun-2026 03:00 PM 27-Jun-2026 03:00 PM [Annual, Repair and Maintenance of Heat Ventilation and Air Conditioning (HVAC) system of IIT Jodhpur] [IITJ/OIE/2026-27/14][2026_IITJ_911728_1] Indian Institute of Technology Jodhpur||Office of Stores and Purchase - IITJ",
+      "portal": "CPPP",
+      "state": "National",
+      "tender_url": "https://eprocure.gov.in/eprocure/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=S54VBlb4JJCD5MTq8yQ3Syg%3D%3D",
+      "open_url": "https://eprocure.gov.in/eprocure/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=S54VBlb4JJCD5MTq8yQ3Syg%3D%3D",
+      "published_date": "2026-06-05",
+      "opening_date": "2026-06-27",
+      "closing_date": "2026-06-26",
+      "estimated_value": null,
+      "categories": [
+        "General"
+      ],
+      "matched_keywords": [
+        "surveillance system"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://eprocure.gov.in/eprocure/app?page=FrontEndListTendersbyDate&service=page",
+        "stable_url": "https://eprocure.gov.in/eprocure/app",
+        "detail_link_resolved": true,
+        "scrape_method": "nic_static_fallback",
+        "api_proxy_used": false,
+        "language": "en",
+        "original_language": "en",
+        "opening_date": "2026-06-27",
+        "last_seen_at": "2026-06-26T07:15:40.344213",
+        "match_score": 3,
+        "match_aliases": [],
+        "match_reasons": [],
+        "semantic_matches": [
+          "surveillance system"
+        ],
+        "ml_used": true,
+        "plain_summary": "CPPP published a National tender for Annual, Repair and Maintenance of Heat Ventilation and Air Conditioning (HVAC) system of IIT Jodhpur. It is grouped under General. Opening date: 2026-06-27. Closing date: 2026-06-26. It matched your watch list for surveillance system.",
+        "alert_attempted_at": "2026-06-26T07:15:40.346873"
+      },
+      "scraped_at": "2026-06-26T07:15:40.341354",
+      "is_active": true
+    }
+  ]
+}

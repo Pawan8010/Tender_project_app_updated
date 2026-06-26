@@ -1,0 +1,2686 @@
+{
+  "schema_version": 1,
+  "backup_type": "matched",
+  "reason": "auto-scrape",
+  "created_at": "2026-06-23T09:26:57.358593",
+  "active_tender_count": 972,
+  "active_matched_count": 66,
+  "tender_count": 66,
+  "tenders": [
+    {
+      "tender_id": "8f2ef8fd6d6da29e12a03b3a",
+      "title": "Supply Installation Commissioning and Maintenance of CCTV camera in three cities Mauganj Maihar Pandhurna",
+      "description": "5. 18-May-2026 06:00 PM 23-Jun-2026 03:00 PM 24-Jun-2026 03:10 PM [Supply Installation Commissioning and Maintenance of CCTV camera in three cities Mauganj Maihar Pandhurna] [D-8519/26 Date 18/05/2026][2026_MPP_508476_1] MP Police||Telecommunication BHOPAL - MPP",
+      "portal": "MP Tenders",
+      "state": "Madhya Pradesh",
+      "tender_url": "https://mptenders.gov.in/nicgep/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=SKIOu2QNW%2F6vN5VYUGeQjlQ%3D%3D",
+      "open_url": "https://mptenders.gov.in/nicgep/app",
+      "published_date": "2026-05-18",
+      "opening_date": "2026-06-24",
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://mptenders.gov.in/nicgep/app?page=FrontEndListTendersbyDate&service=page",
+        "stable_url": "https://mptenders.gov.in/nicgep/app",
+        "detail_link_resolved": true,
+        "scrape_method": "nic_static_fallback",
+        "api_proxy_used": false,
+        "language": "en",
+        "original_language": "en",
+        "opening_date": "2026-06-24",
+        "last_seen_at": "2026-06-23T09:26:55.102257",
+        "match_score": 17,
+        "match_aliases": [
+          "cctv",
+          "cctv camera"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: cctv camera -> Security Equipment"
+        ],
+        "plain_summary": "MP Tenders published a Madhya Pradesh tender for Supply Installation Commissioning and Maintenance of CCTV camera in three cities Mauganj Maihar Pandhurna. It is grouped under Camera. Opening date: 2026-06-24. Closing date: 2026-06-23. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:55.222723"
+      },
+      "scraped_at": "2026-06-23T09:26:57.036680",
+      "is_active": true
+    },
+    {
+      "tender_id": "d821cb19e5fa1f4b805c7d68",
+      "title": "GEM/2026/B/7671407 - Customized AMC/CMC for Pre-owned Products - Providing UHF Radio Airtime Services for 50 Units Handh",
+      "description": "GEM/2026/B/7671407 Customized AMC/CMC for Pre-owned Products - Providing UHF Radio Airtime Services for 50 Units Handh Ministry of Petroleum and Natural Gas 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9476245",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9476245",
+      "published_date": "2026-06-16",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Communication"
+      ],
+      "matched_keywords": [
+        "Handheld Radio"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9476245",
+        "scrape_method": "gem_json_api",
+        "search_term": "handheld radio",
+        "bid_number": "GEM/2026/B/7671407",
+        "buyer": "Ministry of Petroleum and Natural Gas",
+        "last_seen_at": "2026-06-23T09:26:45.814894",
+        "match_score": 8,
+        "match_aliases": [
+          "uhf radio"
+        ],
+        "match_reasons": [
+          "alias: uhf radio -> Handheld Radio"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7671407 - Customized AMC/CMC for Pre-owned Products - Providing UHF Radio Airtime Services for 50 Units Handh. It is grouped under Communication. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Handheld Radio.",
+        "alert_attempted_at": "2026-06-23T09:26:45.828582"
+      },
+      "scraped_at": "2026-06-23T09:26:57.035281",
+      "is_active": true
+    },
+    {
+      "tender_id": "22d5b8fa2ea55ee0096362f8",
+      "title": "GEM/2026/B/7658595 - Camera for CCTV System (V3)",
+      "description": "GEM/2026/B/7658595 Camera for CCTV System (V3) Ministry of Science and Technology 5",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9461638",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9461638",
+      "published_date": "2026-06-12",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9461638",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7658595",
+        "buyer": "Ministry of Science and Technology",
+        "last_seen_at": "2026-06-23T09:26:44.426669",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7658595 - Camera for CCTV System (V3). It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:44.439570"
+      },
+      "scraped_at": "2026-06-23T09:26:57.035019",
+      "is_active": true
+    },
+    {
+      "tender_id": "7d4d47f10c7e506b6032b7aa",
+      "title": "GEM/2026/B/7599358 - 1 Tb Hard Disk,CCTV cage protection box,PVC POE Switch,6 x 6 PBC Box,RJ 456 Connector,POE Switch 4 ",
+      "description": "GEM/2026/B/7599358 1 Tb Hard Disk,CCTV cage protection box,PVC POE Switch,6 x 6 PBC Box,RJ 456 Connector,POE Switch 4 Ministry of Defence 4075",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9395607",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9395607",
+      "published_date": "2026-06-13",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9395607",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7599358",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:44.363746",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7599358 - 1 Tb Hard Disk,CCTV cage protection box,PVC POE Switch,6 x 6 PBC Box,RJ 456 Connector,POE Switch 4. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:44.390914"
+      },
+      "scraped_at": "2026-06-23T09:26:57.035015",
+      "is_active": true
+    },
+    {
+      "tender_id": "a45c2fa7fb5a51af8b04a88a",
+      "title": "GEM/2026/B/7656945 - Camera for CCTV System (V3),Video Recorder for CCTV System (V2),Video Recorder for CCTV System (V2)",
+      "description": "GEM/2026/B/7656945 Camera for CCTV System (V3),Video Recorder for CCTV System (V2),Video Recorder for CCTV System (V2) Panchayats and Rural Housing Department Gujarat 25708",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9459838",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9459838",
+      "published_date": "2026-06-12",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9459838",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7656945",
+        "buyer": "Panchayats and Rural Housing Department Gujarat",
+        "last_seen_at": "2026-06-23T09:26:44.313764",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7656945 - Camera for CCTV System (V3),Video Recorder for CCTV System (V2),Video Recorder for CCTV System (V2). It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:44.330011"
+      },
+      "scraped_at": "2026-06-23T09:26:57.035011",
+      "is_active": true
+    },
+    {
+      "tender_id": "263efbf7a92f37978aacd1f4",
+      "title": "GEM/2026/B/7657501 - Camera for CCTV System (V3),Video Recorder for CCTV System (V2),Video Recorder for CCTV System (V2)",
+      "description": "GEM/2026/B/7657501 Camera for CCTV System (V3),Video Recorder for CCTV System (V2),Video Recorder for CCTV System (V2) Panchayats and Rural Housing Department Gujarat 11010",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9460451",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9460451",
+      "published_date": "2026-06-12",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9460451",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7657501",
+        "buyer": "Panchayats and Rural Housing Department Gujarat",
+        "last_seen_at": "2026-06-23T09:26:44.260594",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7657501 - Camera for CCTV System (V3),Video Recorder for CCTV System (V2),Video Recorder for CCTV System (V2). It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:44.279108"
+      },
+      "scraped_at": "2026-06-23T09:26:57.035008",
+      "is_active": true
+    },
+    {
+      "tender_id": "ac4ffdd94ace214f2b4ee444",
+      "title": "GEM/2026/B/7657703 - Camera for CCTV System (V3),Video Recorder for CCTV System (V2),Optical Fibre Cable for Networking",
+      "description": "GEM/2026/B/7657703 Camera for CCTV System (V3),Video Recorder for CCTV System (V2),Optical Fibre Cable for Networking Panchayats and Rural Housing Department Gujarat 1209",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9460674",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9460674",
+      "published_date": "2026-06-12",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9460674",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7657703",
+        "buyer": "Panchayats and Rural Housing Department Gujarat",
+        "last_seen_at": "2026-06-23T09:26:44.183227",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7657703 - Camera for CCTV System (V3),Video Recorder for CCTV System (V2),Optical Fibre Cable for Networking. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:44.204228"
+      },
+      "scraped_at": "2026-06-23T09:26:57.035004",
+      "is_active": true
+    },
+    {
+      "tender_id": "a6af85f6d02ab45b1a1e4cb3",
+      "title": "GEM/2026/B/7661851 - Facility Management Services - LumpSum Based - DISTRICT JAIL LUCKNOW; AMC SERVICES FOR CCTV CAMERAS",
+      "description": "GEM/2026/B/7661851 Facility Management Services - LumpSum Based - DISTRICT JAIL LUCKNOW; AMC SERVICES FOR CCTV CAMERAS Prisons Administration and Reforms Department Uttar Pradesh 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9465305",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9465305",
+      "published_date": "2026-06-13",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment",
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9465305",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7661851",
+        "buyer": "Prisons Administration and Reforms Department Uttar Pradesh",
+        "last_seen_at": "2026-06-23T09:26:44.046969",
+        "match_score": 13,
+        "match_aliases": [
+          "cctv",
+          "cameras"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: cameras -> Optical Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7661851 - Facility Management Services - LumpSum Based - DISTRICT JAIL LUCKNOW; AMC SERVICES FOR CCTV CAMERAS. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Security Equipment, Optical Camera.",
+        "alert_attempted_at": "2026-06-23T09:26:44.070923"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034993",
+      "is_active": true
+    },
+    {
+      "tender_id": "ffef70e106cc11e264627a29",
+      "title": "GEM/2026/B/7662144 - SUPPLY AND INSTALLATION OF CCTV SURVEILLANCE SYSTEM",
+      "description": "GEM/2026/B/7662144 SUPPLY AND INSTALLATION OF CCTV SURVEILLANCE SYSTEM Ministry of Defence 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9465630",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9465630",
+      "published_date": "2026-06-13",
+      "opening_date": null,
+      "closing_date": "2026-06-24",
+      "estimated_value": null,
+      "categories": [
+        "Camera",
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Security Equipment",
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9465630",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7662144",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:43.962286",
+        "match_score": 15,
+        "match_aliases": [
+          "cctv",
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7662144 - SUPPLY AND INSTALLATION OF CCTV SURVEILLANCE SYSTEM. It is grouped under Camera, EOSS. Opening date: no date published. Closing date: 2026-06-24. It matched your watch list for Security Equipment, Surveillance Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:43.980599"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034989",
+      "is_active": true
+    },
+    {
+      "tender_id": "86b1f0c5ea2192b37171047c",
+      "title": "GEM/2026/B/7658243 - INTEGRATED SECURITY SURVEILLANCE SYSTEM SERVICE - Theft Prevention, Remote Video Monitoring, Facili",
+      "description": "GEM/2026/B/7658243 INTEGRATED SECURITY SURVEILLANCE SYSTEM SERVICE - Theft Prevention, Remote Video Monitoring, Facili Urban Development & Housing Department Bihar 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9461254",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9461254",
+      "published_date": "2026-06-12",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9461254",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7658243",
+        "buyer": "Urban Development & Housing Department Bihar",
+        "last_seen_at": "2026-06-23T09:26:43.549230",
+        "match_score": 8,
+        "match_aliases": [
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7658243 - INTEGRATED SECURITY SURVEILLANCE SYSTEM SERVICE - Theft Prevention, Remote Video Monitoring, Facili. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Surveillance Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:43.560283"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034981",
+      "is_active": true
+    },
+    {
+      "tender_id": "6e6582d01fd9483f817cf51d",
+      "title": "GEM/2026/B/7658677 - AMC of Integrated Security and Surveillance System - Theft Prevention, Remote Video Monitoring, Fac",
+      "description": "GEM/2026/B/7658677 AMC of Integrated Security and Surveillance System - Theft Prevention, Remote Video Monitoring, Fac Urban Development & Housing Department Bihar 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9461726",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9461726",
+      "published_date": "2026-06-12",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9461726",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7658677",
+        "buyer": "Urban Development & Housing Department Bihar",
+        "last_seen_at": "2026-06-23T09:26:43.523152",
+        "match_score": 8,
+        "match_aliases": [
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7658677 - AMC of Integrated Security and Surveillance System - Theft Prevention, Remote Video Monitoring, Fac. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Surveillance Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:43.532864"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034978",
+      "is_active": true
+    },
+    {
+      "tender_id": "99c453b9290cfac4a1c8ad33",
+      "title": "GEM/2026/B/7662503 - Training on CCTV surveillance system",
+      "description": "GEM/2026/B/7662503 Training on CCTV surveillance system Ministry of Defence 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9466026",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9466026",
+      "published_date": "2026-06-13",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera",
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Security Equipment",
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9466026",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7662503",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:43.496682",
+        "match_score": 15,
+        "match_aliases": [
+          "cctv",
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7662503 - Training on CCTV surveillance system. It is grouped under Camera, EOSS. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Security Equipment, Surveillance Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:43.510724"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034974",
+      "is_active": true
+    },
+    {
+      "tender_id": "690b24e48bef9418277b09e9",
+      "title": "GEM/2026/B/7662174 - INTEGRATED SECURITY SURVEILLANCE SYSTEM SERVICE - As per Scope of Work; As per Scope of Work; As pe",
+      "description": "GEM/2026/B/7662174 INTEGRATED SECURITY SURVEILLANCE SYSTEM SERVICE - As per Scope of Work; As per Scope of Work; As pe Panchayats and Rural Housing Department Gujarat 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9465660",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9465660",
+      "published_date": "2026-06-13",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9465660",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7662174",
+        "buyer": "Panchayats and Rural Housing Department Gujarat",
+        "last_seen_at": "2026-06-23T09:26:43.465032",
+        "match_score": 4,
+        "match_aliases": [
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7662174 - INTEGRATED SECURITY SURVEILLANCE SYSTEM SERVICE - As per Scope of Work; As per Scope of Work; As pe. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Surveillance Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:43.473146"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034970",
+      "is_active": true
+    },
+    {
+      "tender_id": "21b5663dd97fa9d43d3a26fa",
+      "title": "GEM/2026/B/7638114 - INTEGRATED SECURITY SURVEILLANCE SYSTEM SERVICE - Theft Prevention, Remote Video Monitoring, Facili",
+      "description": "GEM/2026/B/7638114 INTEGRATED SECURITY SURVEILLANCE SYSTEM SERVICE - Theft Prevention, Remote Video Monitoring, Facili Urban Development Department Uttar Pradesh 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9439015",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9439015",
+      "published_date": "2026-06-12",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9439015",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7638114",
+        "buyer": "Urban Development Department Uttar Pradesh",
+        "last_seen_at": "2026-06-23T09:26:43.438488",
+        "match_score": 8,
+        "match_aliases": [
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7638114 - INTEGRATED SECURITY SURVEILLANCE SYSTEM SERVICE - Theft Prevention, Remote Video Monitoring, Facili. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Surveillance Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:43.452795"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034967",
+      "is_active": true
+    },
+    {
+      "tender_id": "aa046bd8dfc0d0676c3aa4fe",
+      "title": "GEM/2026/B/7636737 - AMC of Integrated Security and Surveillance System - CCTV and CWAN , Remote Video Monitoring; Compr",
+      "description": "GEM/2026/B/7636737 AMC of Integrated Security and Surveillance System - CCTV and CWAN , Remote Video Monitoring; Compr Education Department Gujarat 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9437486",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9437486",
+      "published_date": "2026-06-08",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera",
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Security Equipment",
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9437486",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7636737",
+        "buyer": "Education Department Gujarat",
+        "last_seen_at": "2026-06-23T09:26:43.411777",
+        "match_score": 15,
+        "match_aliases": [
+          "cctv",
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7636737 - AMC of Integrated Security and Surveillance System - CCTV and CWAN , Remote Video Monitoring; Compr. It is grouped under Camera, EOSS. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Security Equipment, Surveillance Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:43.419687"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034963",
+      "is_active": true
+    },
+    {
+      "tender_id": "6ed679425b79dfd72f7b97cc",
+      "title": "GEM/2026/B/7661702 - AMC of Integrated Security and Surveillance System - Theft Prevention, Remote Video Monitoring, Fac",
+      "description": "GEM/2026/B/7661702 AMC of Integrated Security and Surveillance System - Theft Prevention, Remote Video Monitoring, Fac Ministry of Petroleum and Natural Gas 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9465132",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9465132",
+      "published_date": "2026-06-13",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9465132",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7661702",
+        "buyer": "Ministry of Petroleum and Natural Gas",
+        "last_seen_at": "2026-06-23T09:26:43.394840",
+        "match_score": 8,
+        "match_aliases": [
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7661702 - AMC of Integrated Security and Surveillance System - Theft Prevention, Remote Video Monitoring, Fac. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Surveillance Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:43.398892"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034959",
+      "is_active": true
+    },
+    {
+      "tender_id": "c37f28a449c5bfd6160dea87",
+      "title": "GEM/2026/B/7563320 - CCTV Surveillance System",
+      "description": "GEM/2026/B/7563320 CCTV Surveillance System Ministry of Education 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9355223",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9355223",
+      "published_date": "2026-05-22",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera",
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Security Equipment",
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9355223",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7563320",
+        "buyer": "Ministry of Education",
+        "last_seen_at": "2026-06-23T09:26:43.370809",
+        "match_score": 15,
+        "match_aliases": [
+          "cctv",
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7563320 - CCTV Surveillance System. It is grouped under Camera, EOSS. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Security Equipment, Surveillance Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:43.382342"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034955",
+      "is_active": true
+    },
+    {
+      "tender_id": "de6b231151277a7bb9cb11dd",
+      "title": "GEM/2026/R/686297 - CCTV Camera PTZ 25X, 5 MP,20 ft 4 inch pole for PTZ Camera with L Bracket,POE Switch 4 port Giga un",
+      "description": "GEM/2026/R/686297 CCTV Camera PTZ 25X, 5 MP,20 ft 4 inch pole for PTZ Camera with L Bracket,POE Switch 4 port Giga un Ministry of Defence 2523",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9505539",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9505539",
+      "published_date": "2026-06-23",
+      "opening_date": null,
+      "closing_date": "2026-06-24",
+      "estimated_value": null,
+      "categories": [
+        "Camera",
+        "PTZ"
+      ],
+      "matched_keywords": [
+        "PTZ Camera",
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9505539",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/R/686297",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:43.214741",
+        "match_score": 29,
+        "match_aliases": [
+          "cctv",
+          "cctv camera"
+        ],
+        "match_reasons": [
+          "proposal keyword: PTZ Camera",
+          "alias: cctv -> Security Equipment",
+          "alias: cctv camera -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/R/686297 - CCTV Camera PTZ 25X, 5 MP,20 ft 4 inch pole for PTZ Camera with L Bracket,POE Switch 4 port Giga un. It is grouped under Camera, PTZ. Opening date: no date published. Closing date: 2026-06-24. It matched your watch list for PTZ Camera, Security Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:43.229293"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034948",
+      "is_active": true
+    },
+    {
+      "tender_id": "ae0e9c34fa1858b4439739ab",
+      "title": "GEM/2026/B/7661227 - Standalone Wind Mill and Solar Panel for PTZ Camera",
+      "description": "GEM/2026/B/7661227 Standalone Wind Mill and Solar Panel for PTZ Camera Ministry of Defence 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9464596",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9464596",
+      "published_date": "2026-06-14",
+      "opening_date": null,
+      "closing_date": "2026-06-24",
+      "estimated_value": null,
+      "categories": [
+        "PTZ"
+      ],
+      "matched_keywords": [
+        "PTZ Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9464596",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/B/7661227",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:43.177113",
+        "match_score": 12,
+        "match_aliases": [],
+        "match_reasons": [
+          "proposal keyword: PTZ Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7661227 - Standalone Wind Mill and Solar Panel for PTZ Camera. It is grouped under PTZ. Opening date: no date published. Closing date: 2026-06-24. It matched your watch list for PTZ Camera.",
+        "alert_attempted_at": "2026-06-23T09:26:43.185880"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034940",
+      "is_active": true
+    },
+    {
+      "tender_id": "9a4e584f240c30561b97ccbe",
+      "title": "GEM/2026/B/7613459 - PTZ Camera Video Conference Camera,Wired Chairman Unit Microphone,Wired Delegate Units Microphone,D",
+      "description": "GEM/2026/B/7613459 PTZ Camera Video Conference Camera,Wired Chairman Unit Microphone,Wired Delegate Units Microphone,D Ministry of Civil Aviation 79",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9411517",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9411517",
+      "published_date": "2026-06-03",
+      "opening_date": null,
+      "closing_date": "2026-06-24",
+      "estimated_value": null,
+      "categories": [
+        "PTZ"
+      ],
+      "matched_keywords": [
+        "PTZ Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9411517",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/B/7613459",
+        "buyer": "Ministry of Civil Aviation",
+        "last_seen_at": "2026-06-23T09:26:43.161950",
+        "match_score": 12,
+        "match_aliases": [],
+        "match_reasons": [
+          "proposal keyword: PTZ Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7613459 - PTZ Camera Video Conference Camera,Wired Chairman Unit Microphone,Wired Delegate Units Microphone,D. It is grouped under PTZ. Opening date: no date published. Closing date: 2026-06-24. It matched your watch list for PTZ Camera.",
+        "alert_attempted_at": "2026-06-23T09:26:43.167695"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034936",
+      "is_active": true
+    },
+    {
+      "tender_id": "3724eaf81eb2e21b87059af4",
+      "title": "GEM/2026/B/7614415 - PTZ Camera 2 mp 32 into 180 mtr,Cat 6 Cable 305 Mtr,Media Convertor,Patch Cord,POE Switch,Junction ",
+      "description": "GEM/2026/B/7614415 PTZ Camera 2 mp 32 into 180 mtr,Cat 6 Cable 305 Mtr,Media Convertor,Patch Cord,POE Switch,Junction Ministry of Defence 1646",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9412556",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9412556",
+      "published_date": "2026-06-09",
+      "opening_date": null,
+      "closing_date": "2026-06-24",
+      "estimated_value": null,
+      "categories": [
+        "PTZ"
+      ],
+      "matched_keywords": [
+        "PTZ Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9412556",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/B/7614415",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:43.139049",
+        "match_score": 12,
+        "match_aliases": [],
+        "match_reasons": [
+          "proposal keyword: PTZ Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7614415 - PTZ Camera 2 mp 32 into 180 mtr,Cat 6 Cable 305 Mtr,Media Convertor,Patch Cord,POE Switch,Junction. It is grouped under PTZ. Opening date: no date published. Closing date: 2026-06-24. It matched your watch list for PTZ Camera.",
+        "alert_attempted_at": "2026-06-23T09:26:43.149509"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034933",
+      "is_active": true
+    },
+    {
+      "tender_id": "234b53d61e31d72cc33aa195",
+      "title": "GEM/2026/B/7596910 - IP Based CCTV Camera,POE Switch,Roll Out Door Cat Six Cable,RJ 45 Connector,2 Core electric Cable 2",
+      "description": "GEM/2026/B/7596910 IP Based CCTV Camera,POE Switch,Roll Out Door Cat Six Cable,RJ 45 Connector,2 Core electric Cable 2 Ministry of Defence 7300",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9392782",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9392782",
+      "published_date": "2026-06-13",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9392782",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/B/7596910",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:43.115579",
+        "match_score": 17,
+        "match_aliases": [
+          "cctv",
+          "cctv camera"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: cctv camera -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7596910 - IP Based CCTV Camera,POE Switch,Roll Out Door Cat Six Cable,RJ 45 Connector,2 Core electric Cable 2. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:43.123464"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034929",
+      "is_active": true
+    },
+    {
+      "tender_id": "4338fb654a1415407477a69a",
+      "title": "GEM/2026/B/7662408 - Training on operation of PTZ series cameras",
+      "description": "GEM/2026/B/7662408 Training on operation of PTZ series cameras Ministry of Defence 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9465918",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9465918",
+      "published_date": "2026-06-13",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9465918",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/B/7662408",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:43.046977",
+        "match_score": 6,
+        "match_aliases": [
+          "cameras"
+        ],
+        "match_reasons": [
+          "alias: cameras -> Optical Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7662408 - Training on operation of PTZ series cameras. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Optical Camera.",
+        "alert_attempted_at": "2026-06-23T09:26:43.084864"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034925",
+      "is_active": true
+    },
+    {
+      "tender_id": "07f24c888d01d35d2b65e8bb",
+      "title": "GEM/2026/B/7662481 - Training for maintenance and deployment of PTZ series cameras",
+      "description": "GEM/2026/B/7662481 Training for maintenance and deployment of PTZ series cameras Ministry of Defence 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9466004",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9466004",
+      "published_date": "2026-06-13",
+      "opening_date": null,
+      "closing_date": "2026-06-23",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9466004",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/B/7662481",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:42.967479",
+        "match_score": 6,
+        "match_aliases": [
+          "cameras"
+        ],
+        "match_reasons": [
+          "alias: cameras -> Optical Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7662481 - Training for maintenance and deployment of PTZ series cameras. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-23. It matched your watch list for Optical Camera.",
+        "alert_attempted_at": "2026-06-23T09:26:42.989998"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034921",
+      "is_active": true
+    },
+    {
+      "tender_id": "3d5b58a92ab14668c64d55fa",
+      "title": "GEM/2026/B/7697575 - CARABINER,HHMD,CORDON LIGHT BTY,ANVD BTY CHARGER,BATTERY WATER,HAMMER 1 KG,WATER BUCKET,CAT 6 UTP C",
+      "description": "GEM/2026/B/7697575 CARABINER,HHMD,CORDON LIGHT BTY,ANVD BTY CHARGER,BATTERY WATER,HAMMER 1 KG,WATER BUCKET,CAT 6 UTP C Ministry of Defence 168",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9505536",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9505536",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "NVD"
+      ],
+      "matched_keywords": [
+        "NVD"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9505536",
+        "scrape_method": "gem_json_api",
+        "search_term": "nvd night vision device",
+        "bid_number": "GEM/2026/B/7697575",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:42.746172",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7697575 - CARABINER,HHMD,CORDON LIGHT BTY,ANVD BTY CHARGER,BATTERY WATER,HAMMER 1 KG,WATER BUCKET,CAT 6 UTP C. It is grouped under NVD. Opening date: no date published. Closing date: 2026-07-02. It matched your watch list for NVD.",
+        "alert_attempted_at": "2026-06-23T09:26:42.788084"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034914",
+      "is_active": true
+    },
+    {
+      "tender_id": "d85e6e6dc16f411506cab496",
+      "title": "GEM/2026/B/7693197 - REPAIR OF ANVD FOR INSAS LMG (REPLACEMENT OF 1X CABLE CONNECTOR & REPAIR OF IO EXTERNAL CABLE)",
+      "description": "GEM/2026/B/7693197 REPAIR OF ANVD FOR INSAS LMG (REPLACEMENT OF 1X CABLE CONNECTOR & REPAIR OF IO EXTERNAL CABLE) Ministry of Defence 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9500457",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9500457",
+      "published_date": "2026-06-21",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "NVD"
+      ],
+      "matched_keywords": [
+        "NVD"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9500457",
+        "scrape_method": "gem_json_api",
+        "search_term": "nvd night vision device",
+        "bid_number": "GEM/2026/B/7693197",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:42.613669",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7693197 - REPAIR OF ANVD FOR INSAS LMG (REPLACEMENT OF 1X CABLE CONNECTOR & REPAIR OF IO EXTERNAL CABLE). It is grouped under NVD. Opening date: no date published. Closing date: 2026-07-01. It matched your watch list for NVD.",
+        "alert_attempted_at": "2026-06-23T09:26:42.644369"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034910",
+      "is_active": true
+    },
+    {
+      "tender_id": "39df0c9790025e026b43e9d7",
+      "title": "GEM/2026/B/7425082 - Design, Engineering & SITC of CCTV based surveillance monitoring system with night vision facility",
+      "description": "GEM/2026/B/7425082 Design, Engineering & SITC of CCTV based surveillance monitoring system with night vision facility Ministry of Petroleum and Natural Gas 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9201492",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9201492",
+      "published_date": "2026-04-27",
+      "opening_date": null,
+      "closing_date": "2026-06-24",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9201492",
+        "scrape_method": "gem_json_api",
+        "search_term": "night vision",
+        "bid_number": "GEM/2026/B/7425082",
+        "buyer": "Ministry of Petroleum and Natural Gas",
+        "last_seen_at": "2026-06-23T09:26:42.358295",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7425082 - Design, Engineering & SITC of CCTV based surveillance monitoring system with night vision facility. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-24. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:42.370618"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034891",
+      "is_active": true
+    },
+    {
+      "tender_id": "32075ff988c6306b908312b9",
+      "title": "GEM/2026/B/7602298 - NVR 32 chanel,NVR 8 Channel,4MP Ip Camera Night vision colour and audio,Cat 6 Double coated black c",
+      "description": "GEM/2026/B/7602298 NVR 32 chanel,NVR 8 Channel,4MP Ip Camera Night vision colour and audio,Cat 6 Double coated black c Ministry of Defence 133",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9398921",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9398921",
+      "published_date": "2026-06-03",
+      "opening_date": null,
+      "closing_date": "2026-06-24",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9398921",
+        "scrape_method": "gem_json_api",
+        "search_term": "night vision",
+        "bid_number": "GEM/2026/B/7602298",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:42.310261",
+        "match_score": 9,
+        "match_aliases": [
+          "ip camera"
+        ],
+        "match_reasons": [
+          "alias: ip camera -> Optical Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7602298 - NVR 32 chanel,NVR 8 Channel,4MP Ip Camera Night vision colour and audio,Cat 6 Double coated black c. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-24. It matched your watch list for Optical Camera.",
+        "alert_attempted_at": "2026-06-23T09:26:42.340920"
+      },
+      "scraped_at": "2026-06-23T09:26:57.034887",
+      "is_active": true
+    },
+    {
+      "tender_id": "cf3122a0c065f373a8892993",
+      "title": "709864 - SITC of IP based cameras in Trauma Block",
+      "description": "SITC of IP based cameras in Trauma Block in Division No:NIZAMS INSTITUTE OF MEDICAL SCIENCES.",
+      "portal": "Telangana Tenders",
+      "state": "Telangana",
+      "tender_url": "https://tender.telangana.gov.in/login.html",
+      "open_url": "https://tender.telangana.gov.in/login.html",
+      "published_date": null,
+      "opening_date": null,
+      "closing_date": "2026-07-15",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://tender.telangana.gov.in/login.html",
+        "scrape_method": "telangana_public_cards",
+        "procurement_id": "647850",
+        "tender_display_id": "709864",
+        "tender_number": "PL-II/21/2024/CC Cameras/NIMS",
+        "closing_text": "July 15 03:00 PM",
+        "last_seen_at": "2026-06-23T09:26:54.426533",
+        "match_score": 6,
+        "match_aliases": [
+          "cameras"
+        ],
+        "match_reasons": [
+          "alias: cameras -> Optical Camera"
+        ],
+        "plain_summary": "Telangana Tenders published a Telangana tender for 709864 - SITC of IP based cameras in Trauma Block. It is grouped under Camera. Opening date: no date published. Closing date: 2026-07-15. It matched your watch list for Optical Camera.",
+        "alert_attempted_at": "2026-06-23T09:26:54.432477"
+      },
+      "scraped_at": "2026-06-19T15:44:46.978532",
+      "is_active": true
+    },
+    {
+      "tender_id": "72cf26d8249d75b05c8e3829",
+      "title": "DAY TO DAY MAINTENANCE OPERATION AND UPKEEP OF ACCESS CONTROL AND OPERATION OF INTERNET PROTOCOL (IP) CCTV AT DRDO BHAWAN NEW DELHI",
+      "description": "7. 04-Jun-2026 06:15 PM 20-Jun-2026 11:00 AM 22-Jun-2026 03:00 PM [DAY TO DAY MAINTENANCE OPERATION AND UPKEEP OF ACCESS CONTROL AND OPERATION OF INTERNET PROTOCOL (IP) CCTV AT DRDO BHAWAN NEW DELHI] [EMU RND/DRDO BWN/MAINT/CCTV/2026/NIT1][2026_DRDO_911236_1] Defence Research and Development Organisation||Directorate of Civil Works and Estates - DRDO||Estate Management Unit(R and D)DRDO Bhawan - DRDO",
+      "portal": "CPPP",
+      "state": "National",
+      "tender_url": "https://eprocure.gov.in/eprocure/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=SEgUx3eF75AZgKurTA%2Bx6fQ%3D%3D",
+      "open_url": "https://eprocure.gov.in/eprocure/app?component=%24DirectLink&page=FrontEndListTendersbyDate&service=direct&session=T&sp=SEgUx3eF75AZgKurTA%2Bx6fQ%3D%3D",
+      "published_date": "2026-06-04",
+      "opening_date": "2026-06-22",
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera",
+        "Security"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://eprocure.gov.in/eprocure/app?page=FrontEndListTendersbyDate&service=page",
+        "stable_url": "https://eprocure.gov.in/eprocure/app",
+        "detail_link_resolved": true,
+        "scrape_method": "nic_tapestry_LinkSubmit_0",
+        "api_proxy_used": false,
+        "language": "en",
+        "original_language": "en",
+        "opening_date": "2026-06-22",
+        "last_seen_at": "2026-06-19T16:17:02.331287",
+        "match_score": 13,
+        "match_aliases": [
+          "cctv",
+          "access control"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: access control -> Security Equipment"
+        ],
+        "plain_summary": "CPPP published a National tender for DAY TO DAY MAINTENANCE OPERATION AND UPKEEP OF ACCESS CONTROL AND OPERATION OF INTERNET PROTOCOL (IP) CCTV AT DRDO BHAWAN NEW DELHI. It is grouped under Camera, Security. Opening date: 2026-06-22. Closing date: 2026-06-20. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-19T16:17:02.344271"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977965",
+      "is_active": true
+    },
+    {
+      "tender_id": "27a3d86c575dd8abda8a5165",
+      "title": "GEM/2026/B/7604983 - Dslr / Compact / Handheld Camcorder Or Video Cameras (V2)",
+      "description": "GEM/2026/B/7604983 Dslr / Compact / Handheld Camcorder Or Video Cameras (V2) Ministry of Defence 2",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9401986",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9401986",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9401986",
+        "scrape_method": "gem_json_api",
+        "search_term": "handheld radio",
+        "bid_number": "GEM/2026/B/7604983",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:17:01.664491",
+        "match_score": 6,
+        "match_aliases": [
+          "cameras"
+        ],
+        "match_reasons": [
+          "alias: cameras -> Optical Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7604983 - Dslr / Compact / Handheld Camcorder Or Video Cameras (V2). It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Optical Camera.",
+        "alert_attempted_at": "2026-06-19T16:17:01.668170"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977936",
+      "is_active": true
+    },
+    {
+      "tender_id": "2606b5a6330c77451e16596b",
+      "title": "GEM/2026/B/7645125 - Dslr / Compact / Handheld Camcorder Or Video Cameras (V2)",
+      "description": "GEM/2026/B/7645125 Dslr / Compact / Handheld Camcorder Or Video Cameras (V2) Ministry of Defence 2",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9446797",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9446797",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9446797",
+        "scrape_method": "gem_json_api",
+        "search_term": "handheld radio",
+        "bid_number": "GEM/2026/B/7645125",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:17:01.590943",
+        "match_score": 6,
+        "match_aliases": [
+          "cameras"
+        ],
+        "match_reasons": [
+          "alias: cameras -> Optical Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7645125 - Dslr / Compact / Handheld Camcorder Or Video Cameras (V2). It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Optical Camera.",
+        "alert_attempted_at": "2026-06-19T16:17:01.603682"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977925",
+      "is_active": true
+    },
+    {
+      "tender_id": "72193d128d559ed42a72ad6a",
+      "title": "GEM/2026/B/7563846 - Dslr / Compact / Handheld Camcorder Or Video Cameras (V2)",
+      "description": "GEM/2026/B/7563846 Dslr / Compact / Handheld Camcorder Or Video Cameras (V2) Ministry of Defence 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9355822",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9355822",
+      "published_date": "2026-05-20",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9355822",
+        "scrape_method": "gem_json_api",
+        "search_term": "handheld radio",
+        "bid_number": "GEM/2026/B/7563846",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:17:01.455866",
+        "match_score": 6,
+        "match_aliases": [
+          "cameras"
+        ],
+        "match_reasons": [
+          "alias: cameras -> Optical Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7563846 - Dslr / Compact / Handheld Camcorder Or Video Cameras (V2). It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Optical Camera.",
+        "alert_attempted_at": "2026-06-19T16:17:01.464026"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977920",
+      "is_active": true
+    },
+    {
+      "tender_id": "34b5372de17a854f0a066e8c",
+      "title": "GEM/2026/B/7670979 - 7405010036 SET OF MECHANICAL COMPONENT LRF AS PER ANNEX-A",
+      "description": "GEM/2026/B/7670979 7405010036 SET OF MECHANICAL COMPONENT LRF AS PER ANNEX-A Ministry of Defence 122",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9475792",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9475792",
+      "published_date": "2026-06-17",
+      "opening_date": null,
+      "closing_date": "2026-07-08",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "LRF"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9475792",
+        "scrape_method": "gem_json_api",
+        "search_term": "lrf",
+        "bid_number": "GEM/2026/B/7670979",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:45.746087",
+        "match_score": 12,
+        "match_aliases": [],
+        "match_reasons": [
+          "proposal keyword: LRF"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7670979 - 7405010036 SET OF MECHANICAL COMPONENT LRF AS PER ANNEX-A. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-07-08. It matched your watch list for LRF.",
+        "alert_attempted_at": "2026-06-23T09:26:45.751380"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977917",
+      "is_active": true
+    },
+    {
+      "tender_id": "49566a5b5fb721461dd075a5",
+      "title": "GEM/2026/B/7532955 - EB3050B-180000085016(HAND HELD LASER RANGE FINDER LRF-LH-30 WITH ACCESSORIES)",
+      "description": "GEM/2026/B/7532955 EB3050B-180000085016(HAND HELD LASER RANGE FINDER LRF-LH-30 WITH ACCESSORIES) Ministry of Defence 18",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9321571",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9321571",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Laser Range Finder",
+        "LRF"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9321571",
+        "scrape_method": "gem_json_api",
+        "search_term": "lrf",
+        "bid_number": "GEM/2026/B/7532955",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:45.729266",
+        "match_score": 32,
+        "match_aliases": [
+          "range finder"
+        ],
+        "match_reasons": [
+          "proposal keyword: Laser Range Finder",
+          "proposal keyword: LRF",
+          "alias: range finder -> Laser Range Finder"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7532955 - EB3050B-180000085016(HAND HELD LASER RANGE FINDER LRF-LH-30 WITH ACCESSORIES). It is grouped under EOSS. Opening date: no date published. Closing date: 2026-07-01. It matched your watch list for Laser Range Finder, LRF.",
+        "alert_attempted_at": "2026-06-23T09:26:45.734613"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977914",
+      "is_active": true
+    },
+    {
+      "tender_id": "29d4cb7313feb507e4cb8300",
+      "title": "GEM/2026/B/7580604 - 7401423510 HAARNESS ASSY LRF. AS PER ANNEXURE-H.",
+      "description": "GEM/2026/B/7580604 7401423510 HAARNESS ASSY LRF. AS PER ANNEXURE-H. Ministry of Defence 102",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9374540",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9374540",
+      "published_date": "2026-06-01",
+      "opening_date": null,
+      "closing_date": "2026-06-22",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "LRF"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9374540",
+        "scrape_method": "gem_json_api",
+        "search_term": "lrf",
+        "bid_number": "GEM/2026/B/7580604",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:17:01.278404",
+        "match_score": 12,
+        "match_aliases": [],
+        "match_reasons": [
+          "proposal keyword: LRF"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7580604 - 7401423510 HAARNESS ASSY LRF. AS PER ANNEXURE-H.. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-22. It matched your watch list for LRF.",
+        "alert_attempted_at": "2026-06-19T16:17:01.287786"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977908",
+      "is_active": true
+    },
+    {
+      "tender_id": "763b95f337b1592d61386088",
+      "title": "GEM/2026/B/7580752 - 7401423510 HAARNESS ASSY LRF. AS PER ANNEXURE-H.",
+      "description": "GEM/2026/B/7580752 7401423510 HAARNESS ASSY LRF. AS PER ANNEXURE-H. Ministry of Defence 25",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9374724",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9374724",
+      "published_date": "2026-06-01",
+      "opening_date": null,
+      "closing_date": "2026-06-22",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "LRF"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9374724",
+        "scrape_method": "gem_json_api",
+        "search_term": "lrf",
+        "bid_number": "GEM/2026/B/7580752",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:17:01.265088",
+        "match_score": 12,
+        "match_aliases": [],
+        "match_reasons": [
+          "proposal keyword: LRF"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7580752 - 7401423510 HAARNESS ASSY LRF. AS PER ANNEXURE-H.. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-22. It matched your watch list for LRF.",
+        "alert_attempted_at": "2026-06-19T16:17:01.269008"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977906",
+      "is_active": true
+    },
+    {
+      "tender_id": "a4e4ca15f99dc07fd9bcd8d2",
+      "title": "GEM/2026/B/7575028 - 7440040019 SET OF O-RING LRF. AS PER ANNEXURE-F.",
+      "description": "GEM/2026/B/7575028 7440040019 SET OF O-RING LRF. AS PER ANNEXURE-F. Ministry of Defence 127",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9368251",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9368251",
+      "published_date": "2026-05-30",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "LRF"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9368251",
+        "scrape_method": "gem_json_api",
+        "search_term": "lrf",
+        "bid_number": "GEM/2026/B/7575028",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:17:01.219337",
+        "match_score": 12,
+        "match_aliases": [],
+        "match_reasons": [
+          "proposal keyword: LRF"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7575028 - 7440040019 SET OF O-RING LRF. AS PER ANNEXURE-F.. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for LRF.",
+        "alert_attempted_at": "2026-06-19T16:17:01.230263"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977901",
+      "is_active": true
+    },
+    {
+      "tender_id": "136c97932b1ec2ba515b244d",
+      "title": "GEM/2026/B/7479697 - Laser Range Finder",
+      "description": "GEM/2026/B/7479697 Laser Range Finder Ministry of Power 2",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9262383",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9262383",
+      "published_date": "2026-05-21",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Laser Range Finder"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9262383",
+        "scrape_method": "gem_json_api",
+        "search_term": "laser range finder",
+        "bid_number": "GEM/2026/B/7479697",
+        "buyer": "Ministry of Power",
+        "last_seen_at": "2026-06-19T16:17:01.051597",
+        "match_score": 20,
+        "match_aliases": [
+          "range finder"
+        ],
+        "match_reasons": [
+          "proposal keyword: Laser Range Finder",
+          "alias: range finder -> Laser Range Finder"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7479697 - Laser Range Finder. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Laser Range Finder.",
+        "alert_attempted_at": "2026-06-19T16:17:01.058247"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977886",
+      "is_active": true
+    },
+    {
+      "tender_id": "c2532d5163dd26fe9df95554",
+      "title": "GEM/2026/B/7592028 - Laser Range Finder",
+      "description": "GEM/2026/B/7592028 Laser Range Finder Ministry of Defence 4",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9387292",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9387292",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Laser Range Finder"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9387292",
+        "scrape_method": "gem_json_api",
+        "search_term": "laser range finder",
+        "bid_number": "GEM/2026/B/7592028",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:17:00.784441",
+        "match_score": 20,
+        "match_aliases": [
+          "range finder"
+        ],
+        "match_reasons": [
+          "proposal keyword: Laser Range Finder",
+          "alias: range finder -> Laser Range Finder"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7592028 - Laser Range Finder. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Laser Range Finder.",
+        "alert_attempted_at": "2026-06-19T16:17:00.822131"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977875",
+      "is_active": true
+    },
+    {
+      "tender_id": "e5156b63942cf304decb5ddb",
+      "title": "GEM/2026/B/7577467 - Camera for CCTV System (V3)",
+      "description": "GEM/2026/B/7577467 Camera for CCTV System (V3) PMO 25",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9370978",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9370978",
+      "published_date": "2026-05-28",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9370978",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7577467",
+        "buyer": "PMO",
+        "last_seen_at": "2026-06-19T16:17:00.241838",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7577467 - Camera for CCTV System (V3). It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-19T16:17:00.249869"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977801",
+      "is_active": true
+    },
+    {
+      "tender_id": "99e6e2050916e1bdf7ceec3c",
+      "title": "GEM/2026/B/7622528 - Custom Bid for Services - Comprehensive Annual Maintenance Contract (CAMC) for CCTV system at BPCL",
+      "description": "GEM/2026/B/7622528 Custom Bid for Services - Comprehensive Annual Maintenance Contract (CAMC) for CCTV system at BPCL Ministry of Petroleum and Natural Gas 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9421458",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9421458",
+      "published_date": "2026-06-06",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9421458",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7622528",
+        "buyer": "Ministry of Petroleum and Natural Gas",
+        "last_seen_at": "2026-06-19T16:17:00.229073",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7622528 - Custom Bid for Services - Comprehensive Annual Maintenance Contract (CAMC) for CCTV system at BPCL. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-19T16:17:00.232433"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977797",
+      "is_active": true
+    },
+    {
+      "tender_id": "b4bc24de29b88dbe0f684fcb",
+      "title": "GEM/2026/B/7554771 - 16 TB Suvaillance Hard Disk,Video Recorder for CCTV System (V2)",
+      "description": "GEM/2026/B/7554771 16 TB Suvaillance Hard Disk,Video Recorder for CCTV System (V2) Ministry of Home Affairs 25",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9345710",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9345710",
+      "published_date": "2026-05-20",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9345710",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7554771",
+        "buyer": "Ministry of Home Affairs",
+        "last_seen_at": "2026-06-19T16:17:00.216357",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7554771 - 16 TB Suvaillance Hard Disk,Video Recorder for CCTV System (V2). It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-19T16:17:00.220379"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977794",
+      "is_active": true
+    },
+    {
+      "tender_id": "2effe38c41320aa2c016aab4",
+      "title": "GEM/2026/B/7642546 - Video Recorder for CCTV System (V2),Camera for CCTV System (V3),Cables, Converters and Adapters,Lin",
+      "description": "GEM/2026/B/7642546 Video Recorder for CCTV System (V2),Camera for CCTV System (V3),Cables, Converters and Adapters,Lin Local Self Government Department Kerala 12",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9443943",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9443943",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9443943",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7642546",
+        "buyer": "Local Self Government Department Kerala",
+        "last_seen_at": "2026-06-19T16:17:00.197273",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7642546 - Video Recorder for CCTV System (V2),Camera for CCTV System (V3),Cables, Converters and Adapters,Lin. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-19T16:17:00.202544"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977780",
+      "is_active": true
+    },
+    {
+      "tender_id": "28134596f6667dd365f51a5a",
+      "title": "GEM/2026/B/7590972 - Supply of 123 nos of IP based CCTV camera and additional accessories,Installation Testing and Commi",
+      "description": "GEM/2026/B/7590972 Supply of 123 nos of IP based CCTV camera and additional accessories,Installation Testing and Commi Ministry of Coal 2",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9386127",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9386127",
+      "published_date": "2026-05-30",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9386127",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7590972",
+        "buyer": "Ministry of Coal",
+        "last_seen_at": "2026-06-19T16:17:00.182365",
+        "match_score": 17,
+        "match_aliases": [
+          "cctv",
+          "cctv camera"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: cctv camera -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7590972 - Supply of 123 nos of IP based CCTV camera and additional accessories,Installation Testing and Commi. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-19T16:17:00.186084"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977756",
+      "is_active": true
+    },
+    {
+      "tender_id": "f63f425bc9f3b0810969487a",
+      "title": "GEM/2026/B/7625736 - Camera for CCTV System (V3),Video Recorder for CCTV System (V2),Optical Fibre Cable for Networking",
+      "description": "GEM/2026/B/7625736 Camera for CCTV System (V3),Video Recorder for CCTV System (V2),Optical Fibre Cable for Networking Panchayats and Rural Housing Department Gujarat 3021",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9425036",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9425036",
+      "published_date": "2026-06-05",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9425036",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7625736",
+        "buyer": "Panchayats and Rural Housing Department Gujarat",
+        "last_seen_at": "2026-06-19T16:17:00.165609",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7625736 - Camera for CCTV System (V3),Video Recorder for CCTV System (V2),Optical Fibre Cable for Networking. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-19T16:17:00.173697"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977753",
+      "is_active": true
+    },
+    {
+      "tender_id": "3464b8fe8952cd5e65222e19",
+      "title": "GEM/2026/B/7639446 - AMC OF CCTV CAMERA",
+      "description": "GEM/2026/B/7639446 AMC OF CCTV CAMERA Ministry of Defence 25",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9440524",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9440524",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9440524",
+        "scrape_method": "gem_json_api",
+        "search_term": "cctv camera",
+        "bid_number": "GEM/2026/B/7639446",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:17:00.137317",
+        "match_score": 17,
+        "match_aliases": [
+          "cctv",
+          "cctv camera"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: cctv camera -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7639446 - AMC OF CCTV CAMERA. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-19T16:17:00.140324"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977747",
+      "is_active": true
+    },
+    {
+      "tender_id": "ea69c93ad59433cf3f75a862",
+      "title": "GEM/2026/B/7642277 - AMC of Integrated Security and Surveillance System - Theft Prevention, Facility/Asset Protection, M",
+      "description": "GEM/2026/B/7642277 AMC of Integrated Security and Surveillance System - Theft Prevention, Facility/Asset Protection, M Police Department Uttarakhand 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9443653",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9443653",
+      "published_date": "2026-06-09",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9443653",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7642277",
+        "buyer": "Police Department Uttarakhand",
+        "last_seen_at": "2026-06-19T16:17:00.107374",
+        "match_score": 8,
+        "match_aliases": [
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7642277 - AMC of Integrated Security and Surveillance System - Theft Prevention, Facility/Asset Protection, M. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Surveillance Equipment.",
+        "alert_attempted_at": "2026-06-19T16:17:00.113447"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977727",
+      "is_active": true
+    },
+    {
+      "tender_id": "b5032f09e9b62f96e6ec6b63",
+      "title": "GEM/2026/B/7643623 - CCTV Camera,Cat 6 Cable,4 Pair Fiber Cable,Surveillance hard Disk,Double Battery 1KVA Ups",
+      "description": "GEM/2026/B/7643623 CCTV Camera,Cat 6 Cable,4 Pair Fiber Cable,Surveillance hard Disk,Double Battery 1KVA Ups Ministry of Defence 24",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9445133",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9445133",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9445133",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7643623",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:17:00.091418",
+        "match_score": 17,
+        "match_aliases": [
+          "cctv",
+          "cctv camera"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: cctv camera -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7643623 - CCTV Camera,Cat 6 Cable,4 Pair Fiber Cable,Surveillance hard Disk,Double Battery 1KVA Ups. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-19T16:17:00.096714"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977711",
+      "is_active": true
+    },
+    {
+      "tender_id": "59d4870961b59c4dedee5902",
+      "title": "GEM/2026/B/7611603 - INTEGRATED SECURITY SURVEILLANCE SYSTEM SERVICE - Theft Prevention, Remote Video Monitoring, Facili",
+      "description": "GEM/2026/B/7611603 INTEGRATED SECURITY SURVEILLANCE SYSTEM SERVICE - Theft Prevention, Remote Video Monitoring, Facili Health and Family Welfare Department Odisha 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9409522",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9409522",
+      "published_date": "2026-06-02",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9409522",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7611603",
+        "buyer": "Health and Family Welfare Department Odisha",
+        "last_seen_at": "2026-06-19T16:17:00.049142",
+        "match_score": 8,
+        "match_aliases": [
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7611603 - INTEGRATED SECURITY SURVEILLANCE SYSTEM SERVICE - Theft Prevention, Remote Video Monitoring, Facili. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Surveillance Equipment.",
+        "alert_attempted_at": "2026-06-19T16:17:00.065508"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977699",
+      "is_active": true
+    },
+    {
+      "tender_id": "2067b2ac5f425df30ffeab97",
+      "title": "GEM/2026/B/7636268 - AMC of Integrated Security and Surveillance System - Surveillance System; Comprehensive; All Survei",
+      "description": "GEM/2026/B/7636268 AMC of Integrated Security and Surveillance System - Surveillance System; Comprehensive; All Survei Ministry of Defence 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9436947",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9436947",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9436947",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7636268",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:17:00.007974",
+        "match_score": 8,
+        "match_aliases": [
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7636268 - AMC of Integrated Security and Surveillance System - Surveillance System; Comprehensive; All Survei. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Surveillance Equipment.",
+        "alert_attempted_at": "2026-06-19T16:17:00.011999"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977678",
+      "is_active": true
+    },
+    {
+      "tender_id": "596c9c8e9da24289d8012819",
+      "title": "GEM/2026/B/7623983 - 4 MP VERIFOCAL CAMERA,16 CHANNEL NVR,4 MP BULLET CAMERA,CO BOX,OUTER CAMERA UNIT,1 TB SURVEILLANCE ",
+      "description": "GEM/2026/B/7623983 4 MP VERIFOCAL CAMERA,16 CHANNEL NVR,4 MP BULLET CAMERA,CO BOX,OUTER CAMERA UNIT,1 TB SURVEILLANCE Ministry of Defence 1412",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9423063",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9423063",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9423063",
+        "scrape_method": "gem_json_api",
+        "search_term": "surveillance equipment",
+        "bid_number": "GEM/2026/B/7623983",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:16:59.997105",
+        "match_score": 7,
+        "match_aliases": [
+          "bullet camera"
+        ],
+        "match_reasons": [
+          "alias: bullet camera -> Optical Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7623983 - 4 MP VERIFOCAL CAMERA,16 CHANNEL NVR,4 MP BULLET CAMERA,CO BOX,OUTER CAMERA UNIT,1 TB SURVEILLANCE. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Optical Camera.",
+        "alert_attempted_at": "2026-06-19T16:17:00.000266"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977654",
+      "is_active": true
+    },
+    {
+      "tender_id": "736ca05b9005b397f0263666",
+      "title": "GEM/2026/B/7651288 - Repair of IP Camera,Repair of PTZ Camera,Repair of NVR,Repair of UPS 2 KVA,Repair of A6 Port Indust",
+      "description": "GEM/2026/B/7651288 Repair of IP Camera,Repair of PTZ Camera,Repair of NVR,Repair of UPS 2 KVA,Repair of A6 Port Indust Ministry of Defence 15",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9453564",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9453564",
+      "published_date": "2026-06-11",
+      "opening_date": null,
+      "closing_date": "2026-06-22",
+      "estimated_value": null,
+      "categories": [
+        "Camera",
+        "PTZ"
+      ],
+      "matched_keywords": [
+        "PTZ Camera",
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9453564",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/B/7651288",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:16:59.955345",
+        "match_score": 21,
+        "match_aliases": [
+          "ip camera"
+        ],
+        "match_reasons": [
+          "proposal keyword: PTZ Camera",
+          "alias: ip camera -> Optical Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7651288 - Repair of IP Camera,Repair of PTZ Camera,Repair of NVR,Repair of UPS 2 KVA,Repair of A6 Port Indust. It is grouped under Camera, PTZ. Opening date: no date published. Closing date: 2026-06-22. It matched your watch list for PTZ Camera, Optical Camera.",
+        "alert_attempted_at": "2026-06-19T16:16:59.958827"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977597",
+      "is_active": true
+    },
+    {
+      "tender_id": "864916dd05c23d0765361e3a",
+      "title": "GEM/2026/B/7651050 - PTZ Camera,AIO DSP,Celling Speaker,Wireless Mic with Extention,Camera Extention Cable",
+      "description": "GEM/2026/B/7651050 PTZ Camera,AIO DSP,Celling Speaker,Wireless Mic with Extention,Camera Extention Cable Ministry of Defence 8",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9453310",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9453310",
+      "published_date": "2026-06-11",
+      "opening_date": null,
+      "closing_date": "2026-06-22",
+      "estimated_value": null,
+      "categories": [
+        "PTZ"
+      ],
+      "matched_keywords": [
+        "PTZ Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9453310",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/B/7651050",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:16:59.941495",
+        "match_score": 12,
+        "match_aliases": [],
+        "match_reasons": [
+          "proposal keyword: PTZ Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7651050 - PTZ Camera,AIO DSP,Celling Speaker,Wireless Mic with Extention,Camera Extention Cable. It is grouped under PTZ. Opening date: no date published. Closing date: 2026-06-22. It matched your watch list for PTZ Camera.",
+        "alert_attempted_at": "2026-06-19T16:16:59.946192"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977594",
+      "is_active": true
+    },
+    {
+      "tender_id": "5920a6365b6836e17e0987b3",
+      "title": "GEM/2026/B/7511056 - CP PLUS 2MP PTZ (1920 X 1080 Pixel) or better Dome Camera",
+      "description": "GEM/2026/B/7511056 CP PLUS 2MP PTZ (1920 X 1080 Pixel) or better Dome Camera Ministry of Defence 12",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9297247",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9297247",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9297247",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/B/7511056",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:16:59.902991",
+        "match_score": 7,
+        "match_aliases": [
+          "dome camera"
+        ],
+        "match_reasons": [
+          "alias: dome camera -> Optical Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7511056 - CP PLUS 2MP PTZ (1920 X 1080 Pixel) or better Dome Camera. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Optical Camera.",
+        "alert_attempted_at": "2026-06-19T16:16:59.907131"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977589",
+      "is_active": true
+    },
+    {
+      "tender_id": "8090a02163b3fd30a4188d99",
+      "title": "GEM/2026/B/7638295 - NVR,PTZ Outdoor Camera,Bullet Camera,8 POE Switch,16 POE Switch,UPS,UTP Cable,OFC Module,OFC Cable ",
+      "description": "GEM/2026/B/7638295 NVR,PTZ Outdoor Camera,Bullet Camera,8 POE Switch,16 POE Switch,UPS,UTP Cable,OFC Module,OFC Cable Ministry of Defence 5098",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9439221",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9439221",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9439221",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/B/7638295",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:16:59.872106",
+        "match_score": 7,
+        "match_aliases": [
+          "bullet camera"
+        ],
+        "match_reasons": [
+          "alias: bullet camera -> Optical Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7638295 - NVR,PTZ Outdoor Camera,Bullet Camera,8 POE Switch,16 POE Switch,UPS,UTP Cable,OFC Module,OFC Cable. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Optical Camera.",
+        "alert_attempted_at": "2026-06-19T16:16:59.877421"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977585",
+      "is_active": true
+    },
+    {
+      "tender_id": "342739e46e7e2915a9f5e9cf",
+      "title": "GEM/2026/R/684080 - 64 Channel Network Video Recorder,16 Channel POE Switch,8 Channel POE Switch,PTZ Camera Joystick Co",
+      "description": "GEM/2026/R/684080 64 Channel Network Video Recorder,16 Channel POE Switch,8 Channel POE Switch,PTZ Camera Joystick Co Ministry of Defence 77596",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9485829",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9485829",
+      "published_date": "2026-06-19",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "PTZ"
+      ],
+      "matched_keywords": [
+        "PTZ Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9485829",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/R/684080",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:16:59.841426",
+        "match_score": 12,
+        "match_aliases": [],
+        "match_reasons": [
+          "proposal keyword: PTZ Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/R/684080 - 64 Channel Network Video Recorder,16 Channel POE Switch,8 Channel POE Switch,PTZ Camera Joystick Co. It is grouped under PTZ. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for PTZ Camera.",
+        "alert_attempted_at": "2026-06-19T16:16:59.858908"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977560",
+      "is_active": true
+    },
+    {
+      "tender_id": "4a3e0eaa7d4aac722a06462f",
+      "title": "GEM/2026/R/684098 - 8MP Dual Light Dome IP Camera 30m IR,Outdoor PTZ IP Camera 2MP Full HD 45x Optical Zoom 300m IR IP6",
+      "description": "GEM/2026/R/684098 8MP Dual Light Dome IP Camera 30m IR,Outdoor PTZ IP Camera 2MP Full HD 45x Optical Zoom 300m IR IP6 Ministry of Defence 9585",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9486059",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9486059",
+      "published_date": "2026-06-19",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9486059",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/R/684098",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:16:59.828473",
+        "match_score": 9,
+        "match_aliases": [
+          "ip camera"
+        ],
+        "match_reasons": [
+          "alias: ip camera -> Optical Camera"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/R/684098 - 8MP Dual Light Dome IP Camera 30m IR,Outdoor PTZ IP Camera 2MP Full HD 45x Optical Zoom 300m IR IP6. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Optical Camera.",
+        "alert_attempted_at": "2026-06-19T16:16:59.832651"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977556",
+      "is_active": true
+    },
+    {
+      "tender_id": "2ee0b39599b083b57010aee9",
+      "title": "GEM/2026/B/7606458 - DRONE,PTZ 2MP CCTV CAMERA 1920 X 1080 PIXEL,PTZ CAMERA STANDING POLE,OUTDOOR 2 MP CCTV CAMERA 1920 ",
+      "description": "GEM/2026/B/7606458 DRONE,PTZ 2MP CCTV CAMERA 1920 X 1080 PIXEL,PTZ CAMERA STANDING POLE,OUTDOOR 2 MP CCTV CAMERA 1920 Ministry of Defence 13694",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9403707",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9403707",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera",
+        "PTZ"
+      ],
+      "matched_keywords": [
+        "PTZ Camera",
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9403707",
+        "scrape_method": "gem_json_api",
+        "search_term": "ptz camera",
+        "bid_number": "GEM/2026/B/7606458",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:16:59.778789",
+        "match_score": 29,
+        "match_aliases": [
+          "cctv",
+          "cctv camera"
+        ],
+        "match_reasons": [
+          "proposal keyword: PTZ Camera",
+          "alias: cctv -> Security Equipment",
+          "alias: cctv camera -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7606458 - DRONE,PTZ 2MP CCTV CAMERA 1920 X 1080 PIXEL,PTZ CAMERA STANDING POLE,OUTDOOR 2 MP CCTV CAMERA 1920. It is grouped under Camera, PTZ. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for PTZ Camera, Security Equipment.",
+        "alert_attempted_at": "2026-06-19T16:16:59.782245"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977547",
+      "is_active": true
+    },
+    {
+      "tender_id": "9b37158d6d19df54bd2b983b",
+      "title": "GEM/2026/B/7681200 - Custom Bid for Services - Repair of ANVD for Insas Rifle (SED00210)",
+      "description": "GEM/2026/B/7681200 Custom Bid for Services - Repair of ANVD for Insas Rifle (SED00210) Ministry of Defence 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9487060",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9487060",
+      "published_date": "2026-06-18",
+      "opening_date": null,
+      "closing_date": "2026-07-03",
+      "estimated_value": null,
+      "categories": [
+        "NVD"
+      ],
+      "matched_keywords": [
+        "NVD"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9487060",
+        "scrape_method": "gem_json_api",
+        "search_term": "nvd night vision device",
+        "bid_number": "GEM/2026/B/7681200",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:42.832192",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7681200 - Custom Bid for Services - Repair of ANVD for Insas Rifle (SED00210). It is grouped under NVD. Opening date: no date published. Closing date: 2026-07-03. It matched your watch list for NVD.",
+        "alert_attempted_at": "2026-06-23T09:26:42.862245"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977544",
+      "is_active": true
+    },
+    {
+      "tender_id": "3003201d70c54c022340d8c1",
+      "title": "GEM/2026/B/7674250 - CCTV Camera,PTZ Camera,AI Intrusion Detection System,GPU for AI Intrusion Detection System,NVD,Digi",
+      "description": "GEM/2026/B/7674250 CCTV Camera,PTZ Camera,AI Intrusion Detection System,GPU for AI Intrusion Detection System,NVD,Digi Ministry of Defence 196",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9479391",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9479391",
+      "published_date": "2026-06-19",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera",
+        "NVD",
+        "PTZ",
+        "Security"
+      ],
+      "matched_keywords": [
+        "NVD",
+        "PTZ Camera",
+        "Intrusion Detection",
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9479391",
+        "scrape_method": "gem_json_api",
+        "search_term": "nvd night vision device",
+        "bid_number": "GEM/2026/B/7674250",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:42.681063",
+        "match_score": 63,
+        "match_aliases": [
+          "cctv",
+          "cctv camera",
+          "intrusion detection system"
+        ],
+        "match_reasons": [
+          "proposal keyword: NVD",
+          "proposal keyword: PTZ Camera",
+          "proposal keyword: Intrusion Detection",
+          "alias: cctv -> Security Equipment",
+          "alias: cctv camera -> Security Equipment",
+          "alias: intrusion detection system -> Intrusion Detection"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7674250 - CCTV Camera,PTZ Camera,AI Intrusion Detection System,GPU for AI Intrusion Detection System,NVD,Digi. It is grouped under Camera, NVD, PTZ, Security. Opening date: no date published. Closing date: 2026-07-02. It matched your watch list for NVD, PTZ Camera, Intrusion Detection, Security Equipment.",
+        "alert_attempted_at": "2026-06-23T09:26:42.697383"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977541",
+      "is_active": true
+    },
+    {
+      "tender_id": "36f146a0b3313a20b507ab8a",
+      "title": "GEM/2026/B/7687090 - NVD (BINOCULAR)",
+      "description": "GEM/2026/B/7687090 NVD (BINOCULAR) Ministry of Defence 3",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9493608",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9493608",
+      "published_date": "2026-06-19",
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "NVD"
+      ],
+      "matched_keywords": [
+        "NVD"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9493608",
+        "scrape_method": "gem_json_api",
+        "search_term": "nvd night vision device",
+        "bid_number": "GEM/2026/B/7687090",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-23T09:26:42.541431",
+        "match_score": 12,
+        "match_aliases": [],
+        "match_reasons": [
+          "proposal keyword: NVD"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7687090 - NVD (BINOCULAR). It is grouped under NVD. Opening date: no date published. Closing date: 2026-06-30. It matched your watch list for NVD.",
+        "alert_attempted_at": "2026-06-23T09:26:42.568189"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977538",
+      "is_active": true
+    },
+    {
+      "tender_id": "b5dc40e93c0c190a37e97ce3",
+      "title": "GEM/2026/B/7568111 - CP Plus Dome CCTV Camera 4MP IP Night Vision IR STQC Certified,CP Plus 32 Channel 4K AI Network vid",
+      "description": "GEM/2026/B/7568111 CP Plus Dome CCTV Camera 4MP IP Night Vision IR STQC Certified,CP Plus 32 Channel 4K AI Network vid Ministry of Defence 3022",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9360599",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9360599",
+      "published_date": "2026-06-10",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9360599",
+        "scrape_method": "gem_json_api",
+        "search_term": "night vision",
+        "bid_number": "GEM/2026/B/7568111",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:16:59.557545",
+        "match_score": 17,
+        "match_aliases": [
+          "cctv",
+          "cctv camera"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: cctv camera -> Security Equipment"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7568111 - CP Plus Dome CCTV Camera 4MP IP Night Vision IR STQC Certified,CP Plus 32 Channel 4K AI Network vid. It is grouped under Camera. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Security Equipment.",
+        "alert_attempted_at": "2026-06-19T16:16:59.561852"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977478",
+      "is_active": true
+    },
+    {
+      "tender_id": "e2196dc9479942a25c0aa66a",
+      "title": "GEM/2026/B/7502566 - Passive Night Vision Binocular as per MHA QR (V2)",
+      "description": "GEM/2026/B/7502566 Passive Night Vision Binocular as per MHA QR (V2) Ministry of Defence 12",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9287999",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9287999",
+      "published_date": "2026-05-22",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "NVD"
+      ],
+      "matched_keywords": [
+        "Night Vision Device"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9287999",
+        "scrape_method": "gem_json_api",
+        "search_term": "night vision",
+        "bid_number": "GEM/2026/B/7502566",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:16:59.498142",
+        "match_score": 10,
+        "match_aliases": [
+          "night vision binocular"
+        ],
+        "match_reasons": [
+          "alias: night vision binocular -> Night Vision Device"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7502566 - Passive Night Vision Binocular as per MHA QR (V2). It is grouped under NVD. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Night Vision Device.",
+        "alert_attempted_at": "2026-06-19T16:16:59.503675"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977469",
+      "is_active": true
+    },
+    {
+      "tender_id": "962b06bcb11f8b154d90681e",
+      "title": "GEM/2026/B/7545345 - 02 X COUNTER DRONE SHOT GUN(C-UAS) ALONG WITH 200 ROUNDS",
+      "description": "GEM/2026/B/7545345 02 X COUNTER DRONE SHOT GUN(C-UAS) ALONG WITH 200 ROUNDS Ministry of Defence 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9335102",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9335102",
+      "published_date": "2026-05-30",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "Counter-UAV"
+      ],
+      "matched_keywords": [
+        "Counter UAV"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9335102",
+        "scrape_method": "gem_json_api",
+        "search_term": "long range thermal",
+        "bid_number": "GEM/2026/B/7545345",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:16:59.355091",
+        "match_score": 9,
+        "match_aliases": [
+          "counter drone"
+        ],
+        "match_reasons": [
+          "alias: counter drone -> Counter UAV"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7545345 - 02 X COUNTER DRONE SHOT GUN(C-UAS) ALONG WITH 200 ROUNDS. It is grouped under Counter-UAV. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Counter UAV.",
+        "alert_attempted_at": "2026-06-19T16:16:59.358381"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977452",
+      "is_active": true
+    },
+    {
+      "tender_id": "6a9b4f838a50d34e34ec1352",
+      "title": "GEM/2026/B/7501791 - Thermal Imaging Monocular",
+      "description": "GEM/2026/B/7501791 Thermal Imaging Monocular Ministry of Defence 6",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9287115",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9287115",
+      "published_date": "2026-05-28",
+      "opening_date": null,
+      "closing_date": "2026-06-20",
+      "estimated_value": null,
+      "categories": [
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Monocular"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9287115",
+        "scrape_method": "gem_json_api",
+        "search_term": "thermal camera",
+        "bid_number": "GEM/2026/B/7501791",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-19T16:16:59.175495",
+        "match_score": 12,
+        "match_aliases": [],
+        "match_reasons": [
+          "proposal keyword: Monocular"
+        ],
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7501791 - Thermal Imaging Monocular. It is grouped under EOSS. Opening date: no date published. Closing date: 2026-06-20. It matched your watch list for Monocular.",
+        "alert_attempted_at": "2026-06-19T16:16:59.182785"
+      },
+      "scraped_at": "2026-06-19T15:44:46.977418",
+      "is_active": true
+    }
+  ]
+}
