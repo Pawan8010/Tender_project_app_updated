@@ -7,10 +7,24 @@ from app.config import settings
 DATABASE_URL = settings()["database_url"]
 if DATABASE_URL.startswith("postgresql://"):
     DATABASE_URL = DATABASE_URL.replace("postgresql://", "postgresql+psycopg://", 1)
-connect_args = {"check_same_thread": False} if DATABASE_URL.startswith("sqlite") else {}
+connect_args = {"check_same_thread": False, "timeout": 60} if DATABASE_URL.startswith("sqlite") else {}
 
 engine = create_engine(DATABASE_URL, connect_args=connect_args, pool_pre_ping=True)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
+
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
+from sqlalchemy.orm import sessionmaker as async_sessionmaker
+
+ASYNC_DATABASE_URL = DATABASE_URL.replace("postgresql+psycopg://", "postgresql+asyncpg://").replace("sqlite://", "sqlite+aiosqlite://")
+
+async_engine = create_async_engine(ASYNC_DATABASE_URL, connect_args=connect_args, echo=False)
+AsyncSessionLocal = async_sessionmaker(
+    bind=async_engine, class_=AsyncSession, expire_on_commit=False
+)
+
+async def get_async_db():
+    async with AsyncSessionLocal() as session:
+        yield session
 
 
 class Base(DeclarativeBase):
@@ -90,6 +104,22 @@ def _ensure_tender_intelligence_columns():
             "tender_status": "VARCHAR(60) DEFAULT 'ACTIVE'",
             "classification_status": "VARCHAR(60) DEFAULT 'UNCLASSIFIED'",
             "ai_category": "VARCHAR(100)",
+            "tender_category": "VARCHAR(100)",
+            "tender_type": "VARCHAR(100)",
+            "procurement_type": "VARCHAR(100)",
+            "emd": "FLOAT",
+            "tender_fee": "FLOAT",
+            "publishing_authority": "VARCHAR(255)",
+            "city": "VARCHAR(100)",
+            "latitude": "FLOAT",
+            "longitude": "FLOAT",
+            "bid_start_date": "DATE",
+            "pre_bid_date": "DATE",
+            "corrigendum": "BOOLEAN DEFAULT 0",
+            "contact_person": "VARCHAR(255)",
+            "email": "VARCHAR(255)",
+            "phone": "VARCHAR(100)",
+            "website": "TEXT",
             "content_hash": "VARCHAR(64)",
             "search_text": "TEXT",
             "updated_at": "TIMESTAMP",

@@ -173,3 +173,31 @@ def category_for_keyword(keyword: str) -> str | None:
         if any(term.lower() in lowered or lowered in term.lower() for term in terms):
             return category
     return None
+
+
+def _match_keywords_from_library(db, text: str) -> tuple[list[str], list[str], dict]:
+    try:
+        from app.services.ml_engine import ml_analyze_tender
+        match_meta = ml_analyze_tender(text)
+    except Exception:
+        match_meta = analyze_tender_match(text)
+
+    matched = list(match_meta.get("matched_keywords") or [])
+    categories = set(match_meta.get("categories") or [])
+    text_lower = (text or "").lower()
+
+    from app.models import Keyword
+    active_keywords = db.query(Keyword).filter(Keyword.is_active == True).all()
+    for row in active_keywords:
+        kw = (row.keyword or "").strip()
+        if not kw:
+            continue
+        if kw.lower() in text_lower and kw not in matched:
+            matched.append(kw)
+            cat = row.category or category_for_keyword(kw)
+            if cat:
+                categories.add(cat)
+
+    match_meta["matched_keywords"] = matched
+    match_meta["categories"] = sorted(categories)
+    return matched, match_meta["categories"], match_meta

@@ -12,7 +12,7 @@ def _load_local_env():
             if not stripped or stripped.startswith("#") or "=" not in stripped:
                 continue
             key, value = stripped.split("=", 1)
-            os.environ.setdefault(key.strip().lstrip("\ufeff"), value.strip().strip('"').strip("'"))
+            os.environ[key.strip().lstrip("\ufeff")] = value.strip().strip('"').strip("'")
 
 
 _load_local_env()
@@ -59,10 +59,17 @@ CATEGORY_MAP = {
 }
 
 
+def reload_settings():
+    _load_local_env()
+    settings.cache_clear()
+    return settings()
+
+
 @lru_cache
 def settings():
+    db_url = os.getenv("DATABASE_URL")
     return {
-        "database_url": os.getenv("DATABASE_URL", "sqlite:///./tender_hunter.db"),
+        "database_url": db_url if db_url and db_url != "YOUR_NEON_CONNECTION_STRING" else "sqlite:///./tender_hunter.db",
         "redis_url": os.getenv("REDIS_URL", "redis://localhost:6379/0"),
         "environment": os.getenv("ENVIRONMENT", "development").lower(),
         "admin_email": os.getenv("ADMIN_EMAIL", "2317056@ritindia.edu").lower(),

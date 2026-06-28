@@ -82,14 +82,15 @@ def build_tender_email_html(tenders: list[dict | Tender], heading: str = "Tender
     </body></html>"""
 
 
-def send_email(to_email: str, subject: str, html_content: str) -> bool:
+def send_email_verbose(to_email: str, subject: str, html_content: str) -> tuple[bool, str]:
     cfg = settings()
     smtp_user = cfg["gmail_user"]
     smtp_password = cfg["gmail_app_password"]
     from_email = cfg["alert_from_email"] or smtp_user
     if not smtp_user or not smtp_password:
-        print("SMTP email not configured: set GMAIL_USER and GMAIL_APP_PASSWORD in .env")
-        return False
+        err = "SMTP credentials missing. Please set GMAIL_USER and GMAIL_APP_PASSWORD in SMTP configuration."
+        print(err)
+        return False, err
 
     plain_text = re.sub(r"<[^>]+>", " ", html_content)
     plain_text = " ".join(plain_text.split())
@@ -101,17 +102,35 @@ def send_email(to_email: str, subject: str, html_content: str) -> bool:
         message.attach(MIMEText(plain_text, "plain"))
         message.attach(MIMEText(html_content, "html"))
         context = ssl.create_default_context()
-        with smtplib.SMTP_SSL(cfg["smtp_host"], cfg["smtp_port"], context=context) as server:
-            server.login(smtp_user, smtp_password)
-            server.sendmail(from_email, [to_email], message.as_string())
-        print(f"SMTP email sent: to={to_email} subject={subject[:60]}")
-        return True
-    except smtplib.SMTPAuthenticationError:
-        print("SMTP auth failed. For Gmail, use an App Password, not your regular password.")
-        return False
+        port = int(cfg["smtp_port"])
+        host = cfg["smtp_host"]
+        if port == 587:
+            with smtplib.SMTP(host, port, timeout=10) as server:
+                server.ehlo()
+                server.starttls(context=context)
+                server.ehlo()
+                server.login(smtp_user, smtp_password)
+                server.sendmail(from_email, [to_email], message.as_string())
+        else:
+            with smtplib.SMTP_SSL(host, port, context=context, timeout=10) as server:
+                server.login(smtp_user, smtp_password)
+                server.sendmail(from_email, [to_email], message.as_string())
+        msg = f"SMTP email sent: to={to_email} subject={subject[:60]}"
+        print(msg)
+        return True, msg
+    except smtplib.SMTPAuthenticationError as exc:
+        err = f"SMTP authentication failed: {exc}. Please verify Gmail App Password."
+        print(err)
+        return False, err
     except Exception as exc:
-        print(f"SMTP email failed: {exc}")
-        return False
+        err = f"SMTP connection or delivery failed: {exc}"
+        print(err)
+        return False, err
+
+
+def send_email(to_email: str, subject: str, html_content: str) -> bool:
+    success, _ = send_email_verbose(to_email, subject, html_content)
+    return success
 
 
 def configured_alert_recipients() -> list[str]:
@@ -226,8 +245,21 @@ def send_test_email(user: User) -> tuple[bool, str]:
         "tender_url": "#",
     }
     html = build_tender_email_html([sample], "TenderWatch Test Email")
-    sent = sum(1 for recipient in recipients if send_email(recipient, "TenderWatch test email", html))
-    return sent == len(recipients), ", ".join(recipients)
+    
+    errors = []
+    sent_count = 0
+    for recipient in recipients:
+        success, msg = send_email_verbose(recipient, "TenderWatch test email", html)
+        if success:
+            sent_count += 1
+        else:
+            errors.append(f"{recipient}: {msg}")
+            
+    if sent_count == len(recipients):
+        return True, f"Test email sent successfully to {', '.join(recipients)}"
+    else:
+        err_details = "; ".join(errors)
+        return False, f"Failed to send test email. {err_details}"
 
 
 def send_daily_digest_email() -> int:

@@ -51,8 +51,27 @@ class Tender(Base):
     estimated_value: Mapped[float | None] = mapped_column(Float)
     currency: Mapped[str | None] = mapped_column(String(12), default="INR")
     tender_status: Mapped[str] = mapped_column(String(60), default="ACTIVE", index=True)
-    classification_status: Mapped[str] = mapped_column(String(60), default="UNCLASSIFIED", index=True)
+    classification_status: Mapped[str] = mapped_column(String(60), default="PENDING_CLASSIFICATION", index=True)
     ai_category: Mapped[str | None] = mapped_column(String(100), index=True)
+    
+    # New fields
+    tender_category: Mapped[str | None] = mapped_column(String(100), index=True)
+    tender_type: Mapped[str | None] = mapped_column(String(100), index=True)
+    procurement_type: Mapped[str | None] = mapped_column(String(100), index=True)
+    emd: Mapped[float | None] = mapped_column(Float)
+    tender_fee: Mapped[float | None] = mapped_column(Float)
+    publishing_authority: Mapped[str | None] = mapped_column(String(255))
+    city: Mapped[str | None] = mapped_column(String(100))
+    latitude: Mapped[float | None] = mapped_column(Float)
+    longitude: Mapped[float | None] = mapped_column(Float)
+    bid_start_date: Mapped[date | None] = mapped_column(Date)
+    pre_bid_date: Mapped[date | None] = mapped_column(Date)
+    corrigendum: Mapped[bool] = mapped_column(Boolean, default=False)
+    contact_person: Mapped[str | None] = mapped_column(String(255))
+    email: Mapped[str | None] = mapped_column(String(255))
+    phone: Mapped[str | None] = mapped_column(String(100))
+    website: Mapped[str | None] = mapped_column(Text)
+
     content_hash: Mapped[str | None] = mapped_column(String(64), index=True)
     search_text: Mapped[str | None] = mapped_column(Text)
     categories: Mapped[list[str]] = mapped_column(JSON, default=list)
@@ -66,6 +85,7 @@ class Tender(Base):
     documents: Mapped[list["TenderDocument"]] = relationship(back_populates="tender", cascade="all, delete-orphan")
     history: Mapped[list["TenderHistory"]] = relationship(back_populates="tender", cascade="all, delete-orphan")
     matches: Mapped[list["TenderMatch"]] = relationship(back_populates="tender", cascade="all, delete-orphan")
+    change_events: Mapped[list["TenderChangeEvent"]] = relationship(back_populates="tender", cascade="all, delete-orphan")
 
     @property
     def opening_date(self) -> date | None:
@@ -284,6 +304,23 @@ class ScrapeLog(Base):
     scraped_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, index=True)
 
 
+class SchedulerLog(Base):
+    __tablename__ = "scheduler_logs"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    run_id: Mapped[str] = mapped_column(String(64), index=True)
+    status: Mapped[str] = mapped_column(String(50), index=True)  # RUNNING, DEDUPLICATING, MATCHING, COMPLETED, FAILED
+    started_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, index=True)
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime)
+    total_portals: Mapped[int] = mapped_column(Integer, default=0)
+    completed_portals: Mapped[int] = mapped_column(Integer, default=0)
+    failed_portals: Mapped[int] = mapped_column(Integer, default=0)
+    tenders_scraped: Mapped[int] = mapped_column(Integer, default=0)
+    tenders_updated: Mapped[int] = mapped_column(Integer, default=0)
+    matches_found: Mapped[int] = mapped_column(Integer, default=0)
+    error_message: Mapped[str | None] = mapped_column(Text)
+
+
 class TenderBackup(Base):
     __tablename__ = "tender_backups"
 
@@ -297,3 +334,67 @@ class TenderBackup(Base):
     checksum_sha256: Mapped[str] = mapped_column(String(64), nullable=False)
     storage_path: Mapped[str] = mapped_column(Text, nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, index=True)
+
+
+class WorkerStatus(Base):
+    __tablename__ = "worker_statuses"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    worker_id: Mapped[str] = mapped_column(String(64), unique=True, nullable=False)
+    portal_name: Mapped[str | None] = mapped_column(String(255))
+    status: Mapped[str | None] = mapped_column(String(32), default="idle")
+    current_page: Mapped[int | None] = mapped_column(Integer, default=0)
+    current_tender: Mapped[str | None] = mapped_column(String(500))
+    tenders_scraped_session: Mapped[int | None] = mapped_column(Integer, default=0)
+    new_tenders: Mapped[int | None] = mapped_column(Integer, default=0)
+    updated_tenders: Mapped[int | None] = mapped_column(Integer, default=0)
+    failed_tenders: Mapped[int | None] = mapped_column(Integer, default=0)
+    retry_count: Mapped[int | None] = mapped_column(Integer, default=0)
+    started_at: Mapped[datetime | None] = mapped_column(DateTime)
+    last_heartbeat: Mapped[datetime | None] = mapped_column(DateTime)
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime)
+    error_message: Mapped[str | None] = mapped_column(Text)
+
+
+class TenderChangeEvent(Base):
+    __tablename__ = "tender_change_events"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    tender_id: Mapped[int] = mapped_column(Integer, ForeignKey("tenders.id"), nullable=False)
+    change_type: Mapped[str] = mapped_column(String(32), nullable=False)
+    changed_fields: Mapped[dict | None] = mapped_column(JSON)
+    snapshot: Mapped[dict | None] = mapped_column(JSON)
+    detected_at: Mapped[datetime | None] = mapped_column(DateTime, default=datetime.utcnow)
+    
+    tender: Mapped["Tender"] = relationship(back_populates="change_events")
+
+
+class DocumentDownload(Base):
+    __tablename__ = "document_downloads"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    tender_id: Mapped[int] = mapped_column(Integer, ForeignKey("tenders.id"), nullable=False)
+    url: Mapped[str] = mapped_column(Text, nullable=False)
+    filename: Mapped[str | None] = mapped_column(String(255))
+    file_type: Mapped[str | None] = mapped_column(String(20))
+    file_size: Mapped[int | None] = mapped_column(Integer)
+    checksum: Mapped[str | None] = mapped_column(String(64))
+    storage_path: Mapped[str | None] = mapped_column(Text)
+    status: Mapped[str | None] = mapped_column(String(20), default="pending")
+    downloaded_at: Mapped[datetime | None] = mapped_column(DateTime)
+    error_message: Mapped[str | None] = mapped_column(Text)
+    
+    tender: Mapped["Tender"] = relationship()
+
+
+class ScraperPerformance(Base):
+    __tablename__ = "scraper_performance"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    portal_name: Mapped[str | None] = mapped_column(String(255))
+    recorded_at: Mapped[datetime | None] = mapped_column(DateTime, default=datetime.utcnow)
+    tenders_per_minute: Mapped[float | None] = mapped_column(Float)
+    pages_scraped: Mapped[int | None] = mapped_column(Integer)
+    avg_page_time_ms: Mapped[int | None] = mapped_column(Integer)
+    errors: Mapped[int | None] = mapped_column(Integer, default=0)
+    total_runtime_seconds: Mapped[int | None] = mapped_column(Integer)

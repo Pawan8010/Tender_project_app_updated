@@ -30,12 +30,11 @@ export default function SmartSearch({ onPick, onSearchPhrase, notify }) {
     setScraping(true);
     setLiveResults([]);
     try {
-      notify?.("Starting live scraper and searching current tenders...");
-      const started = await api("/scrape/start", { method: "POST" });
-      const data = await api(`/tenders/?${new URLSearchParams({ search: q.trim(), limit: "8", page: "1" }).toString()}`);
+      notify?.(`Scraping portals for "${q.trim()}"... this may take a moment`);
+      const data = await api(`/scrape/search-now?${new URLSearchParams({ q: q.trim(), limit: "8" }).toString()}`, { method: "POST" });
       setLiveResults(data.results || []);
       onSearchPhrase?.(q.trim());
-      notify?.(`${started.message || "Live scraper started"} Showing ${data.total || 0} current matching rows while fresh portal updates arrive.`);
+      notify?.(`Live scrape complete! Found ${data.results?.length || 0} matching items.`);
     } catch (error) {
       notify?.(error.message || "Live scrape search failed", "error");
     } finally {

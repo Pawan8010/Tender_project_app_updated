@@ -13,3 +13,10 @@ celery>=5.4
 redis>=5.0
 playwright>=1.49
 rapidfuzz>=3.0
+aiosqlite
+asyncpg
+structlog
+psutil
+python-docx
+selenium
+

@@ -340,7 +340,7 @@ function AppContent() {
             notify={notify}
           />
         )}
-        {tab === "alerts" && <Alerts alerts={alertsQuery.data} categories={categories} stats={statsQuery.data} notify={notify} />}
+        {tab === "alerts" && <Alerts alerts={alertsQuery.data} categories={categories} stats={statsQuery.data} notify={notify} user={user} />}
         {tab === "keywords" && <Keywords keywords={keywordsQuery.data} notify={notify} />}
         {tab === "sessions" && (
           <Sessions

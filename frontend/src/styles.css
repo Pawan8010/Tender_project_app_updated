@@ -1908,27 +1908,75 @@ button:disabled {
   display: grid;
   place-items: center;
   padding: 24px;
-  background: linear-gradient(135deg, #eef4ee, #f7f4ef 45%, #ecf5f5);
+  background:
+    linear-gradient(90deg, rgba(20, 32, 51, 0.94), rgba(20, 32, 51, 0.76) 48%, rgba(37, 95, 186, 0.28)),
+    url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1800&q=86");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a glowing orb effect */
+.loginScreen::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, rgba(46, 204, 113, 0.15) 0%, transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@keyframes floatPanel {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .loginPanel {
   width: min(480px, 100%);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 28px;
-  box-shadow: 0 18px 45px rgba(26, 44, 37, 0.12);
+  /* Glassmorphism panel */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   display: grid;
   gap: 16px;
+  z-index: 1;
+  color: #fff;
+  transition: transform 0.3s ease;
+  animation: floatPanel 6s ease-in-out infinite;
+}
+
+.loginPanel:hover {
+  transform: translateY(-2px);
 }
 
 .backToLanding {
   justify-self: start;
   min-height: 34px;
   padding: 0 10px;
-  border-color: var(--line);
-  background: #fbfcfb;
-  color: var(--muted);
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #a0aec0;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.backToLanding:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
 .loginHead {
@@ -1941,11 +1989,12 @@ button:disabled {
 .brandMark {
   width: 46px;
   height: 46px;
-  border-radius: 8px;
+  border-radius: 12px;
   display: grid;
   place-items: center;
   color: white;
-  background: var(--green);
+  background: linear-gradient(135deg, #255fba, #1e4a8f);
+  box-shadow: 0 4px 12px rgba(37, 95, 186, 0.3);
 }
 
 .loginPanel h1,
@@ -1958,71 +2007,85 @@ button:disabled {
 .loginPanel h1 {
   font-size: 1.45rem;
   line-height: 1.25;
+  color: #fff;
+  font-weight: 800;
 }
 
 .loginPanel p {
   margin: 7px 0 0;
-  color: var(--muted);
+  color: #94a3b8;
 }
 
 .authSwitch {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 5px;
-  background: #f7faf7;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .authSwitch button {
   min-height: 38px;
   border: 0;
-  border-radius: 6px;
+  border-radius: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   background: transparent;
-  color: var(--muted);
-  font-weight: 800;
+  color: #94a3b8;
+  font-weight: 700;
+  transition: all 0.2s;
 }
 
 .authSwitch button.active {
-  background: white;
-  color: var(--greenDark);
-  box-shadow: 0 1px 7px rgba(23, 38, 32, 0.08);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .authHint {
   text-align: center;
   font-size: 0.86rem;
+  color: #94a3b8;
 }
 
-label {
+.loginPanel label {
   display: grid;
   gap: 7px;
-  color: var(--muted);
+  color: #cbd5e1;
   font-size: 0.9rem;
+  font-weight: 500;
 }
 
-input,
-select {
-  min-height: 40px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: white;
-  color: var(--ink);
-  padding: 0 11px;
+.loginPanel input,
+.loginPanel select {
+  min-height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 0 14px;
+  transition: all 0.2s;
 }
 
-.loginPanel button,
+.loginPanel input:focus,
+.loginPanel select:focus {
+  border-color: #255fba;
+  outline: none;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 3px rgba(37, 95, 186, 0.2);
+}
+
+.loginPanel button[type="submit"],
 .primarySmall,
 .primaryLink {
   border: 0;
-  border-radius: 6px;
-  min-height: 40px;
-  background: var(--green);
+  border-radius: 8px;
+  min-height: 44px;
+  background: linear-gradient(135deg, #255fba, #1e4a8f);
   color: white;
   display: inline-flex;
   align-items: center;
@@ -2031,11 +2094,51 @@ select {
   padding: 0 14px;
   font-weight: 700;
   text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(37, 95, 186, 0.2);
+}
+
+.loginPanel button[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 95, 186, 0.3);
 }
 
 .primarySmall {
   min-height: 36px;
   white-space: nowrap;
+}
+
+.rememberToggle {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.rememberToggle input {
+  width: 18px;
+  height: 18px;
+  min-height: auto;
+  accent-color: #255fba;
+}
+
+.rememberToggle span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rememberToggle strong {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.rememberToggle em {
+  font-style: normal;
+  color: #94a3b8;
+  font-size: 0.8rem;
 }
 
 .liveSyncPill {

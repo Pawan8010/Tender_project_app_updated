@@ -9,11 +9,12 @@ from sqlalchemy.orm import Session
 
 from app.config import settings
 from app.keywords import analyze_tender_match, category_for_keyword, match_keywords
-from app.models import Keyword, PortalRun, ProcurementPortal, ScrapeLog, Tender, TenderDocument, TenderHistory, TenderMatch
+from app.models import Keyword, PortalRun, ProcurementPortal, ScrapeLog, Tender, TenderDocument, TenderHistory, TenderMatch, TenderChangeEvent
 from app.notifier import alert_recipients_for_tender, send_alert_email
 from app.services.backup import create_tender_backup
 from app.services.summaries import plain_tender_summary
-from scrapers.base_scraper import GenericTenderScraper
+from app.services.change_detector import find_existing_tender, detect_and_log_changes
+
 
 SCRAPE_LOCK = threading.Lock()
 SCRAPER_RUNTIME = {
@@ -24,6 +25,47 @@ SCRAPER_RUNTIME = {
     "last_error": None,
     "last_backup_error": None,
 }
+
+try:
+    from scrapers.portals.gem import GeMScraper
+    from scrapers.portals.cppp import CPPPScraper
+    from scrapers.portals.gepnic import GePNICScraper
+    from scrapers.portals.ireps import IREPSScraper
+    from scrapers.portals.karnataka import KarnatakaScraper
+    from scrapers.portals.andhra_pradesh import AndhraScraper
+    from scrapers.portals.telangana import TelanganaScraper
+    from scrapers.portals.gujarat import GujaratScraper
+    from scrapers.portals.bihar import BiharScraper
+    from scrapers.portals.nic_generic import NICGenericScraper
+
+    PORTAL_SCRAPER_MAP = {
+        "GeM": GeMScraper,
+        "CPPP": CPPPScraper,
+        "GePNIC": GePNICScraper,
+        "IREPS": IREPSScraper,
+        "Karnataka eProcurement": KarnatakaScraper,
+        "Andhra Pradesh eProcurement": AndhraScraper,
+        "Telangana Tenders": TelanganaScraper,
+        "nProcure": GujaratScraper,
+        "Bihar eProcurement": BiharScraper,
+        
+        "Defence eProcurement": NICGenericScraper,
+        "Coal India Tenders": NICGenericScraper,
+        "MahaTenders": NICGenericScraper,
+        "Tamil Nadu Tenders": NICGenericScraper,
+        "UP eTender": NICGenericScraper,
+        "Rajasthan eProcurement": NICGenericScraper,
+        "MP Tenders": NICGenericScraper,
+        "Haryana eTenders": NICGenericScraper,
+        "Punjab eProcurement": NICGenericScraper,
+        "Kerala eTenders": NICGenericScraper,
+        "West Bengal Tenders": NICGenericScraper,
+        "Odisha Tenders": NICGenericScraper,
+        "Jharkhand Tenders": NICGenericScraper,
+        "Assam Tenders": NICGenericScraper,
+    }
+except ImportError:
+    PORTAL_SCRAPER_MAP = {}
 
 
 NIC_LATEST = "nicgep/app?page=FrontEndListTendersbyDate&service=page"
@@ -183,50 +225,60 @@ def portal_catalog() -> list[dict]:
         db.close()
 
 
-async def _scrape_with_limit(scraper: GenericTenderScraper, semaphore: asyncio.Semaphore, timeout: int):
+async def _scrape_with_limit(scraper, semaphore: asyncio.Semaphore, timeout: int):
     async with semaphore:
-        return await asyncio.wait_for(scraper.scrape(), timeout=timeout)
+        return await asyncio.wait_for(scraper.scrape_all(), timeout=timeout)
 
 
-def _upsert_tender(db: Session, tender_data: dict) -> str:
+def _upsert_tender(db: Session, tender_data: dict, return_changes: bool = False):
     started = time.perf_counter()
     tender_data = _normalize_tender_data(tender_data)
-    text = tender_data["search_text"] or f"{tender_data.get('title', '')} {tender_data.get('description') or ''}"
-    matched, categories, match_meta = _match_keywords_from_library(db, text)
-    incoming_matched = tender_data.get("matched_keywords") or []
-    incoming_categories = tender_data.get("categories") or []
-    combined_matched = list(dict.fromkeys([*incoming_matched, *matched]))
-    combined_categories = sorted(set([*incoming_categories, *categories]))
-
-    tender_data["matched_keywords"] = combined_matched
-    tender_data["categories"] = combined_categories
-    tender_data["classification_status"] = "CLASSIFIED" if combined_matched or combined_categories else "UNCLASSIFIED"
-    tender_data["ai_category"] = combined_categories[0] if combined_categories else "UNCLASSIFIED"
+    
+    tender_data["classification_status"] = tender_data.get("classification_status") or "PENDING_CLASSIFICATION"
+    
     raw_data = dict(tender_data.get("raw_data") or {})
     raw_data["last_seen_at"] = datetime.utcnow().isoformat()
     raw_data["source"] = raw_data.get("source") or "live_portal"
-    raw_data["match_score"] = match_meta["match_score"]
-    raw_data["match_aliases"] = match_meta["match_aliases"]
-    raw_data["match_reasons"] = match_meta["match_reasons"]
-    if match_meta.get("semantic_matches"):
-        raw_data["semantic_matches"] = match_meta["semantic_matches"]
-    if match_meta.get("ml_used"):
-        raw_data["ml_used"] = True
     raw_data["plain_summary"] = plain_tender_summary({**tender_data, "raw_data": raw_data})
     tender_data["raw_data"] = raw_data
 
-    existing = _find_existing_tender(db, tender_data)
+    existing = find_existing_tender(
+        db,
+        portal=tender_data.get("portal"),
+        tender_id=tender_data.get("tender_id"),
+        reference_number=tender_data.get("reference_number"),
+        organization=tender_data.get("organization"),
+        closing_date=tender_data.get("closing_date"),
+        title=tender_data.get("title")
+    )
     if existing:
-        existing_raw_data = dict(existing.raw_data or {})
-        existing_alerted_at = existing_raw_data.get("alerted_at")
-        existing_alerted_recipients = set(existing_raw_data.get("alerted_recipients") or [])
-        if existing_alerted_at:
-            raw_data["alerted_at"] = existing_alerted_at
-        if existing_alerted_recipients:
-            raw_data["alerted_recipients"] = sorted(existing_alerted_recipients)
-
         previous_hash = existing.content_hash
-        changed_fields = _changed_fields(existing, tender_data)
+        change_type, changed_fields = detect_and_log_changes(db, existing, tender_data)
+        
+        if not changed_fields:
+            # Duplicate/No content changes: preserve existing matching/alerting state
+            tender_data["classification_status"] = existing.classification_status or "UNCLASSIFIED"
+            tender_data["categories"] = existing.categories or []
+            tender_data["matched_keywords"] = existing.matched_keywords or []
+            tender_data["ai_category"] = existing.ai_category
+            
+            existing_raw = dict(existing.raw_data or {})
+            merged_raw = dict(tender_data.get("raw_data") or {})
+            for key in (
+                "alerted_recipients", "alerted_at", "alert_attempted_at",
+                "match_score", "match_aliases", "match_reasons",
+                "semantic_matches", "ml_used"
+            ):
+                if key in existing_raw and key not in merged_raw:
+                    merged_raw[key] = existing_raw[key]
+            tender_data["raw_data"] = merged_raw
+        else:
+            # Actual content changed: reset classification status to trigger matching/alerting again
+            tender_data["classification_status"] = "PENDING_CLASSIFICATION"
+            tender_data["categories"] = []
+            tender_data["matched_keywords"] = []
+            tender_data["ai_category"] = None
+            
         for field in (
             "title",
             "description",
@@ -253,7 +305,8 @@ def _upsert_tender(db: Session, tender_data: dict) -> str:
             "matched_keywords",
             "raw_data",
         ):
-            setattr(existing, field, tender_data.get(field))
+            if field in tender_data:
+                setattr(existing, field, tender_data.get(field))
         existing.is_active = True
         existing.updated_at = datetime.utcnow()
         existing.last_seen_at = datetime.utcnow()
@@ -261,35 +314,26 @@ def _upsert_tender(db: Session, tender_data: dict) -> str:
             db.add(
                 TenderHistory(
                     tender=existing,
-                    change_type="updated",
+                    change_type=change_type,
                     previous_hash=previous_hash,
                     new_hash=tender_data.get("content_hash"),
                     changed_fields=changed_fields,
                     snapshot=_tender_snapshot(existing),
                 )
             )
-        current_recipients = set(alert_recipients_for_tender(tender_data, db))
-        pending_recipients = current_recipients - existing_alerted_recipients
-        should_alert = bool(combined_matched or combined_categories) and bool(pending_recipients)
-        if should_alert:
-            sent = send_alert_email(tender_data, pending_recipients)
-            raw_data["alert_attempted_at"] = datetime.utcnow().isoformat()
-            if sent:
-                raw_data["alerted_recipients"] = sorted(existing_alerted_recipients | pending_recipients)
-                raw_data["alerted_at"] = raw_data["alert_attempted_at"]
-            existing.raw_data = raw_data
+            db.add(
+                TenderChangeEvent(
+                    tender_id=existing.id,
+                    change_type=change_type,
+                    changed_fields=changed_fields,
+                    snapshot=_tender_snapshot(existing),
+                )
+            )
         _queue_documents(db, existing, tender_data)
-        _record_matches(db, existing, match_meta, started)
-        return "updated" if changed_fields else "duplicate"
-
-    if combined_matched or combined_categories:
-        current_recipients = set(alert_recipients_for_tender(tender_data, db))
-        sent = send_alert_email(tender_data, current_recipients)
-        raw_data["alert_attempted_at"] = datetime.utcnow().isoformat()
-        if sent:
-            raw_data["alerted_recipients"] = sorted(current_recipients)
-            raw_data["alerted_at"] = raw_data["alert_attempted_at"]
-        tender_data["raw_data"] = raw_data
+        status = "updated" if changed_fields else "duplicate"
+        if return_changes:
+            return status, existing.id, changed_fields
+        return status
 
     tender = Tender(**tender_data)
     db.add(tender)
@@ -297,15 +341,24 @@ def _upsert_tender(db: Session, tender_data: dict) -> str:
     db.add(
         TenderHistory(
             tender=tender,
-            change_type="created",
+            change_type="New Tender",
             previous_hash=None,
             new_hash=tender.content_hash,
             changed_fields={},
             snapshot=_tender_snapshot(tender),
         )
     )
+    db.add(
+        TenderChangeEvent(
+            tender_id=tender.id,
+            change_type="New Tender",
+            changed_fields={},
+            snapshot=_tender_snapshot(tender),
+        )
+    )
     _queue_documents(db, tender, tender_data)
-    _record_matches(db, tender, match_meta, started)
+    if return_changes:
+        return "new", tender.id, {}
     return "created"
 
 
@@ -481,66 +534,7 @@ def _queue_documents(db: Session, tender: Tender, tender_data: dict) -> None:
         db.add(TenderDocument(tender=tender, url=url, file_name=file_name, status="queued"))
 
 
-def _record_matches(db: Session, tender: Tender, match_meta: dict, started: float) -> None:
-    if not (match_meta.get("matched_keywords") or match_meta.get("categories")):
-        return
-    processing_time_ms = int((time.perf_counter() - started) * 1000)
-    categories = match_meta.get("categories") or [None]
-    score = int(match_meta.get("match_score") or 0)
-    reasons = match_meta.get("match_reasons") or []
-    for keyword in match_meta.get("matched_keywords") or ["AI Classification"]:
-        category = categories[0] if categories else None
-        exists = (
-            db.query(TenderMatch)
-            .filter(TenderMatch.tender_id == tender.id, TenderMatch.matched_keyword == keyword, TenderMatch.category == category)
-            .first()
-        )
-        if exists:
-            exists.confidence = min(1.0, max(0.0, score / 100))
-            exists.score = score
-            exists.reason = "; ".join(reasons[:3])[:1000] if reasons else None
-            exists.processing_time_ms = processing_time_ms
-            continue
-        db.add(
-            TenderMatch(
-                tender=tender,
-                matched_keyword=keyword,
-                category=category,
-                confidence=min(1.0, max(0.0, score / 100)),
-                reason="; ".join(reasons[:3])[:1000] if reasons else None,
-                score=score,
-                matching_fields=["title", "description", "metadata"],
-                processing_time_ms=processing_time_ms,
-            )
-        )
 
-
-def _match_keywords_from_library(db: Session, text: str) -> tuple[list[str], list[str], dict]:
-    try:
-        from app.services.ml_engine import ml_analyze_tender
-
-        match_meta = ml_analyze_tender(text)
-    except Exception:
-        match_meta = analyze_tender_match(text)
-    matched = match_meta["matched_keywords"]
-    categories = match_meta["categories"]
-    text_lower = (text or "").lower()
-
-    active_keywords = db.query(Keyword).filter(Keyword.is_active.is_(True)).all()
-    category_set = set(categories)
-    for row in active_keywords:
-        keyword = (row.keyword or "").strip()
-        if not keyword:
-            continue
-        if keyword.lower() in text_lower and keyword not in matched:
-            matched.append(keyword)
-            category = row.category or category_for_keyword(keyword)
-            if category:
-                category_set.add(category)
-
-    match_meta["matched_keywords"] = matched
-    match_meta["categories"] = sorted(category_set)
-    return matched, sorted(category_set), match_meta
 
 
 PORTALS = [
@@ -616,16 +610,45 @@ def all_scrapers(db: Session | None = None):
             return all_scrapers(local_db)
         finally:
             local_db.close()
-    return [
-        GenericTenderScraper(
-            row.name,
-            row.url,
-            row.state or "National",
-            use_playwright=row.scraper_type == "playwright",
-            listing_urls=row.listing_urls or [row.url],
-        )
-        for row in _enabled_portal_rows(db)
-    ]
+    from scrapers.portals.gem import GeMScraper
+    from scrapers.portals.cppp import CPPPScraper
+    from scrapers.portals.gepnic import GePNICScraper
+    from scrapers.portals.ireps import IREPSScraper
+    from scrapers.portals.karnataka import KarnatakaScraper
+    from scrapers.portals.andhra_pradesh import AndhraScraper
+    from scrapers.portals.telangana import TelanganaScraper
+    from scrapers.portals.gujarat import GujaratScraper
+    from scrapers.portals.bihar import BiharScraper
+    from scrapers.portals.nic_generic import NICGenericScraper
+
+    PORTAL_SCRAPER_MAP = {
+        "GeM": GeMScraper,
+        "CPPP": CPPPScraper,
+        "GePNIC": GePNICScraper,
+        "IREPS": IREPSScraper,
+        "Karnataka eProcurement": KarnatakaScraper,
+        "Andhra Pradesh eProcurement": AndhraScraper,
+        "Telangana Tenders": TelanganaScraper,
+        "nProcure": GujaratScraper,
+        "Bihar eProcurement": BiharScraper,
+    }
+
+    scrapers = []
+    for row in _enabled_portal_rows(db):
+        try:
+            scraper_class = PORTAL_SCRAPER_MAP.get(row.name, NICGenericScraper)
+            scraper_instance = scraper_class(
+                portal_name=row.name,
+                base_url=row.url,
+                state=row.state or "National",
+                use_playwright=row.scraper_type == "playwright",
+                listing_urls=row.listing_urls or [row.url],
+            )
+            scrapers.append(scraper_instance)
+        except Exception as e:
+            print(f"Failed to load scraper for {row.name}: {e}")
+            
+    return scrapers
 
 
 async def run_all_scrapers(db: Session) -> dict:
@@ -770,7 +793,7 @@ async def run_one_scraper(db: Session, portal_name: str) -> dict:
             db.add(portal_run)
             db.commit() # Commit before long-running scrape
             
-            result = await asyncio.wait_for(selected.scrape(), timeout=settings()["scraper_portal_timeout_seconds"])
+            result = await asyncio.wait_for(selected.scrape_all(), timeout=settings()["scraper_portal_timeout_seconds"])
         except Exception as exc:
             message = clean_scrape_error(str(exc) or exc.__class__.__name__)
             status, friendly_message = _classify_scrape_failure(db, selected.portal_name, message)
@@ -880,3 +903,39 @@ def run_one_scraper_sync(portal_name: str) -> dict:
         return asyncio.run(run_one_scraper(db, portal_name))
     finally:
         db.close()
+
+
+def _record_matches(db: Session, tender, match_meta: dict, started: float):
+    processing_time_ms = int((time.perf_counter() - started) * 1000)
+    cats_list = match_meta.get("categories") or [None]
+    score = int(match_meta.get("match_score") or 0)
+    reasons = match_meta.get("match_reasons") or []
+
+    keywords = match_meta.get("matched_keywords") or ["AI Classification"]
+    for keyword in keywords:
+        category = cats_list[0] if cats_list else None
+
+        exists = db.query(TenderMatch).filter(
+            TenderMatch.tender_id == tender.id,
+            TenderMatch.matched_keyword == keyword,
+            TenderMatch.category == category
+        ).first()
+
+        if exists:
+            exists.confidence = min(1.0, max(0.0, score / 100))
+            exists.score = score
+            exists.reason = "; ".join(reasons[:3])[:1000] if reasons else None
+            exists.processing_time_ms = processing_time_ms
+        else:
+            db.add(
+                TenderMatch(
+                    tender_id=tender.id,
+                    matched_keyword=keyword,
+                    category=category,
+                    confidence=min(1.0, max(0.0, score / 100)),
+                    reason="; ".join(reasons[:3])[:1000] if reasons else None,
+                    score=score,
+                    matching_fields=["title", "description", "metadata"],
+                    processing_time_ms=processing_time_ms,
+                )
+            )

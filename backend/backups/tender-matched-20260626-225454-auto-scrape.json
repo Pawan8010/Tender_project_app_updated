@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "backup_type": "matched",
+  "reason": "auto-scrape",
+  "created_at": "2026-06-26T22:54:54.687840",
+  "active_tender_count": 216,
+  "active_matched_count": 0,
+  "tender_count": 0,
+  "tenders": []
+}

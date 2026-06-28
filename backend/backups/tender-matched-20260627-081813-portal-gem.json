@@ -1,0 +1,2148 @@
+{
+  "schema_version": 1,
+  "backup_type": "matched",
+  "reason": "portal-GeM",
+  "created_at": "2026-06-27T08:18:16.307531",
+  "active_tender_count": 3464,
+  "active_matched_count": 52,
+  "tender_count": 52,
+  "tenders": [
+    {
+      "tender_id": "6e659224d39a73118ef0dfd7",
+      "title": "BWCC/2026-27/OW/WORK_INDENT450 - Annual Maintenance of footpath, drain desilting, shoulder cleaning, grating cleaning, resetting of broken slabs, paver block resetting etc., of ward roads (silt and tractor gang) in ward no. 65 Manjunath Nagara",
+      "description": "Annual Maintenance of footpath, drain desilting, shoulder cleaning, grating cleaning, resetting of broken slabs, paver block resetting etc., of ward roads (silt and tractor gang) in ward no. 65 Manjunath Nagara Bengaluru West City Corporation BWCC Rajajinagar Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 10,
+        "nit_id": 308388,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT450",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Rajajinagar Division",
+        "last_seen_at": "2026-06-27T07:42:59.398863",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT450 - Annual Maintenance of footpath, drain desilting, shoulder cleaning, grating cleaning, resetting of broken slabs, paver block resetting etc., of war. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-30.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:47:41.581850"
+      },
+      "scraped_at": "2026-06-27T07:42:59.398789",
+      "is_active": true
+    },
+    {
+      "tender_id": "aefb0d5cd7bc3d68897ad0d2",
+      "title": "BWCC/2026-27/OW/WORK_INDENT454 - Pot Hole filling in ward no 58,59,60,61,62 at Srirammandira Sub Division for the year 2026-27",
+      "description": "Pot Hole filling in ward no 58,59,60,61,62 at Srirammandira Sub Division for the year 2026-27 Bengaluru West City Corporation BWCC Rajajinagar Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 10,
+        "nit_id": 308422,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT454",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Rajajinagar Division",
+        "last_seen_at": "2026-06-27T07:42:59.384865",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT454 - Pot Hole filling in ward no 58,59,60,61,62 at Srirammandira Sub Division for the year 2026-27. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-30.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:47:41.567040"
+      },
+      "scraped_at": "2026-06-27T07:42:59.384738",
+      "is_active": true
+    },
+    {
+      "tender_id": "21cdedbb9334475f7d1ffbcb",
+      "title": "BWCC/2026-27/OW/WORK_INDENT455 - Pot Hole filling in ward no 63,64,65,66,67,68 at Rajajinagar Sub Division for the year 2026-27",
+      "description": "Pot Hole filling in ward no 63,64,65,66,67,68 at Rajajinagar Sub Division for the year 2026-27 Bengaluru West City Corporation BWCC Rajajinagar Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 10,
+        "nit_id": 308436,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT455",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Rajajinagar Division",
+        "last_seen_at": "2026-06-27T07:42:59.370171",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT455 - Pot Hole filling in ward no 63,64,65,66,67,68 at Rajajinagar Sub Division for the year 2026-27. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-30.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:47:41.554109"
+      },
+      "scraped_at": "2026-06-27T07:42:59.370089",
+      "is_active": true
+    },
+    {
+      "tender_id": "496ded349298ace534ad162e",
+      "title": "BWCC/2025-26/OW/WORK_INDENT229/CALL-4 - Providing of new Entrance Arch to Bhovi Colony Basaveshwaranagara ward No. 133 Basaveshwaranagara",
+      "description": "Providing of new Entrance Arch to Bhovi Colony Basaveshwaranagara ward No. 133 Basaveshwaranagara Bengaluru West City Corporation BWCC Rajajinagar Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 10,
+        "nit_id": 308444,
+        "tender_number": "BWCC/2025-26/OW/WORK_INDENT229/CALL-4",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Rajajinagar Division",
+        "last_seen_at": "2026-06-27T07:42:59.312161",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2025-26/OW/WORK_INDENT229/CALL-4 - Providing of new Entrance Arch to Bhovi Colony Basaveshwaranagara ward No. 133 Basaveshwaranagara. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-30.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:47:41.491285"
+      },
+      "scraped_at": "2026-06-27T07:42:59.312095",
+      "is_active": true
+    },
+    {
+      "tender_id": "91096e816edc7aacdcc6d4df",
+      "title": "BWCC/2026-27/OW/WORK_INDENT473 - Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 48-Mathikere, in Mathikere Sub Division for the Year2026-27",
+      "description": "Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 48-Mathikere, in Mathikere Sub Division for the Year2026-27 Bengaluru West City Corporation BWCC Malleshwaram Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308576,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT473",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Malleshwaram Division",
+        "last_seen_at": "2026-06-27T07:42:57.527003",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT473 - Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 48-Mathi. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-02.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:47:09.083453"
+      },
+      "scraped_at": "2026-06-27T07:42:57.526933",
+      "is_active": true
+    },
+    {
+      "tender_id": "4fadc24792a935fe741407eb",
+      "title": "BWCC/2026-27/OW/WORK_INDENT475 - Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 50-Sadashivanagara, in Mathikere Sub Division For the Year 2026-27",
+      "description": "Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 50-Sadashivanagara, in Mathikere Sub Division For the Year 2026-27 Bengaluru West City Corporation BWCC Malleshwaram Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308606,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT475",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Malleshwaram Division",
+        "last_seen_at": "2026-06-27T07:42:57.497763",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT475 - Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 50-Sadas. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-02.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:47:09.031026"
+      },
+      "scraped_at": "2026-06-27T07:42:57.497695",
+      "is_active": true
+    },
+    {
+      "tender_id": "d0845eb81d596299ff8774a2",
+      "title": "BWCC/2026-27/OW/WORK_INDENT477 - Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 51-Rajmahal in Malleshwaram Sub Division For the year 2026-27",
+      "description": "Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 51-Rajmahal in Malleshwaram Sub Division For the year 2026-27 Bengaluru West City Corporation BWCC Malleshwaram Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308626,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT477",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Malleshwaram Division",
+        "last_seen_at": "2026-06-27T07:42:57.478447",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT477 - Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 51-Rajma. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-02.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:47:09.001057"
+      },
+      "scraped_at": "2026-06-27T07:42:57.478376",
+      "is_active": true
+    },
+    {
+      "tender_id": "a0f2c93a3e52f48e327716fa",
+      "title": "BWCC/2026-27/OW/WORK_INDENT478 - Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 52-Kodandarampura, in Malleshwaram Sub Division for the Year 2026-27",
+      "description": "Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 52-Kodandarampura, in Malleshwaram Sub Division for the Year 2026-27 Bengaluru West City Corporation BWCC Malleshwaram Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308632,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT478",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Malleshwaram Division",
+        "last_seen_at": "2026-06-27T07:42:57.468249",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT478 - Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 52-Kodan. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-02.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:47:08.984220"
+      },
+      "scraped_at": "2026-06-27T07:42:57.468170",
+      "is_active": true
+    },
+    {
+      "tender_id": "935bcc3a042a582992b159eb",
+      "title": "BWCC/2026-27/OW/WORK_INDENT456 - Annual maintenance for filling up of potholes and also maintenance of footpath and desilting of drain and shoulders in Arterial and Sub Arterial roads in ward no.63, 64, 65, 66, 67, 68 Rajajinagar sub division.",
+      "description": "Annual maintenance for filling up of potholes and also maintenance of footpath and desilting of drain and shoulders in Arterial and Sub Arterial roads in ward no.63, 64, 65, 66, 67, 68 Rajajinagar sub division. Bengaluru West City Corporation BWCC Rajajinagar Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308648,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT456",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Rajajinagar Division",
+        "last_seen_at": "2026-06-27T07:42:57.446958",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT456 - Annual maintenance for filling up of potholes and also maintenance of footpath and desilting of drain and shoulders in Arterial and Sub Arterial ro. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-30.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:47:08.949009"
+      },
+      "scraped_at": "2026-06-27T07:42:57.446860",
+      "is_active": true
+    },
+    {
+      "tender_id": "eeb05c9a68490a04e85afa76",
+      "title": "BWCC/2026-27/OW/WORK_INDENT457 - Annual maintenance for filling up of potholes and also maintenance of footpath and desilting of drain and shoulders in Arterial and Sub Arterial roads in ward no.58,59,60,61,62 at Srirammandira sub division.",
+      "description": "Annual maintenance for filling up of potholes and also maintenance of footpath and desilting of drain and shoulders in Arterial and Sub Arterial roads in ward no.58,59,60,61,62 at Srirammandira sub division. Bengaluru West City Corporation BWCC Rajajinagar Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308650,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT457",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Rajajinagar Division",
+        "last_seen_at": "2026-06-27T07:42:57.433514",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT457 - Annual maintenance for filling up of potholes and also maintenance of footpath and desilting of drain and shoulders in Arterial and Sub Arterial ro. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-30.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:47:08.923519"
+      },
+      "scraped_at": "2026-06-27T07:42:57.433426",
+      "is_active": true
+    },
+    {
+      "tender_id": "873e229bdcfc21591647de09",
+      "title": "BWCC/2026-27/OW/WORK_INDENT481 - Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 56-Gayathrinagara, in Subramanyanagara Sub Division for the Year 2026-27",
+      "description": "Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 56-Gayathrinagara, in Subramanyanagara Sub Division for the Year 2026-27 Bengaluru West City Corporation BWCC Malleshwaram Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308649,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT481",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Malleshwaram Division",
+        "last_seen_at": "2026-06-27T07:42:57.420042",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT481 - Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 56-Gayat. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-02.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:47:08.907862"
+      },
+      "scraped_at": "2026-06-27T07:42:57.419907",
+      "is_active": true
+    },
+    {
+      "tender_id": "a15074e044d11d04ff97fc51",
+      "title": "BWCC/2026-27/OW/WORK_INDENT494 - Annual maintenance of storm water drains in Rajajinagar Constituency",
+      "description": "Annual maintenance of storm water drains in Rajajinagar Constituency Bengaluru West City Corporation BWCC Rajajinagar Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-06-30",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308665,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT494",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Rajajinagar Division",
+        "last_seen_at": "2026-06-27T07:42:57.378187",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT494 - Annual maintenance of storm water drains in Rajajinagar Constituency. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-30.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:47:08.871528"
+      },
+      "scraped_at": "2026-06-27T07:42:57.378084",
+      "is_active": true
+    },
+    {
+      "tender_id": "dba074c510377178dd6bb598",
+      "title": "BWCC/2026-27/OW/WORK_INDENT482 - Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 57-Kuvempu Ward, in Subramanyanagara Sub Division for the Year 2026-27",
+      "description": "Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 57-Kuvempu Ward, in Subramanyanagara Sub Division for the Year 2026-27 Bengaluru West City Corporation BWCC Malleshwaram Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308652,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT482",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Malleshwaram Division",
+        "last_seen_at": "2026-06-27T07:42:57.349109",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT482 - Annual Maintenance for footpath, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks in Ward no 57-Kuvem. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-02.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:38.793697"
+      },
+      "scraped_at": "2026-06-27T07:42:57.349032",
+      "is_active": true
+    },
+    {
+      "tender_id": "9540052f9c92fa87edcd5a96",
+      "title": "BWCC/2026-27/OW/WORK_INDENT483 - Pothole filling in Ward no 48,49,50,54 in Mathikere Sub Division for the Year 2026-27",
+      "description": "Pothole filling in Ward no 48,49,50,54 in Mathikere Sub Division for the Year 2026-27 Bengaluru West City Corporation BWCC Malleshwaram Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308657,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT483",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Malleshwaram Division",
+        "last_seen_at": "2026-06-27T07:42:57.334636",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT483 - Pothole filling in Ward no 48,49,50,54 in Mathikere Sub Division for the Year 2026-27. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-02.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:38.776206"
+      },
+      "scraped_at": "2026-06-27T07:42:57.334545",
+      "is_active": true
+    },
+    {
+      "tender_id": "3b4e0227a7d381b9fdf2e78e",
+      "title": "BWCC/2026-27/OW/WORK_INDENT484 - Pothole filling in Ward no 51,52,53 in Malleshwaram Sub Division for the Year 2026-27",
+      "description": "Pothole filling in Ward no 51,52,53 in Malleshwaram Sub Division for the Year 2026-27 Bengaluru West City Corporation BWCC Malleshwaram Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308662,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT484",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Malleshwaram Division",
+        "last_seen_at": "2026-06-27T07:42:57.317122",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT484 - Pothole filling in Ward no 51,52,53 in Malleshwaram Sub Division for the Year 2026-27. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-02.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:38.753047"
+      },
+      "scraped_at": "2026-06-27T07:42:57.316991",
+      "is_active": true
+    },
+    {
+      "tender_id": "6391b1476861d1c1f0106b14",
+      "title": "BWCC/2026-27/OW/WORK_INDENT485 - Pothole filling in Ward no 55,56,57 in Subramanyanagara Sub Division for the Year 2026-27",
+      "description": "Pothole filling in Ward no 55,56,57 in Subramanyanagara Sub Division for the Year 2026-27 Bengaluru West City Corporation BWCC Malleshwaram Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308667,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT485",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Malleshwaram Division",
+        "last_seen_at": "2026-06-27T07:42:57.289838",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT485 - Pothole filling in Ward no 55,56,57 in Subramanyanagara Sub Division for the Year 2026-27. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-02.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:38.709521"
+      },
+      "scraped_at": "2026-06-27T07:42:57.289750",
+      "is_active": true
+    },
+    {
+      "tender_id": "1aa25a89ccfe23aa46b50e4f",
+      "title": "BWCC/2026-27/OW/WORK_INDENT489 - Additional Works to ongoing BWCC Building at 10Th Cross Parsi Garden in Ward no.51(57) Rajmahal Nagar",
+      "description": "Additional Works to ongoing BWCC Building at 10Th Cross Parsi Garden in Ward no.51(57) Rajmahal Nagar Bengaluru West City Corporation BWCC Malleshwaram Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308699,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT489",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Malleshwaram Division",
+        "last_seen_at": "2026-06-27T07:42:57.276712",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT489 - Additional Works to ongoing BWCC Building at 10Th Cross Parsi Garden in Ward no.51(57) Rajmahal Nagar. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-02.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:38.689055"
+      },
+      "scraped_at": "2026-06-27T07:42:57.276629",
+      "is_active": true
+    },
+    {
+      "tender_id": "843d655d8943a0815f401eff",
+      "title": "BWCC/2026-27/OW/WORK_INDENT490 - Comprehensive development work of Ramdev Park and Adjacent building in ward no.51(57) Rajmahal Nagar",
+      "description": "Comprehensive development work of Ramdev Park and Adjacent building in ward no.51(57) Rajmahal Nagar Bengaluru West City Corporation BWCC Malleshwaram Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308709,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT490",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Malleshwaram Division",
+        "last_seen_at": "2026-06-27T07:42:57.266946",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT490 - Comprehensive development work of Ramdev Park and Adjacent building in ward no.51(57) Rajmahal Nagar. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-02.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:38.673014"
+      },
+      "scraped_at": "2026-06-27T07:42:57.266872",
+      "is_active": true
+    },
+    {
+      "tender_id": "92f7c13404ba8e9f74a54210",
+      "title": "BWCC/2026-27/OW/WORK_INDENT491 - Repairs and maintenance of BWCC building in Malleshwaram Constituency",
+      "description": "Repairs and maintenance of BWCC building in Malleshwaram Constituency Bengaluru West City Corporation BWCC Malleshwaram Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-22",
+      "opening_date": null,
+      "closing_date": "2026-07-02",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 8,
+        "nit_id": 308716,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT491",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Malleshwaram Division",
+        "last_seen_at": "2026-06-27T07:42:57.254780",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT491 - Repairs and maintenance of BWCC building in Malleshwaram Constituency. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-02.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:38.651660"
+      },
+      "scraped_at": "2026-06-27T07:42:57.254687",
+      "is_active": true
+    },
+    {
+      "tender_id": "6f49e0f913fe0314c8ac7f45",
+      "title": "KPCL/2025-26/GH/WORK_INDENT4079 - Supply and replacement of wire rope at TBWCS Gate No 02.",
+      "description": "Supply and Replacement of wire rope at TBWCS Gate No 02 at thattihalla dam- scope of work as per tender document. Karnataka Power Corporation Limited KPCL Executive Engineer Gates Office KVP Kali Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-23",
+      "opening_date": null,
+      "closing_date": "2026-07-06",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 7,
+        "nit_id": 308463,
+        "tender_number": "KPCL/2025-26/GH/WORK_INDENT4079",
+        "kppp_category": "WORKS",
+        "department": "Karnataka Power Corporation Limited",
+        "location": "KPCL Executive Engineer Gates Office KVP Kali",
+        "last_seen_at": "2026-06-27T07:42:56.417163",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for KPCL/2025-26/GH/WORK_INDENT4079 - Supply and replacement of wire rope at TBWCS Gate No 02.. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-06.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:37.068711"
+      },
+      "scraped_at": "2026-06-27T07:42:56.417088",
+      "is_active": true
+    },
+    {
+      "tender_id": "27fdc8a5da1dbff2be2d3cbf",
+      "title": "BWCC/2026-27/OW/WORK_INDENT495 - Providing Potholes filling in Ward No-13 Nadaprabhu Kempegowda Nagara of Doddabidarakallu Sub division for the year 2026-27",
+      "description": "Providing Potholes filling in Ward No-13 Nadaprabhu Kempegowda Nagara of Doddabidarakallu Sub division for the year 2026-27 Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-23",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 6,
+        "nit_id": 308884,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT495",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:55.733990",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT495 - Providing Potholes filling in Ward No-13 Nadaprabhu Kempegowda Nagara of Doddabidarakallu Sub division for the year 2026-27. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:05.913905"
+      },
+      "scraped_at": "2026-06-27T07:42:55.733925",
+      "is_active": true
+    },
+    {
+      "tender_id": "68286bace56c461453970555",
+      "title": "BWCC/2026-27/OW/WORK_INDENT497 - Providing Pothole filling in Ward No-15 Byadarahalli of Herohalli Sub division for the year 2026-27",
+      "description": "Providing Pothole filling in Ward No-15 Byadarahalli of Herohalli Sub division for the year 2026-27 Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-23",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 6,
+        "nit_id": 308892,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT497",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:55.717710",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT497 - Providing Pothole filling in Ward No-15 Byadarahalli of Herohalli Sub division for the year 2026-27. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:05.861347"
+      },
+      "scraped_at": "2026-06-27T07:42:55.717633",
+      "is_active": true
+    },
+    {
+      "tender_id": "5725d86ca3cefde1b7aba394",
+      "title": "BWCC/2026-27/OW/WORK_INDENT499 - Providing Pothole filling in Ward No-17 Nagadevanahalli of Herohalli Sub division for the year 2026-27",
+      "description": "Providing Pothole filling in Ward No-17 Nagadevanahalli of Herohalli Sub division for the year 2026-27 Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-23",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 6,
+        "nit_id": 308900,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT499",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:55.687605",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT499 - Providing Pothole filling in Ward No-17 Nagadevanahalli of Herohalli Sub division for the year 2026-27. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:05.814223"
+      },
+      "scraped_at": "2026-06-27T07:42:55.687541",
+      "is_active": true
+    },
+    {
+      "tender_id": "b1e11539ba2806c59481ab6c",
+      "title": "BWCC/2026-27/OW/WORK_INDENT503 - Providing Pothole filling in Ward No-21 Kengeri of Kengeri Sub division for the year 2026-27",
+      "description": "Providing Pothole filling in Ward No-21 Kengeri of Kengeri Sub division for the year 2026-27 Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-23",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 6,
+        "nit_id": 308913,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT503",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:55.661151",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT503 - Providing Pothole filling in Ward No-21 Kengeri of Kengeri Sub division for the year 2026-27. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:05.777087"
+      },
+      "scraped_at": "2026-06-27T07:42:55.661082",
+      "is_active": true
+    },
+    {
+      "tender_id": "63b3ef5195184b5908901dab",
+      "title": "BWCC/2026-27/OW/WORK_INDENT507 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in Ward no.14 Herohalli",
+      "description": "Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in Ward no.14 Herohalli Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-23",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 6,
+        "nit_id": 308936,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT507",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:55.380500",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT507 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in Ward no. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:05.343045"
+      },
+      "scraped_at": "2026-06-27T07:42:55.380438",
+      "is_active": true
+    },
+    {
+      "tender_id": "24ca1ef2557b0c6b81d34e55",
+      "title": "BWCC/2026-27/OW/WORK_INDENT509 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in Ward no.16 Ullalu",
+      "description": "Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in Ward no.16 Ullalu Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-23",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 6,
+        "nit_id": 308946,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT509",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:55.366602",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT509 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in Ward no. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:05.312866"
+      },
+      "scraped_at": "2026-06-27T07:42:55.366510",
+      "is_active": true
+    },
+    {
+      "tender_id": "bb324c771fe4a01965420aef",
+      "title": "BWCC/2026-27/OW/WORK_INDENT510 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in Ward no.17 Nagadevanahalli",
+      "description": "Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in Ward no.17 Nagadevanahalli Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-23",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 6,
+        "nit_id": 308953,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT510",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:55.358860",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT510 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in Ward no. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:05.298494"
+      },
+      "scraped_at": "2026-06-27T07:42:55.358792",
+      "is_active": true
+    },
+    {
+      "tender_id": "dfbf1b15349bafb6b1c0a698",
+      "title": "BWCC/2026-27/OW/WORK_INDENT511 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in ward no.18 Kengal Hanumanthaiah West",
+      "description": "Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in ward no.18 Kengal Hanumanthaiah West Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-23",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 6,
+        "nit_id": 308956,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT511",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:55.342343",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT511 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in ward no. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:46:05.269903"
+      },
+      "scraped_at": "2026-06-27T07:42:55.342283",
+      "is_active": true
+    },
+    {
+      "tender_id": "cfabf22ae26ef2218b17cd9d",
+      "title": "BWCC/2026-27/OW/WORK_INDENT512 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in ward no.19 Shivanapalya",
+      "description": "Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in ward no.19 Shivanapalya Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-24",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 5,
+        "nit_id": 308980,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT512",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:54.667941",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT512 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in ward no. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:45:34.137488"
+      },
+      "scraped_at": "2026-06-27T07:42:54.667839",
+      "is_active": true
+    },
+    {
+      "tender_id": "c0999f75f356a66e44337bbf",
+      "title": "BWCC/2026-27/OW/WORK_INDENT513 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in ward no.20 Kengeri Kote",
+      "description": "Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in ward no.20 Kengeri Kote Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-24",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 5,
+        "nit_id": 308984,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT513",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:54.655118",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT513 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in ward no. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:45:34.122531"
+      },
+      "scraped_at": "2026-06-27T07:42:54.655026",
+      "is_active": true
+    },
+    {
+      "tender_id": "e75de9b64de6ec67cc64517b",
+      "title": "BWCC/2026-27/OW/WORK_INDENT514 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in ward no. 21 Kengeri",
+      "description": "Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in ward no. 21 Kengeri Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-24",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 5,
+        "nit_id": 308986,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT514",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:54.645327",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT514 - Maintenance of footpaths, Desilting of Drains, Shoulder and grating cleaning, resetting of broken slabs and paver blocks and other works in ward no. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:45:34.109856"
+      },
+      "scraped_at": "2026-06-27T07:42:54.645197",
+      "is_active": true
+    },
+    {
+      "tender_id": "7aea3af08077b19e33f7b2c0",
+      "title": "BWCC/2026-27/OW/WORK_INDENT515 - Desilting of Drains and other Works at Andrahalli Ward Limits in Ward No-12 of Doddabidrakallu Sub-Division For the Year 2026-27",
+      "description": "Desilting of Drains and other Works at Andrahalli Ward Limits in Ward No-12 of Doddabidrakallu Sub-Division For the Year 2026-27 Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-24",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 5,
+        "nit_id": 308987,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT515",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:54.634900",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT515 - Desilting of Drains and other Works at Andrahalli Ward Limits in Ward No-12 of Doddabidrakallu Sub-Division For the Year 2026-27. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:45:34.096100"
+      },
+      "scraped_at": "2026-06-27T07:42:54.634797",
+      "is_active": true
+    },
+    {
+      "tender_id": "d3c95cb4b5ed6b83808d4dd7",
+      "title": "BWCC/2026-27/OW/WORK_INDENT516 - Desilting of Drains and other Works at Byadarahalli Ward Limits in Ward No-15 of Herohalli Sub-Division For the Year 2026-27",
+      "description": "Desilting of Drains and other Works at Byadarahalli Ward Limits in Ward No-15 of Herohalli Sub-Division For the Year 2026-27 Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-24",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 5,
+        "nit_id": 308990,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT516",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:54.623517",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT516 - Desilting of Drains and other Works at Byadarahalli Ward Limits in Ward No-15 of Herohalli Sub-Division For the Year 2026-27. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:45:34.082126"
+      },
+      "scraped_at": "2026-06-27T07:42:54.623426",
+      "is_active": true
+    },
+    {
+      "tender_id": "7483d0f011ae70d2f8378885",
+      "title": "BWCC/2026-27/OW/WORK_INDENT517 - Desilting of Drains and other Works at Kengeri Ward Limits in Ward No-21 of Kengeri Sub-Division For the Year 2026-27",
+      "description": "Desilting of Drains and other Works at Kengeri Ward Limits in Ward No-21 of Kengeri Sub-Division For the Year 2026-27 Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-24",
+      "opening_date": null,
+      "closing_date": "2026-07-01",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 5,
+        "nit_id": 308992,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT517",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:54.602930",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT517 - Desilting of Drains and other Works at Kengeri Ward Limits in Ward No-21 of Kengeri Sub-Division For the Year 2026-27. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-01.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:45:34.056654"
+      },
+      "scraped_at": "2026-06-27T07:42:54.602765",
+      "is_active": true
+    },
+    {
+      "tender_id": "99faa9241603b19235bff281",
+      "title": "BWCC/2026-27/OW/WORK_INDENT518 - Annual Maintenance for filling up of Potholes and Maintenance of Footpath and Desilting of Drains and Shoulders in Arterial and Sub Arterial Roads in Ward No 83,84,85,86,87,88 and 89 Vijayanagar Sub Division",
+      "description": "Annual Maintenance for filling up of Potholes and Maintenance of Footpath and Desilting of Drains and Shoulders in Arterial and Sub Arterial Roads in Ward No 83,84,85,86,87,88 and 89 Vijayanagar Sub Division Bengaluru West City Corporation BWCC Vijaynagar Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-24",
+      "opening_date": null,
+      "closing_date": "2026-07-03",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 3,
+        "nit_id": 309182,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT518",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Vijaynagar Division",
+        "last_seen_at": "2026-06-27T07:42:53.205427",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT518 - Annual Maintenance for filling up of Potholes and Maintenance of Footpath and Desilting of Drains and Shoulders in Arterial and Sub Arterial Roads . It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-03.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:44:31.380773"
+      },
+      "scraped_at": "2026-06-27T07:42:53.205352",
+      "is_active": true
+    },
+    {
+      "tender_id": "9888a8f3b2517ae945183aea",
+      "title": "BWCC/2026-27/OW/WORK_INDENT519 - Annual maintenance for filling up of Potholes & maintenance of footpath & desilting of drains & shoulders in Arterial & sub arterial roads in Ward No 82, 90, 91, 92, 93 & 94 Gali Anjaneya Temple sub division",
+      "description": "Annual maintenance for filling up of Potholes & maintenance of footpath & desilting of drains & shoulders in Arterial & sub arterial roads in Ward No 82, 90, 91, 92, 93 & 94 Gali Anjaneya Temple sub division Bengaluru West City Corporation BWCC Vijaynagar Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-24",
+      "opening_date": null,
+      "closing_date": "2026-07-03",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 3,
+        "nit_id": 309193,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT519",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Vijaynagar Division",
+        "last_seen_at": "2026-06-27T07:42:53.193440",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT519 - Annual maintenance for filling up of Potholes & maintenance of footpath & desilting of drains & shoulders in Arterial & sub arterial roads in Ward . It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-03.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:44:31.347687"
+      },
+      "scraped_at": "2026-06-27T07:42:53.193377",
+      "is_active": true
+    },
+    {
+      "tender_id": "2fd347765cea43d80631e4c2",
+      "title": "DMA/2026-27/OW/WORK_INDENT57288 - Supply, Installation & Annual Maintenance of CCTV Cameras at Near HDMC Zone 07, Manjunath Nagar, Priyadhrshini Colony, JP Nagar of ward no.51 of HDMC, Dharwad",
+      "description": "Supply, Installation & Annual Maintenance of CCTV Cameras at Near HDMC Zone 07, Manjunath Nagar, Priyadhrshini Colony, JP Nagar of ward no.51 of HDMC, Dharwad Directorate of Municipal Administration DMA City Corporation Hubballi-Dharawada Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-25",
+      "opening_date": null,
+      "closing_date": "2026-07-09",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment",
+        "Optical Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 2,
+        "nit_id": 309430,
+        "tender_number": "DMA/2026-27/OW/WORK_INDENT57288",
+        "kppp_category": "WORKS",
+        "department": "Directorate of Municipal Administration",
+        "location": "DMA City Corporation Hubballi-Dharawada",
+        "last_seen_at": "2026-06-27T07:42:52.311348",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for DMA/2026-27/OW/WORK_INDENT57288 - Supply, Installation & Annual Maintenance of CCTV Cameras at Near HDMC Zone 07, Manjunath Nagar, Priyadhrshini Colony, JP Nagar of ward no.51 of H. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-09.",
+        "match_score": 13,
+        "match_aliases": [
+          "cctv",
+          "cameras"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: cameras -> Optical Camera"
+        ],
+        "alert_attempted_at": "2026-06-27T07:43:47.222242"
+      },
+      "scraped_at": "2026-06-27T07:42:52.311249",
+      "is_active": true
+    },
+    {
+      "tender_id": "5ca1d2b38d042f9d2dd8f41f",
+      "title": "BWCC/2026-27/OW/WORK_INDENT520 - Comprehensive Development of Works at SC-ST Colony, Ambedkar Nagar in New Ward No-16 Ullal (Old Ward No-29 Ullal)",
+      "description": "Comprehensive Development of Works at SC-ST Colony, Ambedkar Nagar in New Ward No-16 Ullal (Old Ward No-29 Ullal) Bengaluru West City Corporation BWCC Kengeri Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-25",
+      "opening_date": null,
+      "closing_date": "2026-07-07",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 2,
+        "nit_id": 309392,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT520",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Kengeri Division",
+        "last_seen_at": "2026-06-27T07:42:52.136158",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT520 - Comprehensive Development of Works at SC-ST Colony, Ambedkar Nagar in New Ward No-16 Ullal (Old Ward No-29 Ullal). It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-07.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:43:46.587195"
+      },
+      "scraped_at": "2026-06-27T07:42:52.136059",
+      "is_active": true
+    },
+    {
+      "tender_id": "372fe273d5ff794bcee6a878",
+      "title": "BWCC/2026-27/OW/WORK_INDENT525 - Annual maintenance of storm water drains in Vijayanagar Constituency in BWCC",
+      "description": "Annual maintenance of storm water drains in Vijayanagar Constituency in BWCC Bengaluru West City Corporation BWCC Vijaynagar Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-25",
+      "opening_date": null,
+      "closing_date": "2026-07-03",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 1,
+        "nit_id": 309590,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT525",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Vijaynagar Division",
+        "last_seen_at": "2026-06-27T07:42:51.972802",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT525 - Annual maintenance of storm water drains in Vijayanagar Constituency in BWCC. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-03.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:43:45.787113"
+      },
+      "scraped_at": "2026-06-27T07:42:51.972750",
+      "is_active": true
+    },
+    {
+      "tender_id": "2909106337b62a8ab04e092e",
+      "title": "BWCC/2026-27/OW/WORK_INDENT526 - Comprehensive development of Roads, Drains and Other Allied infrastructural Works in Manjunathanagar & surrounding area in Ward No 89 Bapujinagar",
+      "description": "Comprehensive development of Roads, Drains and Other Allied infrastructural Works in Manjunathanagar & surrounding area in Ward No 89 Bapujinagar Bengaluru West City Corporation BWCC Vijaynagar Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-25",
+      "opening_date": null,
+      "closing_date": "2026-07-09",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 1,
+        "nit_id": 309628,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT526",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Vijaynagar Division",
+        "last_seen_at": "2026-06-27T07:42:51.881026",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT526 - Comprehensive development of Roads, Drains and Other Allied infrastructural Works in Manjunathanagar & surrounding area in Ward No 89 Bapujinagar. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-09.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:43:45.325360"
+      },
+      "scraped_at": "2026-06-27T07:42:51.880919",
+      "is_active": true
+    },
+    {
+      "tender_id": "0110053c56c41af1a205e2f6",
+      "title": "BWCC/2026-27/OW/WORK_INDENT524 - Comprehensive development of Roads, Drains and Other Allied infrastructural Works in Ward No 87 K P Agrahara and Ward No 88 Sangolli Rayanna",
+      "description": "Comprehensive development of Roads, Drains and Other Allied infrastructural Works in Ward No 87 K P Agrahara and Ward No 88 Sangolli Rayanna Bengaluru West City Corporation BWCC Vijaynagar Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-25",
+      "opening_date": null,
+      "closing_date": "2026-07-09",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 1,
+        "nit_id": 309608,
+        "tender_number": "BWCC/2026-27/OW/WORK_INDENT524",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Vijaynagar Division",
+        "last_seen_at": "2026-06-27T07:42:51.877331",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/OW/WORK_INDENT524 - Comprehensive development of Roads, Drains and Other Allied infrastructural Works in Ward No 87 K P Agrahara and Ward No 88 Sangolli Rayanna. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-09.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:43:45.308036"
+      },
+      "scraped_at": "2026-06-27T07:42:51.877249",
+      "is_active": true
+    },
+    {
+      "tender_id": "1768e99e426ec5a70cbc3890",
+      "title": "BWCC/2026-27/RD/WORK_INDENT523 - Improvements of roads and drains in 1st main, 2nd main and 3rd main roads of Mahalakshmilayout extended Layout in ward no.41 Nagapura and AGB Layout surrounding area in ward no.40 Mahalakshmipuram",
+      "description": "Improvements of roads and drains in 1st main, 2nd main and 3rd main roads of Mahalakshmilayout extended Layout in ward no.41 Nagapura and AGB Layout surrounding area in ward no.40 Mahalakshmipuram Bengaluru West City Corporation BWCC Mahalakshmilayout Division Works",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-25",
+      "opening_date": null,
+      "closing_date": "2026-07-07",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 1,
+        "nit_id": 309412,
+        "tender_number": "BWCC/2026-27/RD/WORK_INDENT523",
+        "kppp_category": "WORKS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Mahalakshmilayout Division",
+        "last_seen_at": "2026-06-27T07:42:51.781755",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/RD/WORK_INDENT523 - Improvements of roads and drains in 1st main, 2nd main and 3rd main roads of Mahalakshmilayout extended Layout in ward no.41 Nagapura and AGB Layou. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-07.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:43:44.715159"
+      },
+      "scraped_at": "2026-06-27T07:42:51.781679",
+      "is_active": true
+    },
+    {
+      "tender_id": "971dc45f330a37e52ed49a70",
+      "title": "KSP/2025-26/IND0548/CALL-2 - Supply, installation and maintenance of CCTV & Camera with ANPR System along with necessary Hardware, Software and Monitoring at Mysuru District of Karnataka State",
+      "description": "Supply, installation and maintenance of CCTV & Camera with ANPR System along with necessary Hardware, Software and Monitoring at Mysuru District of Karnataka State Karnataka State Police Office of the IGP Southern Range Mysuru Goods",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-11",
+      "opening_date": null,
+      "closing_date": "2026-07-10",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 5,
+        "nit_id": 57985,
+        "tender_number": "KSP/2025-26/IND0548/CALL-2",
+        "kppp_category": "GOODS",
+        "department": "Karnataka State Police",
+        "location": "Office of the IGP Southern Range Mysuru",
+        "last_seen_at": "2026-06-27T07:42:51.252777",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for KSP/2025-26/IND0548/CALL-2 - Supply, installation and maintenance of CCTV & Camera with ANPR System along with necessary Hardware, Software and Monitoring at Mysuru District of Kar. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-10.",
+        "match_score": 17,
+        "match_aliases": [
+          "cctv",
+          "cctv camera"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: cctv camera -> Security Equipment"
+        ],
+        "alert_attempted_at": "2026-06-27T07:43:42.337040"
+      },
+      "scraped_at": "2026-06-27T07:42:51.252693",
+      "is_active": true
+    },
+    {
+      "tender_id": "03599e86fd1ea186af201ce9",
+      "title": "KSP/2025-26/IND0520/CALL-3 - SUPPLY AND MAINTENANCE OF DIGITAL VHF/UHF RADIO COMMUNICATION EQUIPMENT FOR DGP CONTROL ROOM AND STATE INTELLIGENCE",
+      "description": "SUPPLY AND MAINTENANCE OF DIGITAL VHF/UHF RADIO COMMUNICATION EQUIPMENT FOR DGP CONTROL ROOM AND STATE INTELLIGENCE Karnataka State Police Office of the ADGP Communication Logistic and Modernisation Bengaluru Goods",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-12",
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Communication"
+      ],
+      "matched_keywords": [
+        "Communication Equipment",
+        "Handheld Radio"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 5,
+        "nit_id": 58034,
+        "tender_number": "KSP/2025-26/IND0520/CALL-3",
+        "kppp_category": "GOODS",
+        "department": "Karnataka State Police",
+        "location": "Office of the ADGP Communication Logistic and Modernisation Bengaluru",
+        "last_seen_at": "2026-06-27T07:42:51.015609",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for KSP/2025-26/IND0520/CALL-3 - SUPPLY AND MAINTENANCE OF DIGITAL VHF/UHF RADIO COMMUNICATION EQUIPMENT FOR DGP CONTROL ROOM AND STATE INTELLIGENCE. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-29.",
+        "match_score": 20,
+        "match_aliases": [
+          "uhf radio"
+        ],
+        "match_reasons": [
+          "proposal keyword: Communication Equipment",
+          "alias: uhf radio -> Handheld Radio"
+        ],
+        "alert_attempted_at": "2026-06-27T07:43:41.807178"
+      },
+      "scraped_at": "2026-06-27T07:42:51.015462",
+      "is_active": true
+    },
+    {
+      "tender_id": "7e4feb875063332c5dff273f",
+      "title": "KSP/2025-26/IND0523/CALL-3 - SUPPLY AND MAINTENANCE OF DIGITAL UHF/VHF RADIO COMMUNICATION EQUIPMENT FOR MYSURU CITY, HUBLI-DHARWAD CITY AND MANGALORE CITY",
+      "description": "SUPPLY AND MAINTENANCE OF DIGITAL UHF/VHF RADIO COMMUNICATION EQUIPMENT FOR MYSORE CITY, HUBLI-DHARWAD CITY AND MANGALORE CITY Karnataka State Police Office of the ADGP Communication Logistic and Modernisation Bengaluru Goods",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-12",
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Communication"
+      ],
+      "matched_keywords": [
+        "Communication Equipment",
+        "Handheld Radio"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 5,
+        "nit_id": 58035,
+        "tender_number": "KSP/2025-26/IND0523/CALL-3",
+        "kppp_category": "GOODS",
+        "department": "Karnataka State Police",
+        "location": "Office of the ADGP Communication Logistic and Modernisation Bengaluru",
+        "last_seen_at": "2026-06-27T07:42:51.011121",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for KSP/2025-26/IND0523/CALL-3 - SUPPLY AND MAINTENANCE OF DIGITAL UHF/VHF RADIO COMMUNICATION EQUIPMENT FOR MYSURU CITY, HUBLI-DHARWAD CITY AND MANGALORE CITY. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-29.",
+        "match_score": 20,
+        "match_aliases": [
+          "vhf radio"
+        ],
+        "match_reasons": [
+          "proposal keyword: Communication Equipment",
+          "alias: vhf radio -> Handheld Radio"
+        ],
+        "alert_attempted_at": "2026-06-27T07:43:41.787926"
+      },
+      "scraped_at": "2026-06-27T07:42:51.011050",
+      "is_active": true
+    },
+    {
+      "tender_id": "1cacad570c213078f40cb8f1",
+      "title": "KSP/2026-27/IND0620 - Supply and Maintenance of Reserve Digital UHF Radio Communication Equipment for Wireless Headquarters",
+      "description": "Supply and Maintenance of Reserve Digital UHF Radio Communication Equipment for Wireless Headquarters Karnataka State Police Office of the ADGP Communication Logistic and Modernisation Bengaluru Goods",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-12",
+      "opening_date": null,
+      "closing_date": "2026-06-29",
+      "estimated_value": null,
+      "categories": [
+        "Communication"
+      ],
+      "matched_keywords": [
+        "Communication Equipment",
+        "Handheld Radio"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 5,
+        "nit_id": 58043,
+        "tender_number": "KSP/2026-27/IND0620",
+        "kppp_category": "GOODS",
+        "department": "Karnataka State Police",
+        "location": "Office of the ADGP Communication Logistic and Modernisation Bengaluru",
+        "last_seen_at": "2026-06-27T07:42:51.005127",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for KSP/2026-27/IND0620 - Supply and Maintenance of Reserve Digital UHF Radio Communication Equipment for Wireless Headquarters. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-29.",
+        "match_score": 20,
+        "match_aliases": [
+          "uhf radio"
+        ],
+        "match_reasons": [
+          "proposal keyword: Communication Equipment",
+          "alias: uhf radio -> Handheld Radio"
+        ],
+        "alert_attempted_at": "2026-06-27T07:43:41.765993"
+      },
+      "scraped_at": "2026-06-27T07:42:51.005058",
+      "is_active": true
+    },
+    {
+      "tender_id": "17255806260049f62d2492e6",
+      "title": "KSP/2026-27/IND0623 - SUPPLY, INSTALLATION AND MAINTENANCE OF CCTV & ANPR CAMERA SYSTEM ALONG WITH NECESSARY HARDWARE AND SOFTWARE TRAFFIC MONITORING AT UDUPI DISTRICT OF KARNATAKA STATE",
+      "description": "SUPPLY, INSTALLATION AND MAINTENANCE OF CCTV & ANPR CAMERA SYSTEM ALONG WITH NECESSARY HARDWARE AND SOFTWARE TRAFFIC MONITORING AT UDUPI DISTRICT OF KARNATAKA STATE Karnataka State Police Office of the IGP Western Range Mangaluru Goods",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-16",
+      "opening_date": null,
+      "closing_date": "2026-07-16",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 4,
+        "nit_id": 58197,
+        "tender_number": "KSP/2026-27/IND0623",
+        "kppp_category": "GOODS",
+        "department": "Karnataka State Police",
+        "location": "Office of the IGP Western Range Mangaluru",
+        "last_seen_at": "2026-06-27T07:42:50.592462",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for KSP/2026-27/IND0623 - SUPPLY, INSTALLATION AND MAINTENANCE OF CCTV & ANPR CAMERA SYSTEM ALONG WITH NECESSARY HARDWARE AND SOFTWARE TRAFFIC MONITORING AT UDUPI DISTRICT OF KARNATAKA. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-16.",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "alert_attempted_at": "2026-06-27T07:43:40.191492"
+      },
+      "scraped_at": "2026-06-27T07:42:50.592352",
+      "is_active": true
+    },
+    {
+      "tender_id": "447b2976dc6cc1a4e71974f9",
+      "title": "KSP/2026-27/IND0622 - SUPPLY, INSTALLATION AND MAINTENANCE OF CCTV & ANPR CAMERA SYSTEM ALONG WITH NECESSARY HARDWARE AND SOFTWARE TRAFFIC MONITORING AT DAKSHINAKANNADA DISTRICT OF KARNATAKA STATE",
+      "description": "SUPPLY, INSTALLATION AND MAINTENANCE OF CCTV & ANPR CAMERA SYSTEM ALONG WITH NECESSARY HARDWARE AND SOFTWARE TRAFFIC MONITORING AT DAKSHINAKANNADA DISTRICT OF KARNATAKA STATE Karnataka State Police Office of the IGP Western Range Mangaluru Goods",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-16",
+      "opening_date": null,
+      "closing_date": "2026-07-16",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 4,
+        "nit_id": 58194,
+        "tender_number": "KSP/2026-27/IND0622",
+        "kppp_category": "GOODS",
+        "department": "Karnataka State Police",
+        "location": "Office of the IGP Western Range Mangaluru",
+        "last_seen_at": "2026-06-27T07:42:50.587375",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for KSP/2026-27/IND0622 - SUPPLY, INSTALLATION AND MAINTENANCE OF CCTV & ANPR CAMERA SYSTEM ALONG WITH NECESSARY HARDWARE AND SOFTWARE TRAFFIC MONITORING AT DAKSHINAKANNADA DISTRICT OF. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-16.",
+        "match_score": 7,
+        "match_aliases": [
+          "cctv"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment"
+        ],
+        "alert_attempted_at": "2026-06-27T07:43:40.172995"
+      },
+      "scraped_at": "2026-06-27T07:42:50.587299",
+      "is_active": true
+    },
+    {
+      "tender_id": "13aff24eaa2484fe583d1787",
+      "title": "BWCC/2026-27/IND0005 - Short term tender for the supply of shoes and socks to the schools of Bengaluru west City Corporation",
+      "description": "Short term tender for the supply of shoes and socks to the schools of Bengaluru west City Corporation Bengaluru West City Corporation BWCC Senior Assistant Director Education Goods",
+      "portal": "Karnataka eProcurement",
+      "state": "Karnataka",
+      "tender_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "open_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+      "published_date": "2026-06-25",
+      "opening_date": null,
+      "closing_date": "2026-07-04",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "BWC"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "stable_url": "https://kppp.karnataka.gov.in/portal/searchTender/live",
+        "scrape_method": "kppp_json_api",
+        "page_number": 1,
+        "nit_id": 58573,
+        "tender_number": "BWCC/2026-27/IND0005",
+        "kppp_category": "GOODS",
+        "department": "Bengaluru West City Corporation",
+        "location": "BWCC Senior Assistant Director Education",
+        "last_seen_at": "2026-06-27T07:42:44.673488",
+        "plain_summary": "Karnataka eProcurement published a Karnataka tender for BWCC/2026-27/IND0005 - Short term tender for the supply of shoes and socks to the schools of Bengaluru west City Corporation. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-07-04.",
+        "match_score": 0,
+        "match_aliases": [],
+        "match_reasons": [],
+        "alert_attempted_at": "2026-06-27T07:43:33.402446"
+      },
+      "scraped_at": "2026-06-27T07:42:44.673054",
+      "is_active": true
+    },
+    {
+      "tender_id": "c2f2121b09c8ebc3c99fefe6",
+      "title": "GEM/2026/B/7630802 - THERMAL IMAGING CAMERA AS PER ENCL FOR YARD 1280,BATTERY FOR THERMAL IMAGING CAMERA AS PER ENCL FOR",
+      "description": "GEM/2026/B/7630802 THERMAL IMAGING CAMERA AS PER ENCL FOR YARD 1280,BATTERY FOR THERMAL IMAGING CAMERA AS PER ENCL FOR Ministry of Defence 35",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9430680",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9430680",
+      "published_date": "2026-06-06",
+      "opening_date": null,
+      "closing_date": "2026-06-27",
+      "estimated_value": null,
+      "categories": [
+        "Thermal"
+      ],
+      "matched_keywords": [
+        "Thermal Imaging Camera"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9430680",
+        "scrape_method": "gem_json_api",
+        "search_term": "unfiltered_public_listing",
+        "page_number": 17,
+        "pager_style": "page",
+        "page_payload": {
+          "param": {
+            "searchBid": "",
+            "searchType": "fullText"
+          },
+          "filter": {
+            "bidStatusType": "ongoing_bids",
+            "byType": "all",
+            "highBidValue": "",
+            "byEndDate": {
+              "from": "",
+              "to": ""
+            },
+            "sort": "Bid-End-Date-Oldest"
+          },
+          "page": 17,
+          "pageSize": 10,
+          "size": 10
+        },
+        "bid_number": "GEM/2026/B/7630802",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-27T07:42:41.885758",
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7630802 - THERMAL IMAGING CAMERA AS PER ENCL FOR YARD 1280,BATTERY FOR THERMAL IMAGING CAMERA AS PER ENCL FOR. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-27.",
+        "match_score": 24,
+        "match_aliases": [
+          "thermal imaging camera"
+        ],
+        "match_reasons": [
+          "proposal keyword: Thermal Imaging Camera",
+          "alias: thermal imaging camera -> Thermal Imaging Camera"
+        ],
+        "alert_attempted_at": "2026-06-27T07:43:31.613164"
+      },
+      "scraped_at": "2026-06-27T07:42:41.885614",
+      "is_active": true
+    },
+    {
+      "tender_id": "ed208c918ba800effd8bd915",
+      "title": "GEM/2026/B/7649757 - AMC of Integrated Security and Surveillance System - Health Monitoring Solution for CCTV System, Re",
+      "description": "GEM/2026/B/7649757 AMC of Integrated Security and Surveillance System - Health Monitoring Solution for CCTV System, Re Ministry of Defence 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9451882",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9451882",
+      "published_date": "2026-06-20",
+      "opening_date": null,
+      "closing_date": "2026-06-27",
+      "estimated_value": null,
+      "categories": [
+        "Camera",
+        "EOSS"
+      ],
+      "matched_keywords": [
+        "Security Equipment",
+        "Surveillance Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9451882",
+        "scrape_method": "gem_json_api",
+        "search_term": "unfiltered_public_listing",
+        "page_number": 10,
+        "pager_style": "page",
+        "page_payload": {
+          "param": {
+            "searchBid": "",
+            "searchType": "fullText"
+          },
+          "filter": {
+            "bidStatusType": "ongoing_bids",
+            "byType": "all",
+            "highBidValue": "",
+            "byEndDate": {
+              "from": "",
+              "to": ""
+            },
+            "sort": "Bid-End-Date-Oldest"
+          },
+          "page": 10,
+          "pageSize": 10,
+          "size": 10
+        },
+        "bid_number": "GEM/2026/B/7649757",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-27T07:42:41.291479",
+        "plain_summary": "GeM published a National tender for GEM/2026/B/7649757 - AMC of Integrated Security and Surveillance System - Health Monitoring Solution for CCTV System, Re. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-27.",
+        "match_score": 15,
+        "match_aliases": [
+          "cctv",
+          "surveillance system"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: surveillance system -> Surveillance Equipment"
+        ],
+        "alert_attempted_at": "2026-06-27T07:43:30.395031"
+      },
+      "scraped_at": "2026-06-27T07:42:41.291284",
+      "is_active": true
+    },
+    {
+      "tender_id": "9501a14ec338f64fdfe0ff30",
+      "title": "GEM/2026/R/687382 - Customized AMC/CMC for Pre-owned Products - CCTV Camera; Multi Brand; Comprehensive Maintenance Con",
+      "description": "GEM/2026/R/687382 Customized AMC/CMC for Pre-owned Products - CCTV Camera; Multi Brand; Comprehensive Maintenance Con Ministry of Defence 1",
+      "portal": "GeM",
+      "state": "National",
+      "tender_url": "https://bidplus.gem.gov.in/showbidDocument/9516839",
+      "open_url": "https://bidplus.gem.gov.in/showbidDocument/9516839",
+      "published_date": "2026-06-25",
+      "opening_date": null,
+      "closing_date": "2026-06-27",
+      "estimated_value": null,
+      "categories": [
+        "Camera"
+      ],
+      "matched_keywords": [
+        "Security Equipment"
+      ],
+      "raw_data": {
+        "source": "live_portal",
+        "source_url": "https://bidplus.gem.gov.in/all-bids",
+        "stable_url": "https://bidplus.gem.gov.in/showbidDocument/9516839",
+        "scrape_method": "gem_json_api",
+        "search_term": "unfiltered_public_listing",
+        "page_number": 1,
+        "pager_style": null,
+        "page_payload": {
+          "param": {
+            "searchBid": "",
+            "searchType": "fullText"
+          },
+          "filter": {
+            "bidStatusType": "ongoing_bids",
+            "byType": "all",
+            "highBidValue": "",
+            "byEndDate": {
+              "from": "",
+              "to": ""
+            },
+            "sort": "Bid-End-Date-Oldest"
+          }
+        },
+        "bid_number": "GEM/2026/R/687382",
+        "buyer": "Ministry of Defence",
+        "last_seen_at": "2026-06-27T08:18:04.327390",
+        "plain_summary": "GeM published a National tender for GEM/2026/R/687382 - Customized AMC/CMC for Pre-owned Products - CCTV Camera; Multi Brand; Comprehensive Maintenance Con. It is grouped under general procurement. Opening date: no date published. Closing date: 2026-06-27.",
+        "alert_attempted_at": "2026-06-27T07:43:29.171985",
+        "match_score": 17,
+        "match_aliases": [
+          "cctv",
+          "cctv camera"
+        ],
+        "match_reasons": [
+          "alias: cctv -> Security Equipment",
+          "alias: cctv camera -> Security Equipment"
+        ]
+      },
+      "scraped_at": "2026-06-27T07:42:40.466817",
+      "is_active": true
+    }
+  ]
+}

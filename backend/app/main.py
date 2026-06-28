@@ -20,6 +20,7 @@ app = FastAPI(title="Government Tender Intelligence Platform", version="1.0.0")
 auto_scrape_task: asyncio.Task | None = None
 session_cleanup_task: asyncio.Task | None = None
 document_processor_task: asyncio.Task | None = None
+keyword_processor_task: asyncio.Task | None = None
 
 app.add_middleware(
     CORSMiddleware,
@@ -53,6 +54,17 @@ app.include_router(users.router, prefix="/api/users", tags=["Users"])
 app.include_router(health_router.router, prefix="/api/health", tags=["Health"])
 app.include_router(help_router.router, prefix="/api/help", tags=["Help"])
 app.include_router(ml_search.router, prefix="/api/ml", tags=["ML Search"])
+
+from app.routers import dashboard, statistics, workers, changes, documents, updates, keyword_matches, logs
+app.include_router(dashboard.router, prefix="/api/dashboard", tags=["Dashboard"])
+app.include_router(statistics.router, prefix="/api/statistics", tags=["Statistics"])
+app.include_router(workers.router, prefix="/api/workers", tags=["Workers"])
+app.include_router(changes.router, prefix="/api/changes", tags=["Changes"])
+app.include_router(documents.router, prefix="/api/documents", tags=["Documents"])
+app.include_router(updates.router, prefix="/api/updates", tags=["Updates"])
+app.include_router(keyword_matches.router, prefix="/api/keyword-matches", tags=["Keyword Matches"])
+app.include_router(logs.router, prefix="/api/logs", tags=["Logs"])
+
 
 from fastapi.responses import FileResponse, HTMLResponse
 import os
@@ -98,12 +110,13 @@ async def serve_frontend(full_path: str):
 
 async def _auto_scrape_loop():
     cfg = settings()
+    from scheduler.orchestrator import run_orchestrator
     await asyncio.sleep(cfg["auto_scrape_startup_delay_seconds"])
     while True:
         try:
-            await asyncio.to_thread(run_all_scrapers_sync)
+            await run_orchestrator()
         except Exception as exc:
-            print(f"Auto scrape failed: {exc}")
+            print(f"Orchestrator failed: {exc}")
         await asyncio.sleep(cfg["auto_scrape_interval_minutes"] * 60)
 
 
@@ -127,6 +140,11 @@ async def _session_cleanup_loop():
 async def _document_processor_loop():
     await asyncio.sleep(20)
     while True:
+        from scrapers.portal_manager import PORTAL_MANAGER
+        if PORTAL_MANAGER._running:
+            await asyncio.sleep(5)
+            continue
+            
         db = SessionLocal()
         try:
             result = process_queued_documents(db, limit=10)
@@ -145,9 +163,32 @@ async def _document_processor_loop():
         await asyncio.sleep(60)
 
 
+async def _keyword_processor_loop():
+    await asyncio.sleep(25)
+    while True:
+        from scrapers.portal_manager import PORTAL_MANAGER
+        if PORTAL_MANAGER._running:
+            await asyncio.sleep(5)
+            continue
+            
+        db = SessionLocal()
+        try:
+            from app.services.keyword_worker import process_pending_tenders
+            processed = await asyncio.to_thread(process_pending_tenders, db, limit=100)
+            if processed > 0:
+                print(f"Keyword processor background run: matched and classified {processed} tender(s)")
+        except Exception as exc:
+            db.rollback()
+            print(f"Keyword processor background worker failed: {exc}")
+        finally:
+            db.close()
+        await asyncio.sleep(30)
+
+
+
 @app.on_event("startup")
 async def startup():
-    global auto_scrape_task, session_cleanup_task, document_processor_task
+    global auto_scrape_task, session_cleanup_task, document_processor_task, keyword_processor_task
     init_db()
     db = SessionLocal()
     try:
@@ -158,6 +199,7 @@ async def startup():
     cfg = settings()
     session_cleanup_task = asyncio.create_task(_session_cleanup_loop())
     document_processor_task = asyncio.create_task(_document_processor_loop())
+    keyword_processor_task = asyncio.create_task(_keyword_processor_loop())
     if cfg["auto_scrape_enabled"] and cfg["in_process_auto_scrape_enabled"]:
         auto_scrape_task = asyncio.create_task(_auto_scrape_loop())
 
@@ -176,3 +218,8 @@ async def shutdown():
         document_processor_task.cancel()
         with suppress(asyncio.CancelledError):
             await document_processor_task
+    if keyword_processor_task:
+        keyword_processor_task.cancel()
+        with suppress(asyncio.CancelledError):
+            await keyword_processor_task
+

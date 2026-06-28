@@ -92,6 +92,7 @@ def _merge_tender_search_text(tender: Tender, text: str) -> None:
     existing_doc_text = raw_data.get("document_text") or ""
     raw_data["document_text"] = f"{existing_doc_text}\n{text}"[:TEXT_LIMIT] if existing_doc_text else text[:TEXT_LIMIT]
     tender.raw_data = raw_data
+    tender.classification_status = "PENDING_CLASSIFICATION"
     tender.updated_at = datetime.utcnow()
 
 
