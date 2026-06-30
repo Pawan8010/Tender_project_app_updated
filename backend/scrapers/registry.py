@@ -158,6 +158,13 @@ def _portal_defaults(name: str, url: str, state: str, use_playwright: bool, list
     }
 
 
+def portal_browser_enabled(row: ProcurementPortal) -> bool:
+    cfg = settings()
+    return bool(cfg["use_playwright"] or cfg["scraper_force_playwright"]) and (
+        cfg["scraper_force_playwright"] or row.scraper_type == "playwright"
+    )
+
+
 def sync_portal_registry(db: Session) -> None:
     now = datetime.utcnow()
     existing = {row.name: row for row in db.query(ProcurementPortal).all()}
@@ -169,6 +176,8 @@ def sync_portal_registry(db: Session) -> None:
             row.state = row.state or defaults["state"]
             row.portal_type = row.portal_type or defaults["portal_type"]
             row.scraper_type = row.scraper_type or defaults["scraper_type"]
+            if defaults["scraper_type"] == "playwright" and row.scraper_type != "playwright":
+                row.scraper_type = "playwright"
             row.listing_urls = row.listing_urls or defaults["listing_urls"]
             row.retry_count = row.retry_count or defaults["retry_count"]
             row.updated_at = now
@@ -207,7 +216,7 @@ def portal_catalog() -> list[dict]:
                 "url": row.url,
                 "state": row.state,
                 "kind": row.portal_type,
-                "uses_playwright": row.scraper_type == "playwright",
+                "uses_playwright": portal_browser_enabled(row),
                 "listing_urls": row.listing_urls or [row.url],
                 "authentication": row.authentication,
                 "scheduler": row.scheduler,
@@ -330,6 +339,12 @@ def _upsert_tender(db: Session, tender_data: dict, return_changes: bool = False)
                 )
             )
         _queue_documents(db, existing, tender_data)
+        try:
+            from app.services.tender_index import index_tender
+
+            index_tender(db, existing)
+        except Exception:
+            pass
         status = "updated" if changed_fields else "duplicate"
         if return_changes:
             return status, existing.id, changed_fields
@@ -357,6 +372,12 @@ def _upsert_tender(db: Session, tender_data: dict, return_changes: bool = False)
         )
     )
     _queue_documents(db, tender, tender_data)
+    try:
+        from app.services.tender_index import index_tender
+
+        index_tender(db, tender)
+    except Exception:
+        pass
     if return_changes:
         return "new", tender.id, {}
     return "created"
@@ -538,20 +559,20 @@ def _queue_documents(db: Session, tender: Tender, tender_data: dict) -> None:
 
 
 PORTALS = [
-    ("GeM", "https://bidplus.gem.gov.in/all-bids", "National", False, ["https://bidplus.gem.gov.in/all-bids"]),
+    ("GeM", "https://bidplus.gem.gov.in/all-bids", "National", True, ["https://bidplus.gem.gov.in/all-bids"]),
     ("CPPP", "https://eprocure.gov.in/eprocure/app", "National", False, ["https://eprocure.gov.in/eprocure/app?page=FrontEndListTendersbyDate&service=page"]),
     (
         "GePNIC",
         "https://gepnic.gov.in",
         "National",
-        False,
+        True,
         [
             "https://gepnic.gov.in/Tender/TenderList.aspx",
             "https://gepnic.gov.in/Tender/tender_list.aspx",
             "https://gepnic.gov.in",
         ],
     ),
-    ("IREPS", "https://www.ireps.gov.in", "National", False, ["https://www.ireps.gov.in/epsn/guestLogin.do"]),
+    ("IREPS", "https://www.ireps.gov.in", "National", True, ["https://www.ireps.gov.in/epsn/guestLogin.do"]),
     ("Defence eProcurement", "https://defproc.gov.in", "National", False, nic("https://defproc.gov.in")),
     ("Coal India Tenders", "https://coalindiatenders.nic.in", "National", False, nic("https://coalindiatenders.nic.in")),
     ("MahaTenders", "https://mahatenders.gov.in", "Maharashtra", False, nic("https://mahatenders.gov.in")),
@@ -559,14 +580,14 @@ PORTALS = [
         "nProcure",
         "https://tender.nprocure.com",
         "Gujarat",
-        False,
+        True,
         ["https://tender.nprocure.com/dashboard/getTenderClosingData", "https://tender.nprocure.com"],
     ),
     (
         "Karnataka eProcurement",
         "https://eproc.karnataka.gov.in",
         "Karnataka",
-        False,
+        True,
         ["https://kppp.karnataka.gov.in/", "https://eproc.karnataka.gov.in"],
     ),
     ("Tamil Nadu Tenders", "https://tntenders.gov.in", "Tamil Nadu", False, nic("https://tntenders.gov.in")),
@@ -574,10 +595,10 @@ PORTALS = [
         "Telangana Tenders",
         "https://tender.telangana.gov.in",
         "Telangana",
-        False,
+        True,
         ["https://tender.telangana.gov.in/login.html", "https://tender.telangana.gov.in/Home/LatestTender"],
     ),
-    ("Andhra Pradesh eProcurement", "https://tender.apeprocurement.gov.in", "Andhra Pradesh", False, ["https://tender.apeprocurement.gov.in/login.html"]),
+    ("Andhra Pradesh eProcurement", "https://tender.apeprocurement.gov.in", "Andhra Pradesh", True, ["https://tender.apeprocurement.gov.in/login.html"]),
     ("UP eTender", "https://etender.up.nic.in", "Uttar Pradesh", False, nic("https://etender.up.nic.in")),
     ("Rajasthan eProcurement", "https://eproc.rajasthan.gov.in", "Rajasthan", False, nic("https://eproc.rajasthan.gov.in")),
     ("MP Tenders", "https://mptenders.gov.in", "Madhya Pradesh", False, nic("https://mptenders.gov.in")),
@@ -590,7 +611,7 @@ PORTALS = [
         "Bihar eProcurement",
         "https://eproc2.bihar.gov.in",
         "Bihar",
-        False,
+        True,
         [
             "https://eproc2.bihar.gov.in/EPSV2Web/openarea/tenderListingPage.action",
             "https://eproc2.bihar.gov.in/EPSV2Web/openarea/openTenderAction.action",
@@ -641,7 +662,7 @@ def all_scrapers(db: Session | None = None):
                 portal_name=row.name,
                 base_url=row.url,
                 state=row.state or "National",
-                use_playwright=row.scraper_type == "playwright",
+                use_playwright=portal_browser_enabled(row),
                 listing_urls=row.listing_urls or [row.url],
             )
             scrapers.append(scraper_instance)

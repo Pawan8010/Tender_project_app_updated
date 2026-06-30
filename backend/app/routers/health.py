@@ -9,7 +9,7 @@ from app.auth import get_current_user
 from app.config import settings
 from app.database import SessionLocal
 from app.models import PortalRun, ProcurementPortal, ScrapeLog, Tender, TenderBackup, TenderDocument, UserSession
-from scrapers.registry import scraper_runtime_status, sync_portal_registry
+from scrapers.registry import portal_browser_enabled, scraper_runtime_status, sync_portal_registry
 
 router = APIRouter()
 
@@ -35,6 +35,15 @@ def _csv_values(value: str | None) -> list[str]:
     return [item.strip() for item in (value or "").split(",") if item.strip()]
 
 
+def _playwright_available() -> tuple[bool, str | None]:
+    try:
+        import playwright  # noqa: F401
+
+        return True, None
+    except Exception as exc:
+        return False, str(exc)
+
+
 @router.get("")
 def health():
     db = SessionLocal()
@@ -46,11 +55,14 @@ def health():
     session_counts = {"active": 0, "revoked": 0, "expired": 0}
     document_counts = {"queued": 0, "processing": 0, "processed": 0, "downloaded": 0, "failed": 0}
     try:
-        sync_portal_registry(db)
         tender_count = db.query(Tender).filter(Tender.is_active.is_(True)).count()
         latest = db.query(ScrapeLog).order_by(ScrapeLog.scraped_at.desc()).first()
         latest_scrape = latest.scraped_at if latest else None
-        dynamic_portal_count = db.query(ProcurementPortal).filter(ProcurementPortal.scraper_type == "playwright").count()
+        dynamic_portal_count = sum(
+            1
+            for portal in db.query(ProcurementPortal).filter(ProcurementPortal.enabled.is_(True)).all()
+            if portal_browser_enabled(portal)
+        )
         backup_count = db.query(TenderBackup).count()
         latest_backup_row = db.query(TenderBackup).order_by(TenderBackup.created_at.desc()).first()
         latest_backup = {
@@ -79,6 +91,8 @@ def health():
     cfg = settings()
     now = datetime.utcnow()
     runtime = scraper_runtime_status()
+    playwright_available, _playwright_error = _playwright_available()
+    browser_enabled = bool(cfg["use_playwright"] or cfg["scraper_force_playwright"]) and playwright_available
     latest_reference = runtime.get("last_finished") or latest_scrape
     latest_scrape_age_seconds = int((now - latest_scrape).total_seconds()) if latest_scrape else None
     next_scrape_at = None
@@ -89,7 +103,7 @@ def health():
 
     return {
         "status": "ok",
-        "service": "TenderWatch API",
+        "service": "Apna Tender API",
         "version": "2.0.0",
         "server_time": now,
         "auto_scrape_enabled": cfg["auto_scrape_enabled"],
@@ -115,7 +129,8 @@ def health():
         "documents": document_counts,
         "scrape_methods": {
             "static_html": True,
-            "dynamic_browser": cfg["use_playwright"],
+            "dynamic_browser": browser_enabled,
+            "playwright_available": playwright_available,
             "api_proxy": bool(cfg["use_proxy"] and cfg["scraper_api_key"]),
             "api_proxy_fallback": bool(cfg["scraper_proxy_fallback"] and cfg["scraper_api_key"]),
             "dynamic_portals": dynamic_portal_count,
@@ -213,19 +228,28 @@ def connection_health(_user=Depends(get_current_user)):
     cfg = settings()
     runtime = scraper_runtime_status()
     warnings = []
+    playwright_available, playwright_error = _playwright_available()
+    browser_enabled = bool(cfg["use_playwright"] or cfg["scraper_force_playwright"]) and playwright_available
 
     postgres_status = "ok"
     tender_count = 0
     scrape_log_count = 0
     active_sessions = 0
     revoked_sessions = 0
+    dynamic_portal_count = 0
     try:
         db = SessionLocal()
         db.execute(text("select 1"))
+        sync_portal_registry(db)
         tender_count = db.query(Tender).filter(Tender.is_active.is_(True)).count()
         scrape_log_count = db.query(ScrapeLog).count()
         active_sessions = db.query(UserSession).filter(UserSession.is_active.is_(True), UserSession.revoked.is_(False)).count()
         revoked_sessions = db.query(UserSession).filter(UserSession.revoked.is_(True)).count()
+        dynamic_portal_count = sum(
+            1
+            for portal in db.query(ProcurementPortal).filter(ProcurementPortal.enabled.is_(True)).all()
+            if portal_browser_enabled(portal)
+        )
     except Exception as exc:
         postgres_status = f"failed: {exc}"
         warnings.append("PostgreSQL connection failed")
@@ -258,6 +282,8 @@ def connection_health(_user=Depends(get_current_user)):
     scraper_api_configured = not _is_placeholder(cfg["scraper_api_key"])
     if proxy_enabled and not scraper_api_configured:
         warnings.append("ScraperAPI proxy is enabled but no API key is configured")
+    if bool(cfg["use_playwright"] or cfg["scraper_force_playwright"]) and not playwright_available:
+        warnings.append(f"Playwright is enabled but not importable: {playwright_error}")
 
     secret_needs_rotation = _is_placeholder(cfg["secret_key"])
     admin_password_needs_rotation = _is_placeholder(cfg["admin_password"])
@@ -289,7 +315,14 @@ def connection_health(_user=Depends(get_current_user)):
             "portal_timeout_seconds": cfg["scraper_portal_timeout_seconds"],
             "retries": cfg["scraper_retries"],
             "concurrency": cfg["scraper_concurrency"],
-            "use_playwright": cfg["use_playwright"],
+            "use_playwright": browser_enabled,
+            "force_playwright": cfg["scraper_force_playwright"],
+            "playwright_available": playwright_available,
+            "dynamic_portals": dynamic_portal_count,
+            "browser_pool_size": cfg["browser_pool_size"],
+            "headless_mode": cfg["headless_mode"],
+            "max_pages_per_portal": cfg["max_pages_per_portal"],
+            "max_tenders_per_portal": cfg["max_tenders_per_portal"],
             "store_all_tenders": cfg["store_all_tenders"],
             "sample_fallback_enabled": cfg["enable_sample_fallback"],
             "runtime": runtime,
@@ -316,6 +349,12 @@ def connection_health(_user=Depends(get_current_user)):
             "recipient_count": len(_csv_values(cfg["alert_to_emails"])),
             "test_recipient_configured": bool(cfg["alert_test_to_email"]),
             "status": "ready" if smtp_configured and cfg["alert_from_email"] and cfg["alert_to_emails"] else "needs_configuration",
+        },
+        "ai": {
+            "enabled": cfg["ml_engine_enabled"],
+            "model": cfg["ml_model_name"],
+            "semantic_threshold": cfg["ml_similarity_threshold"],
+            "status": "enabled" if cfg["ml_engine_enabled"] else "disabled",
         },
         "auth": {
             "admin_user_configured": bool(cfg["admin_email"]),
@@ -361,12 +400,22 @@ def portal_health():
                 .filter(Tender.portal == portal.name, TenderDocument.status.in_(["queued", "processing"]))
                 .count()
             )
+            latest_status = latest.status if latest else None
+            status_value = portal.health_status or latest_status or "never_scraped"
+            if latest_status in {"success", "empty", "cached"}:
+                status_value = latest_status
+            elif tender_count and latest_status in {"failed", "retrying", "temporarily_blocked"}:
+                status_value = "cached"
+            elif not latest and portal.enabled:
+                status_value = "monitored"
             rows.append(
                 {
                     "portal": portal.name,
                     "state": portal.state,
-                    "status": portal.health_status or (latest.status if latest else "never_scraped"),
+                    "status": status_value,
                     "enabled": portal.enabled,
+                    "uses_playwright": portal_browser_enabled(portal),
+                    "scraper_type": portal.scraper_type,
                     "tenders_found": latest.tenders_found if latest else 0,
                     "stored": tender_count,
                     "duplicates": latest_run.duplicate_count if latest_run else 0,

@@ -12,6 +12,22 @@ function status(session) {
   return "active";
 }
 
+function isLocalIp(ip = "") {
+  return ip === "127.0.0.1" || ip === "::1" || ip.startsWith("10.") || ip.startsWith("192.168.") || /^172\.(1[6-9]|2\d|3[0-1])\./.test(ip);
+}
+
+function sessionLocation(session) {
+  const clean = (value) => {
+    const text = `${value || ""}`.trim();
+    return text && !/^unknown/i.test(text) ? text : "";
+  };
+  const city = clean(session.city);
+  const country = clean(session.country);
+  if (city || country) return [city, country].filter(Boolean).join(", ");
+  if (isLocalIp(session.ip_address || "")) return "This device, local network";
+  return "Unknown location";
+}
+
 export default function Sessions({ sessions = [], adminSessions = [], user, onRefresh, onLogoutAll, notify }) {
   async function revoke(session) {
     await api(`/auth/session/${encodeURIComponent(session.session_id)}`, { method: "DELETE" });
@@ -72,12 +88,14 @@ export default function Sessions({ sessions = [], adminSessions = [], user, onRe
           {sessions.length === 0 && <span className="muted">No sessions loaded yet.</span>}
           {sessions.map((session) => {
             const Icon = isMobile(session) ? Smartphone : Laptop;
+            const accountEmail = user?.email || session.user_email || "Unknown account";
             return (
               <article className="sessionRow" key={session.session_id}>
                 <Icon size={22} />
                 <div>
                   <strong>{session.device_name || "Unknown device"} {session.current && <em>Current</em>}</strong>
-                  <span>{session.ip_address || "No IP"} - {session.city || "Unknown city"} {session.country || ""}</span>
+                  <span>{accountEmail} - {session.browser || "Browser"} on {session.operating_system || "OS"}</span>
+                  <span>Location: {sessionLocation(session)} - IP {session.ip_address || "No IP"}</span>
                   <small>Login {formatApiDateTime(session.login_time)} | Last activity {formatApiDateTime(session.last_activity_at)}</small>
                   <small>Expires {formatApiDateTime(session.session_expires_at)} | Refresh until {formatApiDateTime(session.refresh_expires_at)}</small>
                 </div>
@@ -106,8 +124,8 @@ export default function Sessions({ sessions = [], adminSessions = [], user, onRe
               <article className="sessionRow" key={`admin-${session.session_id}`}>
                 <MonitorCheck size={20} />
                 <div>
-                  <strong>User #{session.user_id} - {session.device_name || "Unknown device"}</strong>
-                  <span>{session.ip_address || "No IP"} - {session.browser || "Browser"} - {session.operating_system || "OS"}</span>
+                  <strong>{session.user_email || `User #${session.user_id}`} - {session.device_name || "Unknown device"}</strong>
+                  <span>{session.browser || "Browser"} on {session.operating_system || "OS"} - Location: {sessionLocation(session)} - IP {session.ip_address || "No IP"}</span>
                   <small>Last activity {formatApiDateTime(session.last_activity_at)} | {session.last_api_request || "No API path"}</small>
                 </div>
                 <span className={`statusBadge ${status(session)}`}>{status(session)}</span>

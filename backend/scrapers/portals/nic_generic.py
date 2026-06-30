@@ -10,7 +10,7 @@ class NICGenericScraper(BaseScraper):
         tenders = []
         seen = set()
         for nic_url in self.listing_urls:
-            parsed_pages = await self.scrape_tapestry_listing_pages(nic_url, search_query=search_query)
+            parsed_pages = await self.scrape_tapestry_listing_pages(nic_url)
             for tender in parsed_pages:
                 if tender["tender_id"] in seen:
                     continue
@@ -22,12 +22,8 @@ class NICGenericScraper(BaseScraper):
             try:
                 soup = await self.fetch_static(nic_url)
                 parsed = self._parse_candidates(soup, source_url=nic_url, scrape_method="nic_static_fallback")
-                await self._enrich_missing_schedule(parsed)
+                await self.enrich_detail_pages(parsed)
                 for tender in parsed:
-                    if search_query:
-                        text_to_search = f"{tender.get('title', '')} {tender.get('description', '')}".lower()
-                        if search_query.lower() not in text_to_search:
-                            continue
                     if tender["tender_id"] in seen:
                         continue
                     seen.add(tender["tender_id"])

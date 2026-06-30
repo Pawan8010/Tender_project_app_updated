@@ -1,5 +1,5 @@
 import { Clock3 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { api, clearToken, getRefreshToken, setTokens } from "../lib/api.js";
 
 function format(seconds) {
@@ -12,12 +12,17 @@ function format(seconds) {
 export default function SessionTimer({ onExpired }) {
   const [remaining, setRemaining] = useState(null);
   const [refreshing, setRefreshing] = useState(false);
+  const onExpiredRef = useRef(onExpired);
+
+  useEffect(() => {
+    onExpiredRef.current = onExpired;
+  }, [onExpired]);
 
   async function refreshSession() {
     const refreshToken = getRefreshToken();
     if (!refreshToken) {
       clearToken();
-      onExpired?.();
+      onExpiredRef.current?.();
       return;
     }
     setRefreshing(true);
@@ -31,7 +36,7 @@ export default function SessionTimer({ onExpired }) {
       setRemaining(info.remaining_seconds);
     } catch {
       clearToken();
-      onExpired?.();
+      onExpiredRef.current?.();
     } finally {
       setRefreshing(false);
     }
@@ -43,7 +48,7 @@ export default function SessionTimer({ onExpired }) {
       .then((data) => active && setRemaining(data.remaining_seconds))
       .catch(() => {
         clearToken();
-        onExpired?.();
+        onExpiredRef.current?.();
       });
     const timer = window.setInterval(() => {
       setRemaining((value) => {
@@ -53,7 +58,7 @@ export default function SessionTimer({ onExpired }) {
         }
         if (value <= 1) {
           clearToken();
-          onExpired?.();
+          onExpiredRef.current?.();
           return 0;
         }
         return value - 1;
@@ -63,7 +68,7 @@ export default function SessionTimer({ onExpired }) {
       active = false;
       window.clearInterval(timer);
     };
-  }, [onExpired]);
+  }, []);
 
   return (
     <span className={`sessionTimer ${remaining !== null && remaining < 300 ? "warning" : ""}`} title="Session time remaining">

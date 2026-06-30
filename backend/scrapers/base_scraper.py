@@ -543,11 +543,11 @@ class BaseScraper:
         schedule = self._extract_schedule(text)
         lowered = text.lower()
         status = "ACTIVE"
-        if "cancelled" in lowered or "canceled" in lowered:
+        if re.search(r"(?:tender|bid)\s+status\s*[:\-]?\s*(?:cancelled|canceled)", lowered) or re.search(r"\b(?:cancelled|canceled)\s+(?:tender|bid)\b", lowered):
             status = "CANCELLED"
-        elif "retender" in lowered:
+        elif re.search(r"(?:tender|bid)\s+status\s*[:\-]?\s*retender", lowered) or "retendered tender" in lowered:
             status = "RETENDERED"
-        elif "corrigendum" in lowered:
+        elif re.search(r"(?:corrigendum|amendment)\s+(?:details|document|notice)", lowered):
             status = "CORRIGENDUM"
 
         value = self._parse_value(text)
@@ -620,6 +620,64 @@ class BaseScraper:
                 await self._enrich_one_detail(tender, client=client)
 
         await asyncio.gather(*(run_one(tender) for tender in tenders), return_exceptions=True)
+
+    async def extract_tender_from_url(
+        self,
+        detail_url: str,
+        title_hint: str = "",
+        description_hint: str = "",
+        discovery_context: dict | None = None,
+        client: httpx.AsyncClient | None = None,
+    ) -> dict[str, Any]:
+        """Extract one Google-discovered tender URL using the same parser helpers as portal scrapes."""
+        soup = await self._fetch_detail_soup(detail_url, client=client)
+        metadata = self._extract_detail_metadata(soup, detail_url)
+        page_title = self.clean_text((soup.title.string if soup.title and soup.title.string else "") or "")
+        heading = self.clean_text((soup.select_one("h1, h2, h3").get_text(" ") if soup.select_one("h1, h2, h3") else "") or "")
+        detail_text = metadata.get("detail_text") or self.clean_text(soup.get_text(" "))[:5000]
+        title = self.clean_text(title_hint or heading or page_title or detail_text[:140] or "Google discovered tender")
+        description = self.clean_text(description_hint or detail_text[:1000] or title)
+        raw_data = {
+            "source": "google_discovery",
+            "source_url": (discovery_context or {}).get("portal_url") or self.base_url,
+            "stable_url": detail_url.split("#", 1)[0],
+            "scrape_method": "google_discovery_detail_extraction",
+            "discovery": discovery_context or {},
+            "detail_text": detail_text,
+        }
+        if metadata.get("opening_date"):
+            raw_data["opening_date"] = metadata["opening_date"].isoformat()
+        for field in ("department", "buyer", "organization", "location", "reference_number", "bid_number"):
+            if metadata.get(field):
+                raw_data[field] = metadata[field]
+        if metadata.get("document_urls"):
+            raw_data["document_urls"] = metadata["document_urls"]
+        if metadata.get("corrigendum"):
+            raw_data["corrigendum_detected"] = True
+
+        tender = {
+            "tender_id": self.generate_tender_id(title, detail_url),
+            "title": title[:500],
+            "description": description,
+            "portal": self.portal_name,
+            "state": self.state,
+            "department": metadata.get("department"),
+            "buyer": metadata.get("buyer"),
+            "organization": metadata.get("organization"),
+            "location": metadata.get("location"),
+            "reference_number": metadata.get("reference_number"),
+            "bid_number": metadata.get("bid_number"),
+            "tender_url": detail_url,
+            "published_date": metadata.get("published_date"),
+            "closing_date": metadata.get("closing_date"),
+            "estimated_value": metadata.get("estimated_value"),
+            "tender_status": metadata.get("tender_status") or "ACTIVE",
+            "corrigendum": bool(metadata.get("corrigendum")),
+            "categories": [],
+            "matched_keywords": [],
+            "raw_data": raw_data,
+        }
+        return tender
 
     async def _fetch_nprocure_closing_report(self, client, report_url: str, date_str: str) -> BeautifulSoup:
         """Fetch nProcure bid-closing report for a given date."""
@@ -922,11 +980,6 @@ class BaseScraper:
 
                 new_on_page = 0
                 for tender in parsed:
-                    if search_query:
-                        text_to_search = f"{tender.get('title', '')} {tender.get('description', '')}".lower()
-                        if search_query.lower() not in text_to_search:
-                            continue
-
                     raw_data = dict(tender.get("raw_data") or {})
                     raw_data["stable_url"] = self._strip_session_bound_query(
                         raw_data.get("stable_url") or tender.get("tender_url") or url
@@ -1001,7 +1054,8 @@ class BaseScraper:
 
 
     async def soup(self, url: str) -> BeautifulSoup:
-        use_browser = self.use_playwright and settings()["use_playwright"]
+        cfg = settings()
+        use_browser = self.use_playwright and bool(cfg["use_playwright"] or cfg["scraper_force_playwright"])
         return await (self.fetch_dynamic(url) if use_browser else self.fetch_static(url))
 
     # Core scrape interface.

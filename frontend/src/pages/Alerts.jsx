@@ -199,7 +199,7 @@ export default function Alerts({ alerts, categories, stats, notify, user }) {
                   type="email"
                   value={smtpConfig.gmail_user}
                   onChange={(e) => setSmtpConfig({ ...smtpConfig, gmail_user: e.target.value })}
-                  placeholder="e.g. bhandaresandesh26@gmail.com"
+                  placeholder="e.g. alerts@example.com"
                   style={{ padding: "10px 14px", borderRadius: "8px", border: "1px solid var(--lp-border-color)", background: "white", outline: "none", fontSize: "0.95rem" }}
                 />
               </div>
@@ -251,7 +251,7 @@ export default function Alerts({ alerts, categories, stats, notify, user }) {
                   type="email"
                   value={smtpConfig.alert_from_email}
                   onChange={(e) => setSmtpConfig({ ...smtpConfig, alert_from_email: e.target.value })}
-                  placeholder="e.g. bhandaresandesh26@gmail.com"
+                  placeholder="e.g. alerts@example.com"
                   style={{ padding: "10px 14px", borderRadius: "8px", border: "1px solid var(--lp-border-color)", background: "white", outline: "none", fontSize: "0.95rem" }}
                 />
               </div>

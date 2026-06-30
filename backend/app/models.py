@@ -178,6 +178,23 @@ class TenderDocument(Base):
     tender: Mapped[Tender] = relationship(back_populates="documents")
 
 
+class TenderSearchIndex(Base):
+    __tablename__ = "tender_search_index"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    tender_id: Mapped[int] = mapped_column(ForeignKey("tenders.id"), unique=True, nullable=False, index=True)
+    search_text: Mapped[str] = mapped_column(Text, nullable=False)
+    title_text: Mapped[str | None] = mapped_column(Text)
+    document_text: Mapped[str | None] = mapped_column(Text)
+    embedding: Mapped[list[float]] = mapped_column(JSON, default=list)
+    tags: Mapped[list[str]] = mapped_column(JSON, default=list)
+    entities: Mapped[dict] = mapped_column(JSON, default=dict)
+    ai_summary: Mapped[str | None] = mapped_column(Text)
+    ai_category: Mapped[str | None] = mapped_column(String(100), index=True)
+    indexed_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, index=True)
+    source_hash: Mapped[str | None] = mapped_column(String(64), index=True)
+
+
 class TenderHistory(Base):
     __tablename__ = "tender_history"
 
@@ -319,6 +336,24 @@ class SchedulerLog(Base):
     tenders_updated: Mapped[int] = mapped_column(Integer, default=0)
     matches_found: Mapped[int] = mapped_column(Integer, default=0)
     error_message: Mapped[str | None] = mapped_column(Text)
+
+
+class ScrapeCheckpoint(Base):
+    __tablename__ = "scrape_checkpoints"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    portal: Mapped[str] = mapped_column(String(120), unique=True, nullable=False, index=True)
+    run_id: Mapped[str | None] = mapped_column(String(64), index=True)
+    status: Mapped[str] = mapped_column(String(40), default="idle", index=True)
+    last_page_url: Mapped[str | None] = mapped_column(Text)
+    last_tender_url: Mapped[str | None] = mapped_column(Text)
+    last_success_at: Mapped[datetime | None] = mapped_column(DateTime, index=True)
+    started_at: Mapped[datetime | None] = mapped_column(DateTime)
+    finished_at: Mapped[datetime | None] = mapped_column(DateTime)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, index=True)
+    retry_count: Mapped[int] = mapped_column(Integer, default=0)
+    last_error: Mapped[str | None] = mapped_column(Text)
+    stats: Mapped[dict] = mapped_column(JSON, default=dict)
 
 
 class TenderBackup(Base):

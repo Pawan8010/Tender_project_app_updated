@@ -1,16 +1,17 @@
-# Government Tender Intelligence Platform
+# Apna Tender
 
-A working FastAPI + React platform for defense, surveillance, and security tender monitoring.
+A working FastAPI + React platform for real-time government tender scraping, AI-assisted tender search, alerts, document processing, and dashboard monitoring.
 
 ## What Is Included
 
-- FastAPI backend with JWT-style bearer auth
+- FastAPI backend with JWT-style bearer auth and session tracking
 - Installed PostgreSQL 18 database support for local and Docker-backed services
 - SQLAlchemy models for tenders, users, keywords, alert subscriptions, and scrape logs
 - Keyword engine with the supplied defense/surveillance library and category tagging
 - 23-portal scraper registry covering 6 national and 17 state portals
 - Celery worker and beat scheduler for configured interval-based proposal-aligned scraping
-- Email alert integration, test email endpoint, and daily digest through SendGrid when `SENDGRID_API_KEY` is configured
+- Gmail SMTP alert integration, test email endpoint, and daily digest support when SMTP credentials are configured
+- AI search endpoints with local tender index ranking and optional Google Custom Search discovery fallback
 - CSV and Excel export endpoints
 - Tender backup vault with automatic matched-tender snapshots, manual full backups, JSON download, and restore for missing/inactive tenders
 - React dashboard with 6-card stats, filters, matched-only mode, tender detail rail, alerts, admin keyword management, live scrape status, and manual scrape trigger
@@ -21,7 +22,7 @@ A working FastAPI + React platform for defense, surveillance, and security tende
 The backend seeds one admin account for the owner. Set these values in `.env` before first production start:
 
 ```text
-ADMIN_EMAIL=2317056@ritindia.edu
+ADMIN_EMAIL=admin@example.com
 ADMIN_PASSWORD=replace-with-strong-admin-password
 ```
 
@@ -29,13 +30,13 @@ Visitors can create their own standard user account from the Sign up tab on the 
 
 ## Local Development
 
-This project is configured to use your installed local PostgreSQL server:
+This project can use PostgreSQL through `.env`, and falls back to a local SQLite database for quick development when `DATABASE_URL` is not set.
 
 ```text
-DATABASE_URL=postgresql+psycopg://tenderuser:8010@127.0.0.1:5432/tenderdb
+DATABASE_URL=postgresql+psycopg://tenderuser:replace-with-postgres-password@127.0.0.1:5432/tenderdb
 ```
 
-The app database is `tenderdb`, owned by `tenderuser`. Local development can use your installed PostgreSQL server on port `5432`; Docker Compose starts its own PostgreSQL service and maps it to host port `5433`.
+The app database is `tenderdb`, owned by `tenderuser`. Local development can use your installed PostgreSQL server on port `5432`; Docker Compose starts its own PostgreSQL service.
 
 Backend:
 
@@ -108,8 +109,8 @@ AUTO_SCRAPE_STARTUP_DELAY_SECONDS=15
 SEED_DEMO_DATA=false
 ENABLE_SAMPLE_FALLBACK=false
 STORE_ALL_TENDERS=true
-ALERT_TO_EMAILS=bhandaresandesh26@gmail.com
-ADMIN_EMAIL=2317056@ritindia.edu
+ALERT_TO_EMAILS=alerts@example.com
+ADMIN_EMAIL=admin@example.com
 ADMIN_PASSWORD=replace-with-strong-admin-password
 USE_PLAYWRIGHT=true
 SCRAPER_REQUEST_TIMEOUT_SECONDS=15

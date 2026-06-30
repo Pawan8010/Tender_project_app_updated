@@ -33,11 +33,6 @@ class KarnatakaScraper(BaseScraper):
                     
                     new_on_page = 0
                     for tender in parsed:
-                        if search_query:
-                            text_to_search = f"{tender.get('title', '')} {tender.get('description', '')}".lower()
-                            if search_query.lower() not in text_to_search:
-                                continue
-                                
                         if tender["tender_id"] in seen:
                             continue
                             

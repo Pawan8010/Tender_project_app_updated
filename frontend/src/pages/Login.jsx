@@ -44,7 +44,7 @@ export default function Login({ initialMode = "signin", onBack, onLogin }) {
       <nav className="landingNav authNav" aria-label="Auth navigation">
         <div className="landingBrand" style={{ cursor: "pointer" }} onClick={onBack}>
           <DatabaseZap size={24} />
-          <span>Tender Intel</span>
+          <span>Apna Tender</span>
         </div>
         <div className="landingNavActions">
           <button className="btn-outline authBackBtn" type="button" onClick={onBack}>
@@ -63,7 +63,7 @@ export default function Login({ initialMode = "signin", onBack, onLogin }) {
               <ShieldCheck size={22} />
             </div>
             <div>
-              <h1 className="authTitle">Government Tender Intelligence</h1>
+              <h1 className="authTitle">Apna Tender</h1>
               <p className="authSubtitle">
                 {isSignup
                   ? "Create your account to monitor live tenders."

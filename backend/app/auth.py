@@ -1,13 +1,17 @@
 import base64
 import hashlib
 import hmac
+import ipaddress
 import json
 import os
 import secrets
+import urllib.request
 from datetime import datetime, timedelta, timezone
+from functools import lru_cache
 
 from fastapi import Depends, HTTPException, Request, status
 from fastapi.security import OAuth2PasswordBearer
+from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 
 from app.config import settings
@@ -123,11 +127,75 @@ def token_payload(token: str) -> dict:
     return decode_token(token)
 
 
+def _clean_forwarded_ip(value: str | None) -> str | None:
+    if not value:
+        return None
+    candidate = value.strip().strip('"')
+    if candidate.lower().startswith("for="):
+        candidate = candidate.split("=", 1)[1].strip().strip('"')
+    if candidate.startswith("[") and "]" in candidate:
+        candidate = candidate[1:].split("]", 1)[0]
+    elif candidate.count(":") == 1 and candidate.rsplit(":", 1)[1].isdigit():
+        candidate = candidate.rsplit(":", 1)[0]
+    try:
+        return str(ipaddress.ip_address(candidate))
+    except ValueError:
+        return None
+
+
 def _client_ip(request: Request) -> str | None:
-    forwarded = request.headers.get("x-forwarded-for")
+    candidates: list[str] = []
+    for header in ("cf-connecting-ip", "x-real-ip", "x-client-ip", "x-forwarded-for"):
+        raw = request.headers.get(header)
+        if raw:
+            candidates.extend(part.strip() for part in raw.split(","))
+    forwarded = request.headers.get("forwarded")
     if forwarded:
-        return forwarded.split(",", 1)[0].strip()
-    return request.client.host if request.client else None
+        for segment in forwarded.split(","):
+            for token in segment.split(";"):
+                if token.strip().lower().startswith("for="):
+                    candidates.append(token.strip())
+    if request.client and request.client.host:
+        candidates.append(request.client.host)
+
+    valid = [ip for ip in (_clean_forwarded_ip(candidate) for candidate in candidates) if ip]
+    for ip in valid:
+        if ipaddress.ip_address(ip).is_global:
+            return ip
+    return valid[0] if valid else None
+
+
+@lru_cache(maxsize=2048)
+def _public_ip_location(ip_address: str) -> tuple[str | None, str | None]:
+    try:
+        request = urllib.request.Request(
+            f"https://ipapi.co/{ip_address}/json/",
+            headers={"User-Agent": "ApnaTender/2.0"},
+        )
+        with urllib.request.urlopen(request, timeout=2) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+        city = payload.get("city") or payload.get("region")
+        country_parts = [payload.get("region"), payload.get("country_name")]
+        country = ", ".join(part for part in country_parts if part)
+        return city or "Public internet", country or payload.get("country_code")
+    except Exception:
+        return "Public internet", None
+
+
+def _session_location(ip_address: str | None) -> tuple[str | None, str | None]:
+    if not ip_address:
+        return "Unknown location", None
+    try:
+        ip_obj = ipaddress.ip_address(ip_address)
+    except ValueError:
+        return "Unknown location", None
+    if ip_obj.is_loopback:
+        return "This device", "Localhost"
+    if ip_obj.is_private or ip_obj.is_link_local:
+        return "Local network", "Private IP"
+    if not ip_obj.is_global:
+        return "Network location", None
+    return _public_ip_location(str(ip_obj))
 
 
 def parse_user_agent(user_agent: str | None) -> tuple[str, str, str]:
@@ -190,6 +258,8 @@ def create_session_tokens(user: User, db: Session, request: Request | None = Non
     refresh_token = create_refresh_token(user.email, session_id, refresh_id, remember_me)
     device_name, browser, os_name = parse_user_agent(request.headers.get("user-agent") if request else None)
     refresh_days = cfg["remember_me_expire_days"] if remember_me else cfg["refresh_token_expire_days"]
+    ip_address = _client_ip(request) if request else None
+    city, country = _session_location(ip_address)
     session = UserSession(
         session_id=session_id,
         user_id=user.id,
@@ -199,7 +269,9 @@ def create_session_tokens(user: User, db: Session, request: Request | None = Non
         device_name=device_name,
         browser=browser,
         operating_system=os_name,
-        ip_address=_client_ip(request) if request else None,
+        ip_address=ip_address,
+        country=country,
+        city=city,
         login_time=now,
         last_activity_at=now,
         last_api_request=str(request.url.path) if request else None,
@@ -272,9 +344,19 @@ def get_current_user(request: Request, token: str = Depends(oauth2_scheme), db: 
             audit(db, "session_expired", actor=user.email, entity_type="session", entity_id=session.session_id)
             db.commit()
             raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Session expired")
-        session.last_activity_at = now
-        session.last_api_request = str(request.url.path)
-        session.session_expires_at = now + timedelta(minutes=settings()["session_inactivity_minutes"])
-        session.updated_at = now
-        db.commit()
+        should_touch = not session.last_activity_at or (now - session.last_activity_at).total_seconds() >= 30
+        if should_touch:
+            try:
+                current_ip = _client_ip(request)
+                if current_ip and (not session.ip_address or session.ip_address != current_ip and ipaddress.ip_address(current_ip).is_global):
+                    session.ip_address = current_ip
+                if not session.city or session.city.lower().startswith("unknown"):
+                    session.city, session.country = _session_location(session.ip_address)
+                session.last_activity_at = now
+                session.last_api_request = str(request.url.path)
+                session.session_expires_at = now + timedelta(minutes=settings()["session_inactivity_minutes"])
+                session.updated_at = now
+                db.commit()
+            except SQLAlchemyError:
+                db.rollback()
     return user

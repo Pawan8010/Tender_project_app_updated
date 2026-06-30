@@ -41,14 +41,7 @@ class PortalWorker:
         tenders = []
         try:
             raw_tenders = await self._run_with_retry(search_query)
-            if search_query:
-                sq = search_query.lower()
-                for t in raw_tenders:
-                    text_to_search = f"{t.get('title', '')} {t.get('description', '')} {t.get('bid_number', '')}".lower()
-                    if sq in text_to_search:
-                        tenders.append(t)
-            else:
-                tenders = raw_tenders
+            tenders = raw_tenders
                 
             async for db in get_async_db():
                 await self._update_status(
@@ -117,7 +110,7 @@ class PortalWorker:
                     await self._update_status(db, status="running", retry_count=attempt)
                     break
                 
-                return await self.scraper.scrape(search_query=search_query)
+                return await self.scraper.scrape()
                 
             except Exception as exc:
                 last_error = exc

@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, inspect, text
+from sqlalchemy import create_engine, event, inspect, text
 from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
 from app.config import settings
@@ -12,12 +12,31 @@ connect_args = {"check_same_thread": False, "timeout": 60} if DATABASE_URL.start
 engine = create_engine(DATABASE_URL, connect_args=connect_args, pool_pre_ping=True)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 
+
+if DATABASE_URL.startswith("sqlite"):
+    @event.listens_for(engine, "connect")
+    def _set_sqlite_pragmas(dbapi_connection, _connection_record):
+        cursor = dbapi_connection.cursor()
+        cursor.execute("PRAGMA journal_mode=WAL")
+        cursor.execute("PRAGMA synchronous=NORMAL")
+        cursor.execute("PRAGMA busy_timeout=60000")
+        cursor.close()
+
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker as async_sessionmaker
 
 ASYNC_DATABASE_URL = DATABASE_URL.replace("postgresql+psycopg://", "postgresql+asyncpg://").replace("sqlite://", "sqlite+aiosqlite://")
 
 async_engine = create_async_engine(ASYNC_DATABASE_URL, connect_args=connect_args, echo=False)
+
+if ASYNC_DATABASE_URL.startswith("sqlite"):
+    @event.listens_for(async_engine.sync_engine, "connect")
+    def _set_async_sqlite_pragmas(dbapi_connection, _connection_record):
+        cursor = dbapi_connection.cursor()
+        cursor.execute("PRAGMA journal_mode=WAL")
+        cursor.execute("PRAGMA synchronous=NORMAL")
+        cursor.execute("PRAGMA busy_timeout=60000")
+        cursor.close()
 AsyncSessionLocal = async_sessionmaker(
     bind=async_engine, class_=AsyncSession, expire_on_commit=False
 )
@@ -41,11 +60,13 @@ def get_db():
 
 def init_db():
     from app import models  # noqa: F401
+    from app.services.tender_index import ensure_search_indexes
 
     Base.metadata.create_all(bind=engine)
     _ensure_user_profile_columns()
     _ensure_tender_intelligence_columns()
     _ensure_session_columns()
+    ensure_search_indexes(engine)
 
 
 def _ensure_user_profile_columns():

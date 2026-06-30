@@ -2,7 +2,7 @@ from datetime import datetime
 
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from fastapi.security import OAuth2PasswordBearer
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, joinedload
 
 from app.auth import (
     audit,
@@ -23,8 +23,12 @@ router = APIRouter()
 token_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
 
 
-def _session_response(session: UserSession, current_session_id: str | None = None) -> dict:
-    return {
+def _session_response(
+    session: UserSession,
+    current_session_id: str | None = None,
+    include_user_email: bool = False,
+) -> dict:
+    payload = {
         "id": session.id,
         "session_id": session.session_id,
         "user_id": session.user_id,
@@ -48,6 +52,9 @@ def _session_response(session: UserSession, current_session_id: str | None = Non
         "updated_at": session.updated_at,
         "current": session.session_id == current_session_id,
     }
+    if include_user_email:
+        payload["user_email"] = session.user.email if session.user else None
+    return payload
 
 
 @router.post("/login", response_model=Token)
@@ -133,14 +140,14 @@ def sessions(token: str = Depends(token_scheme), user: User = Depends(get_curren
 def admin_sessions(status_filter: str | None = None, user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     if user.role != "admin":
         raise HTTPException(status_code=403, detail="Admin access required")
-    query = db.query(UserSession).order_by(UserSession.last_activity_at.desc())
+    query = db.query(UserSession).options(joinedload(UserSession.user)).order_by(UserSession.last_activity_at.desc())
     if status_filter == "active":
         query = query.filter(UserSession.is_active.is_(True), UserSession.revoked.is_(False))
     elif status_filter == "revoked":
         query = query.filter(UserSession.revoked.is_(True))
     elif status_filter == "expired":
         query = query.filter(UserSession.refresh_expires_at < utcnow())
-    return [_session_response(row) for row in query.limit(500).all()]
+    return [_session_response(row, include_user_email=True) for row in query.limit(500).all()]
 
 
 @router.post("/logout")

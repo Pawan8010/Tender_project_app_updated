@@ -1,4 +1,4 @@
-import { Bell, BookOpen, DatabaseZap, LayoutDashboard, ListFilter, LogOut, Radio, SearchCode, Server, ShieldCheck, Trash2 } from "lucide-react";
+import { Bell, DatabaseZap, LayoutDashboard, ListFilter, LogOut, Radio, SearchCode, Server, ShieldCheck, Trash2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { api, apiUrl, clearToken, getRefreshToken, getToken } from "./lib/api.js";
@@ -8,7 +8,6 @@ import { ToastProvider, useToast } from "./components/Toast.jsx";
 import Alerts from "./pages/Alerts.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Keywords from "./pages/Keywords.jsx";
-import Glossary from "./pages/Glossary.jsx";
 import Landing from "./pages/Landing.jsx";
 import Login from "./pages/Login.jsx";
 import System from "./pages/System.jsx";
@@ -25,7 +24,6 @@ const tabs = [
   { id: "keywords", labelKey: "keywords", label: "Keywords", icon: SearchCode },
   { id: "system", labelKey: "system", label: "System", icon: Server },
   { id: "sessions", labelKey: "sessions", label: "Sessions", icon: ShieldCheck },
-  { id: "glossary", labelKey: "glossary", label: "Glossary", icon: BookOpen },
 ];
 
 const initialFilters = {
@@ -60,6 +58,7 @@ function AppContent() {
   const [selectedId, setSelectedId] = useState(null);
   const [liveSync, setLiveSync] = useState({ status: "idle", message: "Waiting for live scraper events" });
   const [liveEvents, setLiveEvents] = useState([]);
+  const [tokenVersion, setTokenVersion] = useState(0);
   useLang();
   const queryClient = useQueryClient();
   const { notify } = useToast();
@@ -70,12 +69,29 @@ function AppContent() {
     }
   }, []);
 
+  useEffect(() => {
+    const bump = () => setTokenVersion((value) => value + 1);
+    const clearUser = () => {
+      setUser(null);
+      setAuthMode("signin");
+      bump();
+    };
+    window.addEventListener("auth-token-updated", bump);
+    window.addEventListener("auth-token-cleared", clearUser);
+    return () => {
+      window.removeEventListener("auth-token-updated", bump);
+      window.removeEventListener("auth-token-cleared", clearUser);
+    };
+  }, []);
+
   const enabled = Boolean(user);
   const statsQuery = useQuery({ queryKey: ["stats"], queryFn: () => api("/tenders/stats"), enabled, refetchInterval: 5000 });
   const keywordsQuery = useQuery({ queryKey: ["keywords"], queryFn: () => api("/keywords/"), enabled });
   const alertsQuery = useQuery({ queryKey: ["alerts"], queryFn: () => api("/alerts/"), enabled });
   const scrapeLogsQuery = useQuery({ queryKey: ["scrapeLogs"], queryFn: () => api("/scrape/logs?limit=23"), enabled, refetchInterval: 5000 });
   const healthQuery = useQuery({ queryKey: ["health"], queryFn: () => api("/health"), enabled, refetchInterval: 5000 });
+  const portalHealthQuery = useQuery({ queryKey: ["portalHealth"], queryFn: () => api("/health/portals"), enabled, refetchInterval: 15000 });
+  const aiDashboardQuery = useQuery({ queryKey: ["aiDashboard"], queryFn: () => api("/dashboard/ai"), enabled, refetchInterval: 15000 });
   const connectionsQuery = useQuery({ queryKey: ["connections"], queryFn: () => api("/health/connections"), enabled, refetchInterval: 15000 });
   const portalsQuery = useQuery({ queryKey: ["portals"], queryFn: () => api("/scrape/portals"), enabled });
   const backupsQuery = useQuery({ queryKey: ["backups"], queryFn: () => api("/backups/"), enabled, refetchInterval: 30000 });
@@ -111,6 +127,8 @@ function AppContent() {
         queryClient.invalidateQueries({ queryKey: ["tenders"] });
         queryClient.invalidateQueries({ queryKey: ["scrapeLogs"] });
         queryClient.invalidateQueries({ queryKey: ["health"] });
+        queryClient.invalidateQueries({ queryKey: ["portalHealth"] });
+        queryClient.invalidateQueries({ queryKey: ["aiDashboard"] });
         queryClient.invalidateQueries({ queryKey: ["connections"] });
         queryClient.invalidateQueries({ queryKey: ["backups"] });
       }, 250);
@@ -145,7 +163,7 @@ function AppContent() {
       window.clearTimeout(refreshTimer);
       source.close();
     };
-  }, [enabled, notify, queryClient]);
+  }, [enabled, notify, queryClient, tokenVersion]);
 
   const scrapeMutation = useMutation({
     mutationFn: () => api("/scrape/start", { method: "POST" }),
@@ -159,6 +177,8 @@ function AppContent() {
       queryClient.invalidateQueries({ queryKey: ["tenders"] });
       queryClient.invalidateQueries({ queryKey: ["scrapeLogs"] });
       queryClient.invalidateQueries({ queryKey: ["health"] });
+      queryClient.invalidateQueries({ queryKey: ["portalHealth"] });
+      queryClient.invalidateQueries({ queryKey: ["aiDashboard"] });
       queryClient.invalidateQueries({ queryKey: ["connections"] });
     },
     onError: (error) => notify(error.message || "Scrape failed", "error"),
@@ -182,6 +202,8 @@ function AppContent() {
       queryClient.invalidateQueries({ queryKey: ["tenders"] });
       queryClient.invalidateQueries({ queryKey: ["scrapeLogs"] });
       queryClient.invalidateQueries({ queryKey: ["health"] });
+      queryClient.invalidateQueries({ queryKey: ["portalHealth"] });
+      queryClient.invalidateQueries({ queryKey: ["aiDashboard"] });
       queryClient.invalidateQueries({ queryKey: ["connections"] });
     },
     onError: (error) => notify(error.message || "Portal scrape failed", "error"),
@@ -193,6 +215,8 @@ function AppContent() {
       notify(`${data.backup_type === "all" ? "Full tender" : "Matched tender"} backup created: ${data.tender_count} records`);
       queryClient.invalidateQueries({ queryKey: ["backups"] });
       queryClient.invalidateQueries({ queryKey: ["health"] });
+      queryClient.invalidateQueries({ queryKey: ["portalHealth"] });
+      queryClient.invalidateQueries({ queryKey: ["aiDashboard"] });
       queryClient.invalidateQueries({ queryKey: ["connections"] });
     },
     onError: (error) => notify(error.message || "Backup failed", "error"),
@@ -206,6 +230,8 @@ function AppContent() {
       queryClient.invalidateQueries({ queryKey: ["tenders"] });
       queryClient.invalidateQueries({ queryKey: ["backups"] });
       queryClient.invalidateQueries({ queryKey: ["health"] });
+      queryClient.invalidateQueries({ queryKey: ["portalHealth"] });
+      queryClient.invalidateQueries({ queryKey: ["aiDashboard"] });
       queryClient.invalidateQueries({ queryKey: ["connections"] });
     },
     onError: (error) => notify(error.message || "Restore failed", "error"),
@@ -218,6 +244,8 @@ function AppContent() {
       queryClient.invalidateQueries({ queryKey: ["stats"] });
       queryClient.invalidateQueries({ queryKey: ["tenders"] });
       queryClient.invalidateQueries({ queryKey: ["health"] });
+      queryClient.invalidateQueries({ queryKey: ["portalHealth"] });
+      queryClient.invalidateQueries({ queryKey: ["aiDashboard"] });
       queryClient.invalidateQueries({ queryKey: ["connections"] });
     },
     onError: (error) => notify(error.message || "Document processing failed", "error"),
@@ -265,12 +293,12 @@ function AppContent() {
   if (!user) return <Login initialMode={authMode} onBack={() => setAuthMode(null)} onLogin={setUser} />;
 
   return (
-    <div className="appShell">
+    <div className="appShell platformShell">
       <aside className="sidebar">
         <div className="appTitle">
           <DatabaseZap size={28} />
           <div>
-            <strong>Tender Intel</strong>
+            <strong>Apna Tender</strong>
             <span>Procurement command</span>
           </div>
         </div>
@@ -316,6 +344,8 @@ function AppContent() {
             stats={statsQuery.data}
             scrapeLogs={scrapeLogsQuery.data}
             health={healthQuery.data}
+            portalHealth={portalHealthQuery.data}
+            aiDashboard={aiDashboardQuery.data}
             liveSync={liveSync}
             liveEvents={liveEvents}
             onSelectTender={selectTender}
@@ -329,6 +359,7 @@ function AppContent() {
             categories={categories}
             data={tenderQuery.data}
             health={healthQuery.data}
+            portalHealth={portalHealthQuery.data}
             connections={connectionsQuery.data}
             scrapeLogs={scrapeLogsQuery.data}
             liveSync={liveSync}
@@ -355,7 +386,6 @@ function AppContent() {
             notify={notify}
           />
         )}
-        {tab === "glossary" && <Glossary />}
         {tab === "system" && (
           <System
             health={healthQuery.data}
@@ -389,14 +419,38 @@ function AppContent() {
             <span className="eyebrow">{detailQuery.data.portal} - {detailQuery.data.state || "National"}</span>
             <h2>{detailQuery.data.title}</h2>
             <CategoryChips categories={detailQuery.data.categories} />
+            {detailQuery.data.raw_data?.ai && (
+              <div className="detailAiBox">
+                <strong>AI tender intelligence</strong>
+                <span>
+                  {detailQuery.data.raw_data.ai.category || detailQuery.data.ai_category || "General"}
+                  {detailQuery.data.raw_data.ai.confidence ? ` - ${Math.round(Number(detailQuery.data.raw_data.ai.confidence) * 100)}% confidence` : ""}
+                </span>
+                {detailQuery.data.raw_data.ai.summary && <p>{detailQuery.data.raw_data.ai.summary}</p>}
+                {detailQuery.data.raw_data.ai.tags?.length > 0 && (
+                  <div className="aiTagRow">
+                    {detailQuery.data.raw_data.ai.tags.slice(0, 8).map((tag) => <em key={tag}>{tag}</em>)}
+                  </div>
+                )}
+                {detailQuery.data.raw_data.ai.entities && (
+                  <small>
+                    {Object.entries(detailQuery.data.raw_data.ai.entities)
+                      .filter(([, values]) => Array.isArray(values) && values.length > 0)
+                      .slice(0, 3)
+                      .map(([name, values]) => `${name.replaceAll("_", " ")}: ${values.slice(0, 3).join(", ")}`)
+                      .join(" | ")}
+                  </small>
+                )}
+              </div>
+            )}
             <dl>
               <div><dt>Opening Date</dt><dd>{openingDate(detailQuery.data)}</dd></div>
               <div><dt>Published</dt><dd>{detailQuery.data.published_date || "N/A"}</dd></div>
               <div><dt>Closing Date</dt><dd>{detailQuery.data.closing_date || "N/A"}</dd></div>
               <div><dt>Estimated value</dt><dd>{detailQuery.data.estimated_value ? `INR ${detailQuery.data.estimated_value.toLocaleString("en-IN")}` : "N/A"}</dd></div>
-            <div><dt>Keywords</dt><dd>{detailQuery.data.matched_keywords.join(", ") || "N/A"}</dd></div>
-            <div><dt>Match score</dt><dd>{detailQuery.data.raw_data?.match_score ? `${detailQuery.data.raw_data.match_score}/100` : "N/A"}</dd></div>
-              <div><dt>Plain summary</dt><dd>{detailQuery.data.raw_data?.plain_summary || "N/A"}</dd></div>
+              <div><dt>Keywords</dt><dd>{detailQuery.data.matched_keywords.join(", ") || "N/A"}</dd></div>
+              <div><dt>Match score</dt><dd>{detailQuery.data.raw_data?.match_score ? `${detailQuery.data.raw_data.match_score}/100` : "N/A"}</dd></div>
+              <div><dt>Summary</dt><dd>{detailQuery.data.raw_data?.ai?.summary || detailQuery.data.raw_data?.plain_summary || "N/A"}</dd></div>
             </dl>
             {detailQuery.data.raw_data?.match_reasons?.length > 0 && (
               <div className="matchReasonBox">

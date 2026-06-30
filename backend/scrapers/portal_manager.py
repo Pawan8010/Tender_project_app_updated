@@ -1,8 +1,6 @@
 import asyncio
 import uuid
 from datetime import datetime
-import json
-import traceback
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
@@ -10,9 +8,16 @@ from sqlalchemy import select
 from app.database import SessionLocal, get_async_db
 from app.models import ProcurementPortal, WorkerStatus, PortalRun, ScrapeLog, TenderChangeEvent
 from app.config import settings
-from scrapers.registry import all_scrapers, _upsert_tender
+from scrapers.registry import portal_browser_enabled
 from scrapers.worker import PortalWorker
-from app.services.keyword_engine import match_tender_keywords
+from scrapers.engine_services import (
+    CheckpointService,
+    MonitoringService,
+    PortalJob,
+    ScraperDatabaseService,
+    StructuredScrapeLogger,
+    WorkerQueue,
+)
 
 class PortalManager:
     def __init__(self):
@@ -20,13 +25,26 @@ class PortalManager:
         self._running = False
         self._stop_event = asyncio.Event()
         self._monitor_task = None
+        self.run_id: str | None = None
+        self.logger = StructuredScrapeLogger()
+        self.checkpoints = CheckpointService()
+        self.database_service = ScraperDatabaseService()
+        self.monitoring = MonitoringService()
         self.stats = {
             "total_portals": 0,
             "running": 0,
             "failed": 0,
             "completed": 0,
+            "total_fetched": 0,
             "total_new": 0,
             "total_updated": 0,
+            "total_duplicates": 0,
+            "total_failed_tenders": 0,
+            "retry_count": 0,
+            "queue_size": 0,
+            "current_portal": None,
+            "current_tender": None,
+            "scraping_speed_per_minute": 0,
             "started_at": None,
             "finished_at": None,
         }
@@ -36,13 +54,24 @@ class PortalManager:
             return
             
         self._running = True
+        self.run_id = str(uuid.uuid4())
+        self.monitoring = MonitoringService()
         self._stop_event.clear()
         self.stats["started_at"] = datetime.utcnow()
         self.stats["running"] = 0
         self.stats["completed"] = 0
         self.stats["failed"] = 0
+        self.stats["total_fetched"] = 0
         self.stats["total_new"] = 0
         self.stats["total_updated"] = 0
+        self.stats["total_duplicates"] = 0
+        self.stats["total_failed_tenders"] = 0
+        self.stats["retry_count"] = 0
+        self.stats["queue_size"] = 0
+        self.stats["current_portal"] = None
+        self.stats["current_tender"] = None
+        self.stats["scraping_speed_per_minute"] = 0
+        self.logger.event("scrape_run_started", run_id=self.run_id, message="Enterprise scraper run started")
 
         def ensure_portals_synced() -> None:
             from scrapers.registry import sync_portal_registry
@@ -63,27 +92,34 @@ class PortalManager:
         from scrapers.portals.nic_generic import NICGenericScraper
 
         scrapers = []
+        cfg = settings()
         for row in portals:
             scraper_class = PORTAL_SCRAPER_MAP.get(row.name, NICGenericScraper)
             scraper_instance = scraper_class(
                 portal_name=row.name,
                 base_url=row.url,
                 state=row.state or "National",
-                use_playwright=row.scraper_type == "playwright",
+                use_playwright=portal_browser_enabled(row),
                 listing_urls=row.listing_urls or [row.url],
             )
             scrapers.append(scraper_instance)
 
-        queue = asyncio.Queue()
+        queue = WorkerQueue()
         for s in scrapers:
-            await queue.put(s)
+            await queue.put(PortalJob(portal_name=s.portal_name, scraper=s))
+        self.stats["queue_size"] = queue.qsize()
 
         async def worker_task():
             while not queue.empty():
                 if self._stop_event.is_set():
                     break
-                scraper = await queue.get()
+                job = await queue.get()
+                scraper = job.scraper
                 worker_id = str(uuid.uuid4())
+                self.stats["current_portal"] = scraper.portal_name
+                self.stats["queue_size"] = queue.qsize()
+                self.checkpoints.start_portal(scraper.portal_name, self.run_id or worker_id)
+                self.logger.event("portal_started", run_id=self.run_id, portal=scraper.portal_name, worker_id=worker_id)
                 worker = PortalWorker(
                     worker_id=worker_id,
                     scraper=scraper,
@@ -97,10 +133,11 @@ class PortalManager:
                     await self._process_portal_results(scraper.portal_name, [], e)
                 finally:
                     queue.task_done()
+                    self.stats["queue_size"] = queue.qsize()
 
         self._monitor_task = asyncio.create_task(self.monitor_workers())
         
-        concurrency = settings().get("scraper_concurrency", 3)
+        concurrency = cfg.get("scraper_concurrency", 3)
         num_workers = min(concurrency, len(scrapers))
         
         tasks = [asyncio.create_task(worker_task()) for _ in range(num_workers)]
@@ -108,6 +145,16 @@ class PortalManager:
 
         self._running = False
         self.stats["finished_at"] = datetime.utcnow()
+        self.stats["scraping_speed_per_minute"] = self.monitoring.speed_per_minute(self.stats["total_fetched"])
+        self.logger.event(
+            "scrape_run_finished",
+            run_id=self.run_id,
+            fetched=self.stats["total_fetched"],
+            new=self.stats["total_new"],
+            updated=self.stats["total_updated"],
+            failed=self.stats["failed"],
+            message="Enterprise scraper run finished",
+        )
         if self._monitor_task:
             self._monitor_task.cancel()
 
@@ -121,6 +168,8 @@ class PortalManager:
         
         if error:
             self.stats["failed"] += 1
+            self.checkpoints.finish_portal(portal_name, "failed", error=str(error))
+            self.logger.event("portal_failed", run_id=self.run_id, portal=portal_name, error=str(error), message="Portal failed; remaining portals continue")
         else:
             self.stats["completed"] += 1
             
@@ -151,42 +200,49 @@ class PortalManager:
             if error:
                 log = ScrapeLog(portal=portal_name, status="failed", tenders_found=0, error_message=f"Failed: {error}")
                 db.add(log)
+                await db.commit()
+                try:
+                    from app.routers.scrape import push_log
+                    push_log(f"Worker {portal_name} failed: {error}")
+                except Exception:
+                    pass
+                break
+
+            await db.commit()
             
             new_this_portal = 0
             updated_this_portal = 0
+            fetched_this_portal = len(tenders or [])
+            self.stats["total_fetched"] += fetched_this_portal
             
-            if not error and tenders:
-                from scrapers.registry import _upsert_tender
-                from sqlalchemy.orm import Session
-                from app.database import engine
-                
+            if tenders:
                 def sync_upsert_batch():
-                    n = 0
-                    u = 0
-                    changed_tenders = []
-                    with Session(engine) as sync_db:
-                        for td in tenders:
-                            try:
-                                status, t_id, changes = _upsert_tender(sync_db, td, return_changes=True)
-                                if status == "new" or status == "created":
-                                    n += 1
-                                    changed_tenders.append((t_id, "new", changes))
-                                elif status == "updated":
-                                    u += 1
-                                    changed_tenders.append((t_id, "updated", changes))
-                            except Exception as e:
-                                pass
-                        sync_db.commit()
-                    return n, u, changed_tenders
+                    return self.database_service.upsert_batch(portal_name, tenders)
                 
-                n, u, changed_tenders = await asyncio.to_thread(sync_upsert_batch)
+                batch = await asyncio.to_thread(sync_upsert_batch)
+                n = batch.new
+                u = batch.updated
+                changed_tenders = batch.changed_tenders
                 self.stats["total_new"] += n
                 self.stats["total_updated"] += u
+                self.stats["total_duplicates"] += batch.duplicate
+                self.stats["total_failed_tenders"] += batch.failed
                 new_this_portal = n
                 updated_this_portal = u
                 
-                run.stored_count = n
+                run.stored_count = n + u
                 run.updated_count = u
+                run.duplicate_count = batch.duplicate
+                run.failed_count = batch.failed
+                run.logs = [
+                    {
+                        "message": (
+                            f"{batch.fetched} fetched, {batch.new} new, {batch.updated} updated, "
+                            f"{batch.duplicate} duplicates, {batch.failed} failed"
+                        ),
+                        "errors": batch.errors[:10],
+                    }
+                ]
                 
                 # Create change events
                 for t_id, change_type, changes in changed_tenders:
@@ -197,16 +253,45 @@ class PortalManager:
                         snapshot={}
                     )
                     db.add(event)
-                await db.commit()
-
+            log = ScrapeLog(
+                portal=portal_name,
+                status="success",
+                tenders_found=fetched_this_portal,
+                error_message=None,
+            )
+            db.add(log)
             await db.commit()
+            duplicate_count = max(0, fetched_this_portal - new_this_portal - updated_this_portal)
+            self.stats["scraping_speed_per_minute"] = self.monitoring.speed_per_minute(self.stats["total_fetched"])
+            self.checkpoints.finish_portal(
+                portal_name,
+                "success",
+                stats={
+                    "fetched": fetched_this_portal,
+                    "new": new_this_portal,
+                    "updated": updated_this_portal,
+                    "duplicates": duplicate_count,
+                },
+            )
+            self.logger.event(
+                "portal_completed",
+                run_id=self.run_id,
+                portal=portal_name,
+                fetched=fetched_this_portal,
+                new=new_this_portal,
+                updated=updated_this_portal,
+                duplicates=duplicate_count,
+                speed_per_minute=self.stats["scraping_speed_per_minute"],
+                message="Portal completed",
+            )
             
             try:
                 from app.routers.scrape import push_log
-                if error:
-                    push_log(f"Worker {portal_name} failed: {error}")
-                else:
-                    push_log(f"Worker {portal_name} completed: {len(tenders)} scraped, {new_this_portal} new, {updated_this_portal} updated")
+                duplicate_count = max(0, fetched_this_portal - new_this_portal - updated_this_portal)
+                push_log(
+                    f"Worker {portal_name} completed: {fetched_this_portal} fetched, "
+                    f"{new_this_portal} new, {updated_this_portal} updated, {duplicate_count} unchanged"
+                )
             except Exception:
                 pass
             

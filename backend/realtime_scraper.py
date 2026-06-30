@@ -1,7 +1,7 @@
 import asyncio
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 
 # Add the parent directory to Python path if running directly
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -20,16 +20,16 @@ async def main():
     try:
         while True:
             cycle_count += 1
-            start_time = datetime.utcnow()
+            start_time = datetime.now(timezone.utc)
             print(f"\n[{start_time.isoformat()}] --- Starting Scrape Cycle #{cycle_count} ---")
             
             try:
                 await run_orchestrator()
-                end_time = datetime.utcnow()
+                end_time = datetime.now(timezone.utc)
                 duration = (end_time - start_time).total_seconds()
                 print(f"[{end_time.isoformat()}] --- Cycle #{cycle_count} Completed successfully in {duration:.2f}s ---")
             except Exception as e:
-                end_time = datetime.utcnow()
+                end_time = datetime.now(timezone.utc)
                 print(f"[{end_time.isoformat()}] --- Cycle #{cycle_count} Failed: {e} ---", file=sys.stderr)
             
             print(f"Sleeping for {interval_seconds} seconds...")

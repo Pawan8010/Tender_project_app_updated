@@ -19,4 +19,5 @@ structlog
 psutil
 python-docx
 selenium
-
+numpy
+sentence-transformers

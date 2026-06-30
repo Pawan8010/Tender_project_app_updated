@@ -25,13 +25,20 @@ function formatCountdown(seconds) {
   return minutes >= 60 ? `${hours + 1}h` : `${hours}h ${minutes}m`;
 }
 
-export default function Tenders({ filters, setFilters, stats, categories, data, health, scrapeLogs = [], liveSync, liveEvents = [], isFetching, error, selectedId, onSelect, notify }) {
+export default function Tenders({ filters, setFilters, stats, categories, data, health, portalHealth = [], scrapeLogs = [], liveSync, liveEvents = [], isFetching, error, selectedId, onSelect, notify }) {
   const pages = Math.max(1, Math.ceil((data?.total || 0) / (data?.limit || 20)));
   const scraper = health?.scraper || {};
-  const healthyPortals = (scrapeLogs || []).filter((log) => ["success", "empty", "cached"].includes(log.status)).length;
-  const warningPortals = (scrapeLogs || []).filter((log) => ["retrying", "failed", "temporarily_blocked"].includes(log.status)).length;
+  const portalRows = portalHealth?.length ? portalHealth : (scrapeLogs || []);
+  const healthyStatuses = new Set(["online", "success", "empty", "cached", "monitored"]);
+  const warningStatuses = new Set(["degraded", "retrying", "failed", "temporarily_blocked"]);
+  const healthyPortals = portalRows.filter((row) => healthyStatuses.has(row.status)).length;
+  const warningPortals = portalRows.filter((row) => warningStatuses.has(row.status)).length;
+  const portalTotal = portalHealth?.length || health?.scraper?.portal_count || 23;
   const visibleCount = data?.results?.length || 0;
   const totalCount = data?.total || 0;
+  const activeFilterCount = Object.entries(filters).filter(([key, value]) => key !== "page" && (typeof value === "boolean" ? value : Boolean(value))).length;
+  const storedTenderCount = stats?.total || health?.tender_count || 0;
+  const filtersHideLiveRows = !isFetching && !error && storedTenderCount > 0 && totalCount === 0 && activeFilterCount > 0;
   const matchedCount = stats?.matched || 0;
   const lastScrapeLabel = health?.latest_scrape_age_seconds !== null && health?.latest_scrape_age_seconds !== undefined
     ? formatRelative(health.latest_scrape_age_seconds)
@@ -84,8 +91,8 @@ export default function Tenders({ filters, setFilters, stats, categories, data, 
           <div className={`tenderOpsCard ${warningPortals ? "warning" : "healthy"}`}>
             {warningPortals ? <AlertTriangle size={18} /> : <CheckCircle2 size={18} />}
             <span>Portal health</span>
-            <strong>{healthyPortals}/{health?.scraper?.portal_count || 23}</strong>
-            <small>{warningPortals ? `${warningPortals} retrying/monitored` : "all latest checks stable"}</small>
+            <strong>{healthyPortals}/{portalTotal}</strong>
+            <small>{warningPortals ? `${warningPortals} need retry/monitoring` : "all latest checks stable"}</small>
           </div>
         </section>
 
@@ -107,6 +114,39 @@ export default function Tenders({ filters, setFilters, stats, categories, data, 
                 <span>Refreshing live tender rows from the backend.</span>
               </>
             )}
+          </div>
+        )}
+
+        {filtersHideLiveRows && (
+          <div className="queryNotice error" role="status">
+            <AlertTriangle size={16} />
+            <span>
+              Live backend has {storedTenderCount} tenders, but the active filter is hiding all rows.
+            </span>
+            <button
+              className="miniActionButton"
+              type="button"
+              onClick={() => {
+                setFilters({
+                  search: "",
+                  category: "",
+                  state: "",
+                  portal: "",
+                  date_from: "",
+                  date_to: "",
+                  opening_from: "",
+                  opening_to: "",
+                  closing_from: "",
+                  closing_to: "",
+                  closing_in_days: "",
+                  matched_only: false,
+                  page: 1,
+                });
+                notify?.("Filters reset. Showing all live tenders.");
+              }}
+            >
+              Show all live tenders
+            </button>
           </div>
         )}
 
@@ -134,6 +174,7 @@ export default function Tenders({ filters, setFilters, stats, categories, data, 
             setFilters((current) => ({ ...current, search: item.term, category: item.category || current.category, page: 1 }));
             notify?.(`Smart search applied: ${item.term}`);
           }}
+          onSelectTender={onSelect}
         />
         <FilterPanel filters={filters} setFilters={setFilters} stats={stats} categories={categories} />
         <TenderTable

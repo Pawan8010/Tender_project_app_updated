@@ -1,14 +1,16 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 import psutil
 
+from app.auth import get_current_user
 from app.database import get_async_db
 from app.models import ProcurementPortal, WorkerStatus, Tender, TenderMatch, TenderDocument, PortalRun, ScrapeLog
+from app.services.ai_intelligence import trend_summary
 from scrapers.portal_manager import PORTAL_MANAGER
 
-router = APIRouter(prefix="/api/v1/dashboard", tags=["dashboard"])
+router = APIRouter(tags=["dashboard"], dependencies=[Depends(get_current_user)])
 
 @router.get("/")
 async def get_dashboard_stats(db: AsyncSession = Depends(get_async_db)):
@@ -73,4 +75,56 @@ async def get_dashboard_stats(db: AsyncSession = Depends(get_async_db)):
                 "next_run": p.next_run
             } for p in portals
         ]
+    }
+
+
+@router.get("/ai")
+async def get_ai_dashboard(db: AsyncSession = Depends(get_async_db)):
+    res = await db.execute(select(Tender).where(Tender.is_active == True).order_by(Tender.scraped_at.desc()).limit(5000))
+    tenders = res.scalars().all()
+    trends = trend_summary(tenders)
+    today = date.today()
+    closing_soon = [
+        tender
+        for tender in tenders
+        if tender.closing_date and today <= tender.closing_date <= today + timedelta(days=7)
+    ]
+    largest = sorted(
+        [tender for tender in tenders if tender.estimated_value],
+        key=lambda tender: tender.estimated_value or 0,
+        reverse=True,
+    )[:10]
+    recommended = sorted(
+        tenders,
+        key=lambda tender: float(((tender.raw_data or {}).get("ai") or {}).get("confidence") or 0),
+        reverse=True,
+    )[:10]
+
+    return {
+        **trends,
+        "closing_soon": [
+            {"id": t.id, "title": t.title, "portal": t.portal, "state": t.state, "closing_date": t.closing_date}
+            for t in closing_soon[:10]
+        ],
+        "largest_tenders": [
+            {"id": t.id, "title": t.title, "portal": t.portal, "state": t.state, "estimated_value": t.estimated_value}
+            for t in largest
+        ],
+        "ai_recommended": [
+            {
+                "id": t.id,
+                "title": t.title,
+                "portal": t.portal,
+                "state": t.state,
+                "ai_category": t.ai_category,
+                "confidence": ((t.raw_data or {}).get("ai") or {}).get("confidence"),
+                "tags": ((t.raw_data or {}).get("ai") or {}).get("tags") or [],
+            }
+            for t in recommended
+        ],
+        "predictive_analytics": {
+            "procurement_trends": trends["trending_sectors"][:5],
+            "technology_demand": trends["trending_technologies"][:5],
+            "department_purchasing_trends": trends["active_departments"][:5],
+        },
     }

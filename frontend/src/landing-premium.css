@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 .landingPage {
   --lp-bg-base: #ffffff;
   --lp-bg-surface: #f8fafc;
@@ -1373,5 +1371,474 @@
   .authTrust {
     flex-direction: column;
     gap: 8px;
+  }
+}
+
+/* Antigravity-inspired landing refresh: local CSS only, no external assets. */
+.landingPage {
+  --lp-bg-base: #ffffff;
+  --lp-bg-surface: #f7faff;
+  --lp-bg-alt: #eef5ff;
+  --lp-text-primary: #05070b;
+  --lp-text-secondary: #2f3b52;
+  --lp-text-muted: #657189;
+  --lp-brand-primary: #1a73e8;
+  --lp-brand-primary-hover: #1558b0;
+  --lp-brand-soft: #d8e8ff;
+  --lp-brand-pale: #f1f7ff;
+  --lp-brand-cyan: #21a1ff;
+  --lp-status-success: #14a86b;
+  --lp-status-warning: #f29900;
+  --lp-status-neutral: #94a3b8;
+  --lp-border-color: #dce6f5;
+  --lp-border-light: #edf4ff;
+  --lp-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --lp-shadow-md: 0 12px 32px rgba(26, 115, 232, 0.09);
+  --lp-shadow-lg: 0 24px 70px rgba(26, 115, 232, 0.13);
+  --lp-shadow-hover: 0 28px 80px rgba(26, 115, 232, 0.16);
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 52%, #ffffff 100%);
+  color: var(--lp-text-primary);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+.landingPage *,
+.landingPage *::before,
+.landingPage *::after {
+  letter-spacing: 0;
+}
+
+.landingHero {
+  min-height: 92vh;
+  padding: 0 0 42px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 14%, rgba(26, 115, 232, 0.16), rgba(255, 255, 255, 0) 34%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 62%, #ffffff 100%);
+}
+
+.landingNav {
+  min-height: 76px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(220, 230, 245, 0.72);
+  z-index: 5;
+}
+
+.landingBrand {
+  gap: 10px;
+  color: #111827;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.landingBrand svg {
+  color: var(--lp-brand-primary);
+  filter: drop-shadow(0 8px 18px rgba(26, 115, 232, 0.22));
+}
+
+.landingNavLinks {
+  border: 1px solid var(--lp-border-color);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  padding: 6px;
+  gap: 4px;
+  box-shadow: var(--lp-shadow-sm);
+}
+
+.landingNavLinks a {
+  min-height: 34px;
+  border-radius: 999px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--lp-text-secondary);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.landingNavLinks a:hover {
+  color: var(--lp-brand-primary);
+  background: var(--lp-brand-pale);
+}
+
+.btn-primary,
+.btn-outline,
+.footerButton,
+.authBackBtn,
+.authSubmitBtn {
+  border-radius: 999px;
+}
+
+.btn-primary {
+  background: #05070b;
+  color: #ffffff;
+  border-color: #05070b;
+  box-shadow: 0 12px 30px rgba(5, 7, 11, 0.16);
+}
+
+.btn-primary:hover {
+  background: #111827;
+  border-color: #111827;
+  box-shadow: 0 16px 38px rgba(5, 7, 11, 0.2);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.76);
+  border-color: var(--lp-border-color);
+  color: #101828;
+}
+
+.btn-outline:hover {
+  background: var(--lp-brand-pale);
+  border-color: #b8d3fb;
+}
+
+.landingHeroInner {
+  min-height: calc(92vh - 210px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(48px, 9vh, 96px) 0 34px;
+  z-index: 1;
+}
+
+.landingHeroCopy {
+  max-width: 900px;
+  text-align: center;
+}
+
+.landingHeroPill {
+  background: rgba(241, 247, 255, 0.9);
+  border-color: #cfe0fa;
+  color: #174ea6;
+  font-weight: 800;
+  box-shadow: 0 10px 28px rgba(26, 115, 232, 0.1);
+}
+
+.landingHero h1 {
+  margin: 0 0 28px;
+  color: #05070b;
+  font-size: clamp(4.25rem, 10vw, 9.6rem);
+  line-height: 0.92;
+  font-weight: 850;
+  letter-spacing: 0;
+}
+
+.landingHero h1 span {
+  display: block;
+  color: var(--lp-brand-primary);
+}
+
+.landingHero p {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  color: var(--lp-text-secondary);
+  font-size: clamp(1.08rem, 1.35vw, 1.32rem);
+  line-height: 1.68;
+}
+
+.landingActions {
+  justify-content: center;
+  margin: 0 0 28px;
+}
+
+.landingActions .btn-primary,
+.landingActions .btn-outline {
+  min-height: 52px;
+}
+
+.heroTrust {
+  justify-content: center;
+  gap: 12px;
+}
+
+.heroTrust span {
+  min-height: 38px;
+  border: 1px solid var(--lp-border-color);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 0 13px;
+  color: var(--lp-text-secondary);
+  box-shadow: var(--lp-shadow-sm);
+}
+
+.heroTrust svg {
+  color: var(--lp-brand-primary);
+}
+
+.heroLiveDock {
+  margin-top: 4px;
+  border-radius: 24px;
+  border-color: rgba(207, 224, 250, 0.92);
+  box-shadow: var(--lp-shadow-lg);
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 2;
+}
+
+.heroDockStatus {
+  background: var(--lp-brand-pale);
+}
+
+.heroDockStatus,
+.heroDockMetric {
+  min-height: 104px;
+}
+
+.liveDot {
+  background: var(--lp-status-success);
+}
+
+.liveDot.running {
+  background: var(--lp-brand-primary);
+}
+
+.landingStatsBand {
+  padding: 36px 0 10px;
+  margin-bottom: 60px;
+}
+
+.landingStats {
+  gap: 18px;
+}
+
+.landingStat,
+.capabilityItem,
+.workflowItem,
+.outcomeCard,
+.methodPill,
+.coveragePanel,
+.commandSurfacePreview,
+.landingClosing,
+.portalGroup {
+  border-radius: 22px;
+  border-color: var(--lp-border-color);
+}
+
+.landingStat:hover,
+.capabilityItem:hover,
+.workflowItem:hover,
+.outcomeCard:hover,
+.methodPill:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--lp-shadow-hover);
+}
+
+.statusStat {
+  background: #05070b;
+  border-color: #05070b;
+}
+
+.statusStat strong {
+  color: #ffffff;
+}
+
+.statusStat span,
+.statusStat svg {
+  color: #cfe0fa;
+}
+
+.landingEyebrow {
+  color: var(--lp-brand-primary);
+}
+
+.commandSurfaceSection,
+.coverageSection {
+  align-items: center;
+}
+
+.commandSurfaceCopy {
+  padding: 0;
+}
+
+.methodPill.active {
+  background: var(--lp-brand-pale);
+}
+
+.previewHeader {
+  background: linear-gradient(135deg, var(--lp-brand-pale), #ffffff);
+}
+
+.commandRow {
+  border-color: var(--lp-border-color);
+}
+
+.landingWorkflow {
+  border: 0;
+  border-radius: 36px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(26, 115, 232, 0.12), transparent 28%),
+    var(--lp-bg-surface);
+}
+
+.keywordTicker span,
+.proposalSignalGrid span {
+  border-radius: 999px;
+}
+
+.landingClosing {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(26, 115, 232, 0.14), transparent 32%),
+    linear-gradient(180deg, #ffffff, var(--lp-brand-pale));
+}
+
+.landingFooter {
+  background: #05070b;
+  color: #ffffff;
+  border-top: 0;
+}
+
+.footerLogo strong,
+.footerGroup strong,
+.footerActions strong {
+  color: #ffffff;
+}
+
+.footerBrand p,
+.footerStatus,
+.footerGroup span,
+.footerSocials a,
+.footerBottom {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footerSocials a:hover {
+  color: #ffffff;
+}
+
+.footerButton {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.primaryFooter {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #05070b;
+}
+
+.primaryFooter:hover {
+  background: var(--lp-brand-pale);
+}
+
+@media (max-width: 1080px) {
+  .landingHeroInner {
+    text-align: center;
+  }
+
+  .landingHeroCopy {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .landingHero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .landingActions,
+  .heroTrust {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .landingHero {
+    min-height: auto;
+  }
+
+  .landingNav {
+    min-height: auto;
+    padding: 14px 0;
+    align-items: flex-start;
+  }
+
+  .landingBrand {
+    min-height: 40px;
+  }
+
+  .landingNavActions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .landingHeroInner,
+  .landingNav,
+  .heroLiveDock,
+  .landingStats,
+  .landingSection,
+  .landingInsightBand,
+  .landingClosing,
+  .footerInner,
+  .footerBottom {
+    width: min(100% - 28px, 1200px);
+  }
+
+  .landingHeroInner {
+    padding-top: 46px;
+  }
+
+  .landingHero h1 {
+    font-size: clamp(3.2rem, 17vw, 5rem);
+  }
+
+  .landingActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .landingActions .btn-primary,
+  .landingActions .btn-outline {
+    width: 100%;
+  }
+
+  .heroTrust {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .heroTrust span {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .landingNav {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .landingNavActions {
+    justify-content: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .landingNavActions .btn-primary,
+  .landingNavActions .btn-outline {
+    width: 100%;
+    min-width: 0;
+    padding: 0 10px;
+  }
+
+  .landingHeroPill {
+    max-width: 100%;
+    justify-content: center;
+    white-space: normal;
+  }
+
+  .heroLiveDock {
+    border-radius: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liveDot.running {
+    animation: none;
   }
 }

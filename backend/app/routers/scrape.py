@@ -1,19 +1,22 @@
 import asyncio
 import json
+import re
 from datetime import datetime
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.responses import StreamingResponse
-from sqlalchemy import or_
 from sqlalchemy.orm import Session
 
 from app.auth import get_current_user, token_payload
 from app.database import get_db
 from app.database import SessionLocal
-from app.models import PortalRun, ProcurementPortal, ScrapeLog, Tender, TenderDocument, User
+from app.models import PortalRun, ProcurementPortal, ScrapeCheckpoint, ScrapeLog, Tender, TenderDocument, TenderSearchIndex, User, WorkerStatus
+from app.services.ai_intelligence import expand_query
 from app.services.document_processor import process_queued_documents
+from app.services.google_tender_discovery import configured_portal_queries, discover_google_tenders
+from app.services.tender_index import index_pending_tenders
 from app.schemas import CleanupOut, PortalOut, PortalRunOut, PortalUpdate, ScrapeLogOut, ScrapeRunOut
-from scrapers.registry import run_all_scrapers_sync, run_one_scraper_sync, scraper_runtime_status, sync_portal_registry
+from scrapers.registry import portal_browser_enabled, run_all_scrapers_sync, run_one_scraper_sync, scraper_runtime_status, sync_portal_registry
 
 router = APIRouter()
 _scrape_log: list[dict] = []
@@ -45,9 +48,15 @@ async def run_scrape(_user=Depends(get_current_user)):
     return {
         "status": "success",
         "portals": PORTAL_MANAGER.stats.get("total_portals", 0),
-        "tenders_found": PORTAL_MANAGER.stats.get("total_new", 0),
+        "tenders_found": PORTAL_MANAGER.stats.get("total_fetched", 0),
         "updated_tenders": PORTAL_MANAGER.stats.get("total_updated", 0),
-        "logs": [{"message": f"Orchestrator finished. Scraped {PORTAL_MANAGER.stats.get('total_new', 0)} new."}]
+        "logs": [{
+            "message": (
+                f"Orchestrator finished. Fetched {PORTAL_MANAGER.stats.get('total_fetched', 0)} tenders, "
+                f"{PORTAL_MANAGER.stats.get('total_new', 0)} new, "
+                f"{PORTAL_MANAGER.stats.get('total_updated', 0)} updated."
+            )
+        }]
     }
 
 
@@ -88,13 +97,54 @@ async def start_scrape(_user=Depends(get_current_user)):
     }
 
 
+@router.get("/google-discovery/queries")
+def google_discovery_queries(_user=Depends(get_current_user)):
+    queries = configured_portal_queries()
+    return {"count": len(queries), "queries": queries}
+
+
+@router.post("/google-discovery/run")
+async def run_google_discovery(
+    limit_per_portal: int = Query(3, ge=1, le=10),
+    max_portals: int | None = Query(None, ge=1, le=100),
+    store: bool = Query(True),
+    _user=Depends(get_current_user),
+):
+    push_log("Google tender discovery started")
+    result = await discover_google_tenders(limit_per_portal=limit_per_portal, max_portals=max_portals, store=store)
+    push_log(
+        f"Google discovery finished: {result.get('discovered', 0)} discovered, "
+        f"{result.get('new', 0)} new, {result.get('updated', 0)} updated"
+    )
+    return result
+
+
+@router.post("/index/rebuild")
+async def rebuild_search_index(
+    limit: int = Query(1000, ge=1, le=10000),
+    _user=Depends(get_current_user),
+):
+    def run_index() -> int:
+        local_db = SessionLocal()
+        try:
+            return index_pending_tenders(local_db, limit=limit)
+        finally:
+            local_db.close()
+
+    indexed = await asyncio.to_thread(run_index)
+    push_log(f"Search index rebuild processed {indexed} tender(s)")
+    return {"status": "success", "indexed": indexed, "message": "Local tender search index updated."}
+
+
 def _search_terms(search: str) -> list[str]:
-    return [term.lower() for term in str(search or "").split() if len(term) >= 3]
+    expanded = " ".join(expand_query(str(search or "")))
+    return [term.lower() for term in re.findall(r"[a-zA-Z0-9+-]{3,}", expanded)]
 
 
 SEARCH_GENERIC_TERMS = {
     "long", "range", "supply", "work", "works", "service", "services",
     "procurement", "purchase", "tender", "bid", "rfq", "rfp", "open",
+    "tenders", "closing", "under", "this", "week",
 }
 SEARCH_DOMAIN_TERMS = {
     "thermal", "imaging", "camera", "cctv", "ptz", "surveillance", "night",
@@ -110,6 +160,7 @@ def _important_search_terms(search: str) -> list[str]:
 
 def _rank_tender(tender: Tender, q: str) -> int:
     raw = tender.raw_data or {}
+    ai = raw.get("ai") if isinstance(raw.get("ai"), dict) else {}
     text = " ".join(
         str(part)
         for part in [
@@ -125,6 +176,13 @@ def _rank_tender(tender: Tender, q: str) -> int:
             raw.get("reference_no"),
             raw.get("bid_number"),
             raw.get("nit_id"),
+            tender.ai_category,
+            tender.search_text,
+            ai.get("category"),
+            ai.get("summary"),
+            " ".join(ai.get("tags") or []),
+            " ".join(tender.categories or []),
+            " ".join(tender.matched_keywords or []),
         ]
         if part
     ).lower()
@@ -171,87 +229,73 @@ async def scrape_and_search(
             "message": "Scraper is already running. Returning current archive results while live updates continue.",
         }
     else:
-        push_log(f"Keyword search requested live refresh: {q}")
+        push_log(f"AI search requested full live refresh before ranking: {q}")
         from scrapers.portal_manager import PortalManager
         from app.database import get_async_db
+        from app.services.keyword_worker import process_pending_tenders
+        from scrapers.document_downloader import DOCUMENT_DOWNLOADER
+        from app.config import settings
+        cfg = settings()
+        google_discovery = {}
+        if cfg.get("google_discovery_enabled"):
+            push_log("Google discovery is checking configured portal domains before full scrape")
+            google_discovery = await discover_google_tenders(limit_per_portal=cfg["google_discovery_limit_per_portal"], store=True)
+            push_log(
+                f"Google discovery found {google_discovery.get('discovered', 0)} URLs, "
+                f"{google_discovery.get('new', 0)} new, {google_discovery.get('updated', 0)} updated"
+            )
         manager = PortalManager()
         async for async_db in get_async_db():
-            await manager.start_all(async_db, search_query=q)
+            await manager.start_all(async_db)
             break
+
+        await DOCUMENT_DOWNLOADER.run()
+
+        def classify_pending() -> int:
+            local_db = SessionLocal()
+            processed_total = 0
+            try:
+                while True:
+                    processed = process_pending_tenders(local_db, limit=500)
+                    processed_total += processed
+                    if processed == 0:
+                        break
+                return processed_total
+            finally:
+                local_db.close()
+
+        classified = await asyncio.to_thread(classify_pending)
             
         push_log(
-            f"Keyword refresh finished for '{q}': "
-            f"{manager.stats.get('total_new', 0)} new, {manager.stats.get('total_updated', 0)} refreshed"
+            f"AI refresh finished for '{q}': "
+            f"{manager.stats.get('total_new', 0)} new, {manager.stats.get('total_updated', 0)} refreshed, {classified} classified"
         )
         
         scrape_result = {
             "status": "success",
             "portals": manager.stats.get("total_portals", 0),
-            "tenders_found": manager.stats.get("total_new", 0),
+            "tenders_found": manager.stats.get("total_fetched", 0),
+            "new_tenders": manager.stats.get("total_new", 0),
             "updated_tenders": manager.stats.get("total_updated", 0),
-            "message": "Live scrape complete. Returning fresh results.",
+            "classified_tenders": classified,
+            "google_discovery": {
+                "configured": google_discovery.get("configured"),
+                "discovered": google_discovery.get("discovered", 0),
+                "stored": google_discovery.get("stored", 0),
+                "new": google_discovery.get("new", 0),
+                "updated": google_discovery.get("updated", 0),
+                "duplicates": google_discovery.get("duplicates", 0),
+                "message": google_discovery.get("message"),
+            },
+            "message": "Full live scrape stored all discovered tenders, then AI ranked the fresh archive.",
         }
     db = SessionLocal()
     try:
-        terms = _search_terms(q)
-        clauses = [Tender.title.ilike(f"%{q}%"), Tender.description.ilike(f"%{q}%")]
-        for term in terms:
-            clauses.extend([Tender.title.ilike(f"%{term}%"), Tender.description.ilike(f"%{term}%")])
-            
-        candidates = db.query(Tender).filter(Tender.is_active.is_(True), or_(*clauses)).order_by(Tender.scraped_at.desc()).limit(5000).all()
-        
-        if not candidates:
-            push_log(f"No existing matches for '{q}'. Dynamically generating online tender mock...")
-            from scrapers.registry import _upsert_tender
-            from scrapers.document_downloader import DOCUMENT_DOWNLOADER
-            from app.services.keyword_worker import process_pending_tenders
-            import time
-            from datetime import date, timedelta
-            
-            new_tender_data = {
-                "tender_id": f"TND-{q}-{int(time.time())}",
-                "title": f"Procurement of {q} Tactical Systems",
-                "description": f"This tender is for the supply, installation, and integration of {q} equipment, including thermal camera systems, drone jammers, and night vision devices for national security forces.",
-                "portal": "GeM",
-                "state": "National",
-                "department": "Ministry of Defence",
-                "buyer": "Directorate General of Ordnance",
-                "organization": "Indian Army",
-                "location": "New Delhi",
-                "tender_url": "https://bidplus.gem.gov.in/all-bids",
-                "published_date": date.today(),
-                "closing_date": date.today() + timedelta(days=30),
-                "estimated_value": 8500000.0,
-                "currency": "INR",
-                "tender_status": "ACTIVE",
-                "classification_status": "PENDING_CLASSIFICATION",
-                "bid_number": f"GEM/{date.today().year}/B/{q}",
-                "reference_number": f"REF-{q}-2026",
-                "categories": ["Defence", "Technology"],
-                "matched_keywords": [],
-                "raw_data": {
-                    "source": "live_portal",
-                    "source_url": "https://bidplus.gem.gov.in/all-bids",
-                    "scrape_method": "live_search_fallback",
-                    "attachment_urls": [
-                        "https://bidplus.gem.gov.in/documents/tender_notice.pdf",
-                        "https://bidplus.gem.gov.in/documents/boq_specs.xlsx"
-                    ]
-                }
-            }
-            
-            await asyncio.to_thread(_upsert_tender, db, new_tender_data)
-            db.commit()
-            
-            await DOCUMENT_DOWNLOADER.run()
-            await asyncio.to_thread(process_pending_tenders, db, limit=100)
-            db.commit()
-            
-            candidates = db.query(Tender).filter(Tender.is_active.is_(True), or_(*clauses)).order_by(Tender.scraped_at.desc()).limit(5000).all()
+        candidates = db.query(Tender).filter(Tender.is_active.is_(True)).order_by(Tender.scraped_at.desc()).limit(5000).all()
 
         scored = [(tender, _rank_tender(tender, q)) for tender in candidates]
         positive = [(tender, score) for tender, score in scored if score > 0]
-        ranked = [tender for tender, _score in sorted(positive or scored, key=lambda item: (item[1], item[0].scraped_at), reverse=True)]
+        ranked = [tender for tender, _score in sorted(positive, key=lambda item: (item[1], item[0].scraped_at), reverse=True)]
         
         return {
             "query": q,
@@ -291,7 +335,7 @@ def list_portals(db: Session = Depends(get_db), _user=Depends(get_current_user))
             "state": row.state,
             "authentication": row.authentication,
             "scraper_type": row.scraper_type,
-            "uses_playwright": row.scraper_type == "playwright",
+            "uses_playwright": portal_browser_enabled(row),
             "scheduler": row.scheduler,
             "retry_count": row.retry_count,
             "health_status": row.health_status,
@@ -328,7 +372,7 @@ def update_portal(portal_name: str, payload: PortalUpdate, db: Session = Depends
         "state": portal.state,
         "authentication": portal.authentication,
         "scraper_type": portal.scraper_type,
-        "uses_playwright": portal.scraper_type == "playwright",
+        "uses_playwright": portal_browser_enabled(portal),
         "scheduler": portal.scheduler,
         "retry_count": portal.retry_count,
         "health_status": portal.health_status,
@@ -451,6 +495,42 @@ def document_queue_status(db: Session = Depends(get_db), _user=Depends(get_curre
     }
 
 
+@router.get("/engine/status")
+def scraper_engine_status(db: Session = Depends(get_db), _user=Depends(get_current_user)):
+    from scrapers.portal_manager import PORTAL_MANAGER
+
+    worker_counts = {}
+    for status_name, in db.query(WorkerStatus.status).distinct().all():
+        worker_counts[status_name or "unknown"] = db.query(WorkerStatus).filter(WorkerStatus.status == status_name).count()
+    checkpoint_counts = {}
+    for status_name, in db.query(ScrapeCheckpoint.status).distinct().all():
+        checkpoint_counts[status_name or "unknown"] = db.query(ScrapeCheckpoint).filter(ScrapeCheckpoint.status == status_name).count()
+    docs = document_queue_status(db, _user)
+    total_tenders = db.query(Tender).filter(Tender.is_active.is_(True)).count()
+    indexed_tenders = db.query(TenderSearchIndex).count()
+    latest_checkpoint = db.query(ScrapeCheckpoint).order_by(ScrapeCheckpoint.updated_at.desc()).first()
+    return {
+        "running": PORTAL_MANAGER._running,
+        "run_id": PORTAL_MANAGER.run_id,
+        "stats": PORTAL_MANAGER.get_status(),
+        "workers": {
+            "active": worker_counts.get("running", 0) + worker_counts.get("starting", 0),
+            "by_status": worker_counts,
+        },
+        "checkpoints": {
+            "by_status": checkpoint_counts,
+            "last_successful_sync": latest_checkpoint.last_success_at if latest_checkpoint else None,
+            "last_updated": latest_checkpoint.updated_at if latest_checkpoint else None,
+        },
+        "documents": docs,
+        "search_index": {
+            "indexed": indexed_tenders,
+            "total_tenders": total_tenders,
+            "coverage_percent": round((indexed_tenders / total_tenders * 100), 2) if total_tenders else 0,
+        },
+    }
+
+
 @router.post("/documents/process")
 def process_documents(limit: int = Query(20, ge=1, le=100), db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     if user.role != "admin":
@@ -462,8 +542,10 @@ def process_documents(limit: int = Query(20, ge=1, le=100), db: Session = Depend
 def clear_demo_data(db: Session = Depends(get_db), _user=Depends(get_current_user)):
     deleted = 0
     for tender in db.query(Tender).all():
-        source = (tender.raw_data or {}).get("source")
-        if source in {"seed", "sample_fallback"} or tender.tender_id.startswith("demo-"):
+        raw_data = tender.raw_data or {}
+        source = raw_data.get("source")
+        scrape_method = raw_data.get("scrape_method")
+        if source in {"seed", "sample_fallback"} or scrape_method == "live_search_fallback" or tender.tender_id.startswith(("demo-", "TND-")):
             db.delete(tender)
             deleted += 1
     db.commit()

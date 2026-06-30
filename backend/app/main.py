@@ -16,7 +16,7 @@ from app.services.document_processor import process_queued_documents
 from app.seed import seed_defaults
 from scrapers.registry import run_all_scrapers_sync, sync_portal_registry
 
-app = FastAPI(title="Government Tender Intelligence Platform", version="1.0.0")
+app = FastAPI(title="Apna Tender", version="1.0.0")
 auto_scrape_task: asyncio.Task | None = None
 session_cleanup_task: asyncio.Task | None = None
 document_processor_task: asyncio.Task | None = None
@@ -111,10 +111,14 @@ async def serve_frontend(full_path: str):
 async def _auto_scrape_loop():
     cfg = settings()
     from scheduler.orchestrator import run_orchestrator
+
+    def run_orchestrator_in_thread():
+        asyncio.run(run_orchestrator())
+
     await asyncio.sleep(cfg["auto_scrape_startup_delay_seconds"])
     while True:
         try:
-            await run_orchestrator()
+            await asyncio.to_thread(run_orchestrator_in_thread)
         except Exception as exc:
             print(f"Orchestrator failed: {exc}")
         await asyncio.sleep(cfg["auto_scrape_interval_minutes"] * 60)
@@ -147,7 +151,7 @@ async def _document_processor_loop():
             
         db = SessionLocal()
         try:
-            result = process_queued_documents(db, limit=10)
+            result = await asyncio.to_thread(process_queued_documents, db, 2)
             if result["processed"] or result["failed"]:
                 try:
                     from app.routers.scrape import push_log
@@ -160,7 +164,7 @@ async def _document_processor_loop():
             print(f"Document processor failed: {exc}")
         finally:
             db.close()
-        await asyncio.sleep(60)
+        await asyncio.sleep(90)
 
 
 async def _keyword_processor_loop():
@@ -174,7 +178,11 @@ async def _keyword_processor_loop():
         db = SessionLocal()
         try:
             from app.services.keyword_worker import process_pending_tenders
-            processed = await asyncio.to_thread(process_pending_tenders, db, limit=100)
+            from app.services.tender_index import index_pending_tenders
+            indexed = await asyncio.to_thread(index_pending_tenders, db, limit=5)
+            processed = await asyncio.to_thread(process_pending_tenders, db, limit=20)
+            if indexed > 0:
+                print(f"Search index background run: indexed {indexed} tender(s)")
             if processed > 0:
                 print(f"Keyword processor background run: matched and classified {processed} tender(s)")
         except Exception as exc:
@@ -182,7 +190,7 @@ async def _keyword_processor_loop():
             print(f"Keyword processor background worker failed: {exc}")
         finally:
             db.close()
-        await asyncio.sleep(30)
+        await asyncio.sleep(90)
 
 
 
@@ -222,4 +230,3 @@ async def shutdown():
         keyword_processor_task.cancel()
         with suppress(asyncio.CancelledError):
             await keyword_processor_task
-

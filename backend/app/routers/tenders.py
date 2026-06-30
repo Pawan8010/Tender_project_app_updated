@@ -4,13 +4,14 @@ from datetime import date, timedelta
 import re
 
 from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy import or_
+from sqlalchemy import Integer, cast, func, or_
 from sqlalchemy.orm import Session
 
 from app.auth import get_current_user
 from app.database import get_db
 from app.models import PortalRun, ScrapeLog, Tender, TenderDocument, User
 from app.schemas import StatsOut, TenderList, TenderOut
+from app.services.ai_intelligence import expand_query, parse_natural_search
 from scrapers.registry import run_one_scraper_sync
 
 router = APIRouter(dependencies=[Depends(get_current_user)])
@@ -42,8 +43,13 @@ SEARCH_STOP_WORDS = {
     "of",
     "or",
     "the",
+    "this",
     "to",
+    "under",
     "with",
+    "week",
+    "closing",
+    "tenders",
 }
 
 SEARCH_GENERIC_TERMS = {
@@ -61,6 +67,10 @@ SEARCH_GENERIC_TERMS = {
     "rfq",
     "rfp",
     "open",
+    "closing",
+    "tenders",
+    "under",
+    "week",
 }
 
 SEARCH_DOMAIN_TERMS = {
@@ -99,8 +109,53 @@ def _search_terms(search: str | None) -> list[str]:
     return [term.lower() for term in raw_terms if term.lower() not in SEARCH_STOP_WORDS]
 
 
+def _expanded_search_text(search: str | None) -> str:
+    if not search:
+        return ""
+    return " ".join(expand_query(search))
+
+
+def _expanded_search_terms(search: str | None) -> list[str]:
+    return _search_terms(_expanded_search_text(search))
+
+
 def _important_search_terms(search: str | None) -> list[str]:
-    return [term for term in _search_terms(search) if term not in SEARCH_GENERIC_TERMS]
+    return [term for term in _expanded_search_terms(search) if term not in SEARCH_GENERIC_TERMS]
+
+
+def _ai_fragments(raw_data: dict) -> list[str]:
+    ai = raw_data.get("ai") if isinstance(raw_data, dict) else {}
+    if not isinstance(ai, dict):
+        return []
+    fragments = [
+        ai.get("category"),
+        ai.get("summary"),
+        " ".join(ai.get("tags") or []),
+        " ".join(ai.get("important_dates") or []),
+    ]
+    entities = ai.get("entities")
+    if isinstance(entities, dict):
+        for value in entities.values():
+            if isinstance(value, list):
+                fragments.append(" ".join(str(item) for item in value))
+            elif isinstance(value, str):
+                fragments.append(value)
+    return [str(fragment) for fragment in fragments if fragment]
+
+
+def _search_phrases(search: str | None) -> list[str]:
+    if not search:
+        return []
+    return list(dict.fromkeys([search, *expand_query(search)]))
+
+
+def _term_in_text(term: str, text: str) -> bool:
+    term = term.lower().strip()
+    if not term:
+        return False
+    if len(term) <= 3:
+        return re.search(rf"\b{re.escape(term)}\b", text) is not None
+    return term in text
 
 
 def _search_text(tender: Tender) -> str:
@@ -149,6 +204,7 @@ def _search_text(tender: Tender) -> str:
         " ".join(tender.matched_keywords or []),
         *raw_values,
         " ".join(raw_data.get("semantic_matches") or []),
+        *_ai_fragments(raw_data),
     ]
     return " ".join(str(part) for part in parts if part).lower()
 
@@ -189,6 +245,7 @@ def _source_search_text(tender: Tender) -> str:
         tender.ai_category,
         tender.search_text,
         *raw_values,
+        *_ai_fragments(raw_data),
     ]
     return " ".join(str(part) for part in parts if part).lower()
 
@@ -198,12 +255,12 @@ def _rank_for_search(tender: Tender, search: str | None) -> int:
         return 0
     text = _source_search_text(tender)
     phrase = search.strip().lower()
-    terms = _search_terms(search)
+    terms = _expanded_search_terms(search)
     important_terms = _important_search_terms(search)
     domain_terms = [term for term in terms if term in SEARCH_DOMAIN_TERMS]
-    matched_terms = [term for term in terms if term in text]
-    matched_important = [term for term in important_terms if term in text]
-    matched_domain = [term for term in domain_terms if term in text]
+    matched_terms = [term for term in terms if _term_in_text(term, text)]
+    matched_important = [term for term in important_terms if _term_in_text(term, text)]
+    matched_domain = [term for term in domain_terms if _term_in_text(term, text)]
 
     if domain_terms and not matched_domain:
         return -1000
@@ -256,6 +313,42 @@ def _filter_tenders(
         deadline = date.today() + timedelta(days=closing_in_days)
         tenders = [t for t in tenders if t.closing_date and date.today() <= t.closing_date <= deadline]
     return tenders
+
+
+def _apply_sql_listing_filters(
+    query,
+    date_from: date | None,
+    date_to: date | None,
+    opening_from: date | None,
+    opening_to: date | None,
+    closing_from: date | None,
+    closing_to: date | None,
+    matched_only: bool,
+    closing_in_days: int | None,
+):
+    if matched_only:
+        query = query.filter(
+            or_(
+                Tender.matched_keywords != [],
+                cast(func.json_extract(Tender.raw_data, "$.match_score"), Integer) > 0,
+            )
+        )
+    if date_from:
+        query = query.filter(Tender.published_date >= date_from)
+    if date_to:
+        query = query.filter(Tender.published_date <= date_to)
+    if opening_from:
+        query = query.filter(Tender.opening_date >= opening_from)
+    if opening_to:
+        query = query.filter(Tender.opening_date <= opening_to)
+    if closing_from:
+        query = query.filter(Tender.closing_date >= closing_from)
+    if closing_to:
+        query = query.filter(Tender.closing_date <= closing_to)
+    if closing_in_days:
+        deadline = date.today() + timedelta(days=closing_in_days)
+        query = query.filter(Tender.closing_date >= date.today(), Tender.closing_date <= deadline)
+    return query
 
 
 @router.get("/stats", response_model=StatsOut)
@@ -316,91 +409,41 @@ def get_tenders(
     db: Session = Depends(get_db),
 ):
     if search:
-        search_clauses_check = [
-            Tender.tender_id.ilike(f"%{search}%"),
-            Tender.bid_number.ilike(f"%{search}%"),
-            Tender.reference_number.ilike(f"%{search}%"),
-            Tender.title.ilike(f"%{search}%"),
-            Tender.description.ilike(f"%{search}%"),
-        ]
-        has_matches = db.query(Tender.id).filter(Tender.is_active.is_(True), or_(*search_clauses_check)).first()
-        if not has_matches:
-            from scrapers.registry import _upsert_tender
-            from scrapers.document_downloader import DOCUMENT_DOWNLOADER
-            from app.services.keyword_worker import process_pending_tenders
-            from app.models import Keyword
-            import time
-            from datetime import date, timedelta
-            import asyncio
-
-            keywords = db.query(Keyword.keyword).filter(Keyword.is_active.is_(True)).all()
-            kw_list = [k[0] for k in keywords]
-            kw_str = ", ".join(kw_list) if kw_list else "thermal camera, drone jammer, night vision"
-
-            new_tender_data = {
-                "tender_id": f"TND-{search}-{int(time.time())}",
-                "title": f"Procurement of {search} Tactical Systems",
-                "description": f"This tender is for the supply, installation, and integration of {search} equipment, including: {kw_str} for national security forces.",
-                "portal": "GeM",
-                "state": "National",
-                "department": "Ministry of Defence",
-                "buyer": "Directorate General of Ordnance",
-                "organization": "Indian Army",
-                "location": "New Delhi",
-                "tender_url": "https://bidplus.gem.gov.in/all-bids",
-                "published_date": date.today(),
-                "closing_date": date.today() + timedelta(days=30),
-                "estimated_value": 8500000.0,
-                "currency": "INR",
-                "tender_status": "ACTIVE",
-                "classification_status": "PENDING_CLASSIFICATION",
-                "bid_number": f"GEM/{date.today().year}/B/{search}",
-                "reference_number": f"REF-{search}-2026",
-                "categories": ["Defence", "Technology"],
-                "matched_keywords": [],
-                "raw_data": {
-                    "source": "live_portal",
-                    "source_url": "https://bidplus.gem.gov.in/all-bids",
-                    "scrape_method": "live_search_fallback",
-                    "attachment_urls": [
-                        "https://bidplus.gem.gov.in/documents/tender_notice.pdf",
-                        "https://bidplus.gem.gov.in/documents/boq_specs.xlsx"
-                    ]
-                }
-            }
-            
-            _upsert_tender(db, new_tender_data)
-            db.commit()
-            
-            try:
-                loop = asyncio.new_event_loop()
-                loop.run_until_complete(DOCUMENT_DOWNLOADER.run())
-                loop.close()
-            except Exception as e:
-                print(f"Failed to run document downloader in sync loop: {e}")
-                
-            process_pending_tenders(db, limit=100)
-            db.commit()
+        intent = parse_natural_search(search)
+        if not state and intent.get("state"):
+            state = intent["state"]
+        if not closing_to and intent.get("closing_to"):
+            closing_to = intent["closing_to"]
+        max_value = intent.get("max_value")
+    else:
+        intent = {}
+        max_value = None
+    semantic_search = intent.get("core_query") or search
 
     query = _base_query(db)
-    search_term_list = _search_terms(search)
+    search_phrases = _search_phrases(semantic_search)
+    search_term_list = _expanded_search_terms(semantic_search)
     if search:
-        search_clauses = [
-            Tender.tender_id.ilike(f"%{search}%"),
-            Tender.bid_number.ilike(f"%{search}%"),
-            Tender.reference_number.ilike(f"%{search}%"),
-            Tender.title.ilike(f"%{search}%"),
-            Tender.description.ilike(f"%{search}%"),
-            Tender.portal.ilike(f"%{search}%"),
-            Tender.state.ilike(f"%{search}%"),
-            Tender.district.ilike(f"%{search}%"),
-            Tender.department.ilike(f"%{search}%"),
-            Tender.buyer.ilike(f"%{search}%"),
-            Tender.organization.ilike(f"%{search}%"),
-            Tender.location.ilike(f"%{search}%"),
-            Tender.ai_category.ilike(f"%{search}%"),
-            Tender.search_text.ilike(f"%{search}%"),
-        ]
+        search_clauses = []
+        for phrase in search_phrases:
+            search_clauses.extend(
+                [
+                    Tender.tender_id.ilike(f"%{phrase}%"),
+                    Tender.bid_number.ilike(f"%{phrase}%"),
+                    Tender.reference_number.ilike(f"%{phrase}%"),
+                    Tender.title.ilike(f"%{phrase}%"),
+                    Tender.description.ilike(f"%{phrase}%"),
+                    Tender.portal.ilike(f"%{phrase}%"),
+                    Tender.state.ilike(f"%{phrase}%"),
+                    Tender.district.ilike(f"%{phrase}%"),
+                    Tender.department.ilike(f"%{phrase}%"),
+                    Tender.buyer.ilike(f"%{phrase}%"),
+                    Tender.organization.ilike(f"%{phrase}%"),
+                    Tender.location.ilike(f"%{phrase}%"),
+                    Tender.ai_category.ilike(f"%{phrase}%"),
+                    Tender.search_text.ilike(f"%{phrase}%"),
+                ]
+            )
         for term in search_term_list:
             search_clauses.extend(
                 [
@@ -426,6 +469,27 @@ def get_tenders(
     if portal:
         query = query.filter(Tender.portal == portal)
 
+    if not search and not category and not max_value:
+        fast_query = _apply_sql_listing_filters(
+            query,
+            date_from,
+            date_to,
+            opening_from,
+            opening_to,
+            closing_from,
+            closing_to,
+            matched_only,
+            closing_in_days,
+        )
+        total = fast_query.count()
+        rows = (
+            fast_query.order_by(Tender.scraped_at.desc())
+            .offset((page - 1) * limit)
+            .limit(limit)
+            .all()
+        )
+        return {"total": total, "page": page, "limit": limit, "results": rows}
+
     filtered = _filter_tenders(
         query.order_by(Tender.scraped_at.desc()).all(),
         category,
@@ -438,9 +502,11 @@ def get_tenders(
         matched_only,
         closing_in_days,
     )
+    if max_value:
+        filtered = [tender for tender in filtered if tender.estimated_value is None or tender.estimated_value <= max_value]
     if search:
-        phrase = search.strip().lower()
-        terms = _search_terms(search)
+        phrases = [phrase.strip().lower() for phrase in search_phrases if phrase.strip()]
+        terms = _expanded_search_terms(semantic_search)
         extra_query = _base_query(db)
         if state:
             extra_query = extra_query.filter(Tender.state == state)
@@ -452,7 +518,8 @@ def get_tenders(
             if tender.id in existing_ids:
                 continue
             text = _search_text(tender)
-            if (phrase and phrase in text) or any(term in text for term in terms):
+            phrase_match = any(_term_in_text(phrase, text) if len(phrase) <= 3 else phrase in text for phrase in phrases)
+            if phrase_match or any(_term_in_text(term, text) for term in terms):
                 metadata_matches.append(tender)
         if metadata_matches:
             filtered = _filter_tenders(
@@ -467,16 +534,17 @@ def get_tenders(
                 matched_only,
                 closing_in_days,
             )
+            if max_value:
+                filtered = [tender for tender in filtered if tender.estimated_value is None or tender.estimated_value <= max_value]
     if search:
-        scored = [(tender, _rank_for_search(tender, search)) for tender in filtered]
+        scored = [(tender, _rank_for_search(tender, semantic_search)) for tender in filtered]
         positive = [(tender, score) for tender, score in scored if score > 0]
-        if positive:
-            filtered = [tender for tender, _score in positive]
+        filtered = [tender for tender, _score in positive]
 
     if matched_only:
         filtered = sorted(filtered, key=lambda t: (_match_score(t), t.scraped_at), reverse=True)
     elif search:
-        filtered = sorted(filtered, key=lambda t: (_rank_for_search(t, search), t.scraped_at), reverse=True)
+        filtered = sorted(filtered, key=lambda t: (_rank_for_search(t, semantic_search), t.scraped_at), reverse=True)
     total = len(filtered)
     start = (page - 1) * limit
     return {"total": total, "page": page, "limit": limit, "results": filtered[start : start + limit]}

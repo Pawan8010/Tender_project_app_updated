@@ -68,6 +68,7 @@ class UserSessionOut(BaseModel):
     id: int
     session_id: str
     user_id: int
+    user_email: EmailStr | None = None
     device_name: str | None = None
     browser: str | None = None
     operating_system: str | None = None

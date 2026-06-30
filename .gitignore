@@ -2,18 +2,29 @@
 node_modules/
 frontend/node_modules/
 backend/venv/
+backend/.venv/
+.venv/
 __pycache__/
+**/__pycache__/
 *.pyc
 *.pyo
 *.egg-info/
 
 # Environment variables
 .env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+!backend/.env.demo
+!backend/.env.override
 .env.local
 .env.*.local
 
 # Build outputs
 frontend/dist/
+backend/static/
 backend/build/
 
 # IDE
@@ -29,8 +40,27 @@ Thumbs.db
 
 # Logs
 *.log
+*.out.log
+*.err.log
 npm-debug.log*
+backend-server.log
+backend-uvicorn*.log
+frontend-*.log
+cloudflare-tunnel*.log
+share-server.log
+realtime-scraper.log
 
 # Misc
 .cache/
 .pytest_cache/
+
+# Runtime databases, scraper output, and local documents
+*.db
+*.db-shm
+*.db-wal
+backend/data/
+backend/downloads/
+backend/backups/
+backend/logs/
+backups/
+exports/

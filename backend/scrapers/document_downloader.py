@@ -10,7 +10,7 @@ import httpx
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 
-from app.database import get_async_db
+from app.database import SessionLocal, get_async_db
 from app.models import TenderDocument, Tender, DocumentDownload
 from app.config import settings
 
@@ -32,6 +32,18 @@ except ImportError:
 DOWNLOADS_BASE_DIR = Path("downloads")
 TEXT_LIMIT = 1_000_000
 
+
+def _index_tender_sync(tender_id: int) -> None:
+    from app.services.tender_index import index_tender
+
+    db = SessionLocal()
+    try:
+        tender = db.get(Tender, tender_id)
+        if tender:
+            index_tender(db, tender, commit=True)
+    finally:
+        db.close()
+
 class DocumentDownloader:
     def __init__(self, concurrency: int = 5):
         self.concurrency = concurrency
@@ -42,18 +54,27 @@ class DocumentDownloader:
         
         async for db in get_async_db():
             result = await db.execute(
-                select(TenderDocument)
+                select(TenderDocument.id)
                 .where(TenderDocument.status.in_(["queued", "retrying"]))
             )
-            downloads = result.scalars().all()
-            
-            tasks = [asyncio.create_task(self._process_download(db, d)) for d in downloads]
-            if tasks:
-                await asyncio.gather(*tasks, return_exceptions=True)
+            download_ids = result.scalars().all()
             break
 
-    async def _process_download(self, db: AsyncSession, doc: TenderDocument):
+        tasks = [asyncio.create_task(self._process_download(doc_id)) for doc_id in download_ids]
+        if tasks:
+            await asyncio.gather(*tasks, return_exceptions=True)
+
+    async def _process_download(self, doc_id: int):
         async with self.semaphore:
+            async for db in get_async_db():
+                await self._process_download_with_session(db, doc_id)
+                break
+
+    async def _process_download_with_session(self, db: AsyncSession, doc_id: int):
+            result = await db.execute(select(TenderDocument).where(TenderDocument.id == doc_id))
+            doc = result.scalars().first()
+            if not doc or doc.status not in {"queued", "retrying"}:
+                return
             doc.status = "processing"
             await db.commit()
             
@@ -111,6 +132,11 @@ class DocumentDownloader:
                 
                 if extracted_text:
                     tender.search_text = (tender.search_text or "") + "\n" + extracted_text
+                    raw_data = dict(tender.raw_data or {})
+                    existing_doc_text = raw_data.get("document_text") or ""
+                    raw_data["document_text"] = f"{existing_doc_text}\n{extracted_text}"[:TEXT_LIMIT] if existing_doc_text else extracted_text[:TEXT_LIMIT]
+                    tender.raw_data = raw_data
+                    tender.classification_status = "PENDING_CLASSIFICATION"
                 
                 # Update/Create DocumentDownload
                 dd_res = await db.execute(
@@ -135,55 +161,10 @@ class DocumentDownloader:
                 dd.error_message = None
                 
                 await db.commit()
+                if extracted_text:
+                    await asyncio.to_thread(_index_tender_sync, tender.id)
                 
             except Exception as e:
-                if "tender_notice" in doc.url or "boq_" in doc.url or "specs" in doc.url or "bidplus" in doc.url or "eprocure" in doc.url or "doc_" in filename:
-                    try:
-                        print(f"Applying download mock fallback for: {doc.url}")
-                        file_ext = os.path.splitext(filename)[1].lower().lstrip('.')
-                        if file_ext == "pdf":
-                            content = b"%PDF-1.4 mock pdf content with security camera, drone jammer, and night vision specifications"
-                        else:
-                            content = b"mock boq excel sheets with item prices for thermal imaging device and anti drone weapon"
-                        
-                        file_hash = hashlib.sha256(content).hexdigest()
-                        file_path.write_bytes(content)
-                        
-                        doc.file_name = filename
-                        doc.storage_path = str(file_path.resolve())
-                        doc.content_hash = file_hash
-                        doc.processed_at = datetime.utcnow()
-                        
-                        extracted_text = f"Technical specifications for {doc.url}: high performance surveillance camera, 4K resolution, thermal sensors, and drone jammer frequencies."
-                        doc.extracted_text = extracted_text
-                        doc.status = "processed"
-                        doc.error_message = None
-                        
-                        tender.search_text = (tender.search_text or "") + "\n" + extracted_text
-                        
-                        dd_res = await db.execute(
-                            select(DocumentDownload)
-                            .where(DocumentDownload.tender_id == tender.id, DocumentDownload.url == doc.url)
-                        )
-                        dd = dd_res.scalars().first()
-                        if not dd:
-                            dd = DocumentDownload(tender_id=tender.id, url=doc.url)
-                            db.add(dd)
-                        
-                        dd.filename = filename
-                        dd.file_type = file_ext
-                        dd.file_size = len(content)
-                        dd.checksum = file_hash
-                        dd.storage_path = str(file_path.resolve())
-                        dd.status = "completed"
-                        dd.downloaded_at = datetime.utcnow()
-                        dd.error_message = None
-                        
-                        await db.commit()
-                        return
-                    except Exception as inner_e:
-                        e = inner_e
-
                 doc.status = "failed"
                 doc.error_message = str(e)
                 

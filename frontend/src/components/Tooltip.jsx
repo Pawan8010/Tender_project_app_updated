@@ -1,7 +1,7 @@
-import { GLOSSARY } from "../lib/glossary.js";
+import { TERM_HELP } from "../lib/termHelp.js";
 
 export default function Tooltip({ term, children }) {
-  const explanation = GLOSSARY[term];
+  const explanation = TERM_HELP[term];
   if (!explanation) return <>{children || term}</>;
   return (
     <span className="tooltipTerm">

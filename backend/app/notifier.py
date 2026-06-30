@@ -10,6 +10,44 @@ from app.database import SessionLocal
 from app.models import AlertSubscription, Tender, User, _is_session_bound_url, _remove_session_query
 
 
+_IMMEDIATE_ALERT_WINDOW = {
+    "started_at": datetime.utcnow(),
+    "sent": 0,
+}
+
+
+def _immediate_alert_quota() -> int:
+    cfg = settings()
+    if not cfg["alert_immediate_enabled"]:
+        return 0
+    max_per_hour = cfg["alert_max_immediate_emails_per_hour"]
+    if max_per_hour <= 0:
+        return 0
+    now = datetime.utcnow()
+    if (now - _IMMEDIATE_ALERT_WINDOW["started_at"]).total_seconds() >= 3600:
+        _IMMEDIATE_ALERT_WINDOW["started_at"] = now
+        _IMMEDIATE_ALERT_WINDOW["sent"] = 0
+    return max(0, max_per_hour - int(_IMMEDIATE_ALERT_WINDOW["sent"]))
+
+
+def send_alert_email_limited(tender: dict, recipients: list[str] | set[str] | None = None) -> tuple[int, list[str], list[str]]:
+    recipient_list = sorted(set(alert_recipients_for_tender(tender) if recipients is None else recipients))
+    quota = _immediate_alert_quota()
+    if quota <= 0:
+        return 0, recipient_list, []
+    selected = recipient_list[:quota]
+    deferred = recipient_list[quota:]
+    sent_recipients = []
+    html = build_tender_email_html([tender], "New Matching Tender Found")
+    for recipient in selected:
+        if send_email(recipient, f"Matched Tender Alert: {tender['title'][:80]}", html):
+            sent_recipients.append(recipient)
+        else:
+            deferred.append(recipient)
+    _IMMEDIATE_ALERT_WINDOW["sent"] += len(sent_recipients)
+    return len(sent_recipients), sorted(set(deferred)), sent_recipients
+
+
 def _opening_date_for_email(tender: dict | Tender):
     if isinstance(tender, Tender):
         if tender.opening_date:
@@ -31,7 +69,7 @@ def _open_url_for_email(tender: dict | Tender):
     return tender_url or stable_url or "#"
 
 
-def build_tender_email_html(tenders: list[dict | Tender], heading: str = "TenderWatch Alert") -> str:
+def build_tender_email_html(tenders: list[dict | Tender], heading: str = "Apna Tender Alert") -> str:
     rows = ""
     for tender in tenders[:20]:
         if isinstance(tender, Tender):
@@ -87,8 +125,10 @@ def send_email_verbose(to_email: str, subject: str, html_content: str) -> tuple[
     smtp_user = cfg["gmail_user"]
     smtp_password = cfg["gmail_app_password"]
     from_email = cfg["alert_from_email"] or smtp_user
-    if not smtp_user or not smtp_password:
-        err = "SMTP credentials missing. Please set GMAIL_USER and GMAIL_APP_PASSWORD in SMTP configuration."
+    login_password = _normalized_smtp_password(smtp_password, cfg["smtp_host"])
+    config_error = _smtp_config_error(smtp_user, login_password, cfg["smtp_host"])
+    if config_error:
+        err = config_error
         print(err)
         return False, err
 
@@ -97,7 +137,7 @@ def send_email_verbose(to_email: str, subject: str, html_content: str) -> tuple[
     try:
         message = MIMEMultipart("alternative")
         message["Subject"] = subject
-        message["From"] = f"TenderWatch Alerts <{from_email}>"
+        message["From"] = f"Apna Tender Alerts <{from_email}>"
         message["To"] = to_email
         message.attach(MIMEText(plain_text, "plain"))
         message.attach(MIMEText(html_content, "html"))
@@ -109,17 +149,17 @@ def send_email_verbose(to_email: str, subject: str, html_content: str) -> tuple[
                 server.ehlo()
                 server.starttls(context=context)
                 server.ehlo()
-                server.login(smtp_user, smtp_password)
+                server.login(smtp_user, login_password)
                 server.sendmail(from_email, [to_email], message.as_string())
         else:
             with smtplib.SMTP_SSL(host, port, context=context, timeout=10) as server:
-                server.login(smtp_user, smtp_password)
+                server.login(smtp_user, login_password)
                 server.sendmail(from_email, [to_email], message.as_string())
         msg = f"SMTP email sent: to={to_email} subject={subject[:60]}"
         print(msg)
         return True, msg
     except smtplib.SMTPAuthenticationError as exc:
-        err = f"SMTP authentication failed: {exc}. Please verify Gmail App Password."
+        err = _smtp_auth_message(exc)
         print(err)
         return False, err
     except Exception as exc:
@@ -131,6 +171,83 @@ def send_email_verbose(to_email: str, subject: str, html_content: str) -> tuple[
 def send_email(to_email: str, subject: str, html_content: str) -> bool:
     success, _ = send_email_verbose(to_email, subject, html_content)
     return success
+
+
+def _normalized_smtp_password(password: str, host: str) -> str:
+    return "".join((password or "").split()) if "gmail" in (host or "").lower() else (password or "")
+
+
+def _smtp_config_error(smtp_user: str, login_password: str, host: str) -> str | None:
+    if not smtp_user or not login_password:
+        return "SMTP credentials missing. Please set GMAIL_USER and GMAIL_APP_PASSWORD in SMTP configuration."
+    if "gmail" in (host or "").lower() and len(login_password) != 16:
+        return (
+            "Gmail App Password is not valid length after spaces are removed. "
+            "Generate a 16-character Gmail App Password and save it again."
+        )
+    return None
+
+
+def _smtp_auth_message(exc: smtplib.SMTPAuthenticationError) -> str:
+    detail = exc.smtp_error.decode("utf-8", "ignore") if isinstance(exc.smtp_error, bytes) else str(exc.smtp_error)
+    detail = " ".join(detail.split())
+    if "BadCredentials" in detail or "Username and Password not accepted" in detail:
+        return (
+            "SMTP authentication failed: Gmail rejected the username/app password. "
+            "Confirm 2-Step Verification is enabled and use a fresh Gmail App Password."
+        )
+    return f"SMTP authentication failed: {detail[:180]}"
+
+
+def send_email_many_verbose(to_emails: list[str], subject: str, html_content: str) -> tuple[bool, str, int]:
+    cfg = settings()
+    smtp_user = cfg["gmail_user"]
+    smtp_password = cfg["gmail_app_password"]
+    from_email = cfg["alert_from_email"] or smtp_user
+    recipients = list(dict.fromkeys(email.strip() for email in to_emails if email and email.strip()))
+    if not recipients:
+        return False, "No email recipients configured.", 0
+
+    port = int(cfg["smtp_port"])
+    host = cfg["smtp_host"]
+    login_password = _normalized_smtp_password(smtp_password, host)
+    config_error = _smtp_config_error(smtp_user, login_password, host)
+    if config_error:
+        print(config_error)
+        return False, config_error, 0
+
+    plain_text = re.sub(r"<[^>]+>", " ", html_content)
+    plain_text = " ".join(plain_text.split())
+    try:
+        message = MIMEMultipart("alternative")
+        message["Subject"] = subject
+        message["From"] = f"Apna Tender Alerts <{from_email}>"
+        message["To"] = from_email
+        message.attach(MIMEText(plain_text, "plain"))
+        message.attach(MIMEText(html_content, "html"))
+        context = ssl.create_default_context()
+        if port == 587:
+            with smtplib.SMTP(host, port, timeout=10) as server:
+                server.ehlo()
+                server.starttls(context=context)
+                server.ehlo()
+                server.login(smtp_user, login_password)
+                server.sendmail(from_email, recipients, message.as_string())
+        else:
+            with smtplib.SMTP_SSL(host, port, context=context, timeout=10) as server:
+                server.login(smtp_user, login_password)
+                server.sendmail(from_email, recipients, message.as_string())
+        msg = f"SMTP email sent to {len(recipients)} recipient(s)."
+        print(msg)
+        return True, msg, len(recipients)
+    except smtplib.SMTPAuthenticationError as exc:
+        err = _smtp_auth_message(exc)
+        print(err)
+        return False, err, 0
+    except Exception as exc:
+        err = f"SMTP connection or delivery failed: {exc}"
+        print(err)
+        return False, err, 0
 
 
 def configured_alert_recipients() -> list[str]:
@@ -236,7 +353,7 @@ def send_test_email(user: User) -> tuple[bool, str]:
     ]
     recipients = list(dict.fromkeys(recipients or [user.email]))
     sample = {
-        "title": "Test tender alert from TenderWatch",
+        "title": "Test tender alert from Apna Tender",
         "portal": "System",
         "state": "Test",
         "categories": ["Thermal"],
@@ -244,22 +361,12 @@ def send_test_email(user: User) -> tuple[bool, str]:
         "closing_date": "N/A",
         "tender_url": "#",
     }
-    html = build_tender_email_html([sample], "TenderWatch Test Email")
-    
-    errors = []
-    sent_count = 0
-    for recipient in recipients:
-        success, msg = send_email_verbose(recipient, "TenderWatch test email", html)
-        if success:
-            sent_count += 1
-        else:
-            errors.append(f"{recipient}: {msg}")
-            
-    if sent_count == len(recipients):
+    html = build_tender_email_html([sample], "Apna Tender Test Email")
+
+    success, msg, sent_count = send_email_many_verbose(recipients, "Apna Tender test email", html)
+    if success and sent_count == len(recipients):
         return True, f"Test email sent successfully to {', '.join(recipients)}"
-    else:
-        err_details = "; ".join(errors)
-        return False, f"Failed to send test email. {err_details}"
+    return False, f"Failed to send test email. {msg}"
 
 
 def send_daily_digest_email() -> int:

@@ -130,6 +130,12 @@ def process_queued_documents(db: Session, limit: int = 20) -> dict:
             doc.error_message = None
             if doc.tender:
                 _merge_tender_search_text(doc.tender, text)
+                try:
+                    from app.services.tender_index import index_tender
+
+                    index_tender(db, doc.tender)
+                except Exception:
+                    pass
             processed += 1
         except Exception as exc:
             doc.status = "failed"

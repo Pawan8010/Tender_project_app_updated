@@ -8,6 +8,8 @@ from app.models import SchedulerLog
 from scrapers.portal_manager import PORTAL_MANAGER
 from scrapers.document_downloader import DOCUMENT_DOWNLOADER
 from app.services.keyword_worker import process_pending_tenders
+from app.config import settings
+from app.services.google_tender_discovery import discover_google_tenders
 
 async def run_orchestrator():
     db = SessionLocal()
@@ -21,6 +23,15 @@ async def run_orchestrator():
     db.commit()
 
     try:
+        cfg = settings()
+        if cfg.get("google_discovery_enabled") and cfg.get("google_discovery_before_scrape"):
+            print(f"[{run_id}] Step 0: Google tender discovery...")
+            discovery = await discover_google_tenders(limit_per_portal=cfg["google_discovery_limit_per_portal"], store=True)
+            print(
+                f"[{run_id}] Google discovery: {discovery.get('discovered', 0)} discovered, "
+                f"{discovery.get('new', 0)} new, {discovery.get('updated', 0)} updated"
+            )
+
         # Step 1: Scrape ALL portals concurrently
         print(f"[{run_id}] Step 1: Scraping portals...")
         async with AsyncSessionLocal() as async_db:
@@ -46,7 +57,12 @@ async def run_orchestrator():
         log.status = "MATCHING"
         db.commit()
         
-        processed = await asyncio.to_thread(process_pending_tenders, db, limit=2000)
+        processed = 0
+        while True:
+            batch_processed = await asyncio.to_thread(process_pending_tenders, db, limit=1000)
+            processed += batch_processed
+            if batch_processed == 0:
+                break
         log.matches_found = processed
         
         print(f"[{run_id}] Finished Orchestrator Run successfully.")

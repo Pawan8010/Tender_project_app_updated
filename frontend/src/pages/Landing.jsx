@@ -37,7 +37,7 @@ const capabilities = [
   { title: "Real-time tender intake", detail: "The dashboard refreshes live while the hourly scraper and manual runs write clean records into PostgreSQL.", icon: DatabaseZap },
   { title: "Keyword intelligence", detail: "Defense, surveillance, camera, EOSS, NVD, PTZ, protection, and counter-UAV terms are tagged at ingestion.", icon: ShieldCheck },
   { title: "Reliable opening and closing dates", detail: "NIC-style three-date rows are parsed into published, closing, and opening dates with direct tender links.", icon: FileCheck2 },
-  { title: "Operations-ready alerts", detail: "Matched tenders can trigger SendGrid email alerts and stay visible in the live dashboard workflow.", icon: Workflow },
+  { title: "Operations-ready alerts", detail: "Matched tenders can trigger Gmail SMTP alerts and stay visible in the live dashboard workflow.", icon: Workflow },
 ];
 
 const keywordShowcase = [
@@ -143,7 +143,7 @@ export default function Landing({ onAuth }) {
   const methodCards = [
     { label: "Static HTML", value: "Enabled", icon: Globe2, active: true },
     { label: "Browser render", value: methods.dynamic_browser ? "Enabled" : "Standby", icon: Cpu, active: Boolean(methods.dynamic_browser) },
-    { label: "Scraper API", value: methods.api_proxy ? "Connected" : "Optional", icon: Radar, active: Boolean(methods.api_proxy) },
+    { label: "Local direct", value: methods.api_proxy ? "Proxy optional" : "Active", icon: Radar, active: !methods.api_proxy },
   ];
 
   return (
@@ -152,7 +152,7 @@ export default function Landing({ onAuth }) {
         <nav className="landingNav" aria-label="Landing navigation">
           <div className="landingBrand">
             <DatabaseZap size={24} />
-            <span>Tender Intel</span>
+            <span>Apna Tender</span>
           </div>
           <div className="landingNavLinks">
             <a href="#pipeline">Pipeline</a>
@@ -167,11 +167,14 @@ export default function Landing({ onAuth }) {
 
         <div className="landingHeroInner">
           <div className="landingHeroCopy">
-            <span className="landingHeroPill"><Zap size={15} /> Static + browser scraping live</span>
-            <h1>TenderWatch</h1>
+            <span className="landingHeroPill"><Zap size={15} /> AI tender intelligence, running locally</span>
+            <h1>
+              Introducing{" "}
+              <span>Apna Tender AI</span>
+            </h1>
             <p>
-              A refined command center for live tender capture, proposal-keyword matching,
-              opening and closing date tracking, direct source links, exports, and email alerts.
+              A real-time procurement command center that scrapes every configured portal,
+              understands tender content, and turns government opportunities into searchable intelligence.
             </p>
             <div className="landingActions">
               <button className="btn-primary" type="button" onClick={() => onAuth("signin")}>
@@ -242,7 +245,7 @@ export default function Landing({ onAuth }) {
           <h2>Production data, shown with design-system clarity.</h2>
           <p>
             The landing page reads from the same backend as the dashboard: scraper health,
-            tender volume, proxy mode, browser scraping mode, and recent portal results.
+            tender volume, local network mode, browser scraping mode, and recent portal results.
           </p>
           <div className="methodGrid">
             {methodCards.map(({ label, value, icon: Icon, active }) => (
@@ -383,7 +386,7 @@ export default function Landing({ onAuth }) {
           <h2>Search, filter, export, alert, and monitor live scraper health from one responsive dashboard.</h2>
         </div>
         <button className="btn-primary darkCta" type="button" onClick={() => onAuth("signin")}>
-          Enter TenderWatch
+          Enter Apna Tender
           <ArrowRight size={20} />
         </button>
       </section>
@@ -394,7 +397,7 @@ export default function Landing({ onAuth }) {
             <div className="footerLogo">
               <DatabaseZap size={24} />
               <div>
-                <strong>Tender Intel</strong>
+                <strong>Apna Tender</strong>
               </div>
             </div>
             <p>
@@ -431,7 +434,7 @@ export default function Landing({ onAuth }) {
           </div>
         </div>
         <div className="footerBottom">
-          <span>&copy; {new Date().getFullYear()} TenderWatch</span>
+          <span>&copy; {new Date().getFullYear()} Apna Tender</span>
           <span>Live scraper &bull; PostgreSQL backed &bull; Alert ready</span>
         </div>
       </footer>

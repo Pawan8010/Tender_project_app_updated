@@ -23,11 +23,13 @@ export function setRefreshToken(token) {
 export function setTokens(accessToken, refreshToken) {
   setToken(accessToken);
   setRefreshToken(refreshToken);
+  window.dispatchEvent(new CustomEvent("auth-token-updated"));
 }
 
 export function clearToken() {
   localStorage.removeItem("tender_token");
   localStorage.removeItem("tender_refresh_token");
+  window.dispatchEvent(new CustomEvent("auth-token-cleared"));
 }
 
 async function refreshAccessToken() {

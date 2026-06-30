@@ -1,4 +1,4 @@
-import { Activity, AlertTriangle, Bell, CheckCircle2, Clock3, Database, Eye } from "lucide-react";
+import { Activity, AlertTriangle, Bell, Brain, CheckCircle2, Clock3, Database, Eye, TrendingUp } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import CategoryChips from "../components/CategoryChips.jsx";
 import { formatApiDateTime, parseApiDate } from "../lib/time.js";
@@ -60,7 +60,7 @@ function barPercent(count, max) {
   return `${Math.max(4, Math.round((Number(count) / max) * 100))}%`;
 }
 
-export default function Dashboard({ stats, scrapeLogs = [], health, liveSync, liveEvents = [], onSelectTender }) {
+export default function Dashboard({ stats, scrapeLogs = [], health, portalHealth = [], aiDashboard, liveSync, liveEvents = [], onSelectTender }) {
   const [now, setNow] = useState(Date.now());
   useEffect(() => {
     const timer = window.setInterval(() => setNow(Date.now()), 1000);
@@ -78,8 +78,11 @@ export default function Dashboard({ stats, scrapeLogs = [], health, liveSync, li
   const logs = scrapeLogs || [];
   const latestLog = logs[0];
   const scraper = health?.scraper || {};
-  const healthyRuns = logs.filter((log) => ["success", "empty", "cached"].includes(log.status)).length;
-  const attentionRuns = logs.filter((log) => ["retrying", "failed", "temporarily_blocked"].includes(log.status)).length;
+  const portalRows = portalHealth?.length ? portalHealth : logs;
+  const healthyStatuses = new Set(["online", "success", "empty", "cached", "monitored"]);
+  const warningStatuses = new Set(["degraded", "retrying", "failed", "temporarily_blocked"]);
+  const healthyRuns = portalRows.filter((row) => healthyStatuses.has(row.status)).length;
+  const attentionRuns = portalRows.filter((row) => warningStatuses.has(row.status)).length;
   const latestTime = latestLog?.scraped_at ? formatApiDateTime(latestLog.scraped_at, { hour: "2-digit", minute: "2-digit" }) : "Waiting";
   const serverTime = health?.server_time ? parseApiDate(health.server_time).getTime() : now;
   const clientDeltaSeconds = Math.max(0, Math.floor((now - serverTime) / 1000));
@@ -93,6 +96,10 @@ export default function Dashboard({ stats, scrapeLogs = [], health, liveSync, li
   const matchedTenders = useMemo(() => [...(stats?.recent_matched || [])].sort((a, b) => matchScore(b) - matchScore(a)), [stats]);
   const matchRate = stats?.total ? Math.round(((stats?.matched || 0) / stats.total) * 100) : 0;
   const matchRateLabel = stats?.matched && stats?.total && matchRate === 0 ? "<1% qualified" : `${matchRate}% qualified`;
+  const aiSectors = aiDashboard?.trending_sectors || [];
+  const aiTechnologies = aiDashboard?.trending_technologies || [];
+  const aiRecommendations = aiDashboard?.ai_recommended || [];
+  const predictiveSignals = aiDashboard?.predictive_analytics || {};
 
   return (
     <div className="pageGrid">
@@ -158,6 +165,80 @@ export default function Dashboard({ stats, scrapeLogs = [], health, liveSync, li
           <span>Documents</span>
           <strong>{stats?.processed_documents || 0}</strong>
           <small>{stats?.queued_documents || 0} queued / {stats?.failed_documents || 0} failed</small>
+        </div>
+      </section>
+
+      <section className="split aiInsightGrid">
+        <div className="panel aiPanel">
+          <div className="panelHead">
+            <div>
+              <h2>AI Intelligence</h2>
+              <span className="muted">Semantic classification, tags, and demand signals from stored tenders</span>
+            </div>
+            <span className="statusBadge success"><Brain size={14} /> AI</span>
+          </div>
+          <div className="aiTrendColumns">
+            <div className="miniRankList">
+              <strong>Trending sectors</strong>
+              {aiSectors.length === 0 && <span className="muted">AI classifications will appear after pending tenders are processed.</span>}
+              {aiSectors.slice(0, 6).map(([name, count]) => (
+                <span key={name}><em>{name}</em><b>{count}</b></span>
+              ))}
+            </div>
+            <div className="miniRankList">
+              <strong>Trending technologies</strong>
+              {aiTechnologies.length === 0 && <span className="muted">AI tags will appear after document text is classified.</span>}
+              {aiTechnologies.slice(0, 6).map(([name, count]) => (
+                <span key={name}><em>{name}</em><b>{count}</b></span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="panel aiPanel">
+          <div className="panelHead">
+            <div>
+              <h2>AI Recommendations</h2>
+              <span className="muted">Ranked by AI confidence and current opportunity quality</span>
+            </div>
+            <span className="statusBadge cached"><TrendingUp size={14} /> Live</span>
+          </div>
+          <div className="aiRecommendationList">
+            {aiRecommendations.length === 0 && <span className="muted">Recommendations will appear after the AI worker classifies tenders.</span>}
+            {aiRecommendations.slice(0, 5).map((tender) => (
+              <button key={tender.id} type="button" onClick={() => onSelectTender(tender.id)}>
+                <strong>{tender.title}</strong>
+                <span>{tender.portal} - {tender.state || "National"} - {tender.ai_category || "General"}</span>
+                <div className="aiTagRow">
+                  {(tender.tags || []).slice(0, 4).map((tag) => <em key={tag}>{tag}</em>)}
+                  <b>{Math.round(Number(tender.confidence || 0) * 100)}%</b>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="panel aiSignalPanel">
+        <div className="panelHead">
+          <div>
+            <h2>Predictive Signals</h2>
+            <span className="muted">Derived from current sector, technology, and department activity</span>
+          </div>
+        </div>
+        <div className="aiSignalGrid">
+          {(predictiveSignals.procurement_trends || []).slice(0, 5).map(([name, count]) => (
+            <span key={`sector-${name}`}><strong>{name}</strong><small>{count} sector signals</small></span>
+          ))}
+          {(predictiveSignals.technology_demand || []).slice(0, 5).map(([name, count]) => (
+            <span key={`tech-${name}`}><strong>{name}</strong><small>{count} technology signals</small></span>
+          ))}
+          {(predictiveSignals.department_purchasing_trends || []).slice(0, 5).map(([name, count]) => (
+            <span key={`dept-${name}`}><strong>{name}</strong><small>{count} department signals</small></span>
+          ))}
+          {!predictiveSignals.procurement_trends?.length && !predictiveSignals.technology_demand?.length && (
+            <span><strong>Learning</strong><small>Signals update automatically as AI classification completes.</small></span>
+          )}
         </div>
       </section>
 

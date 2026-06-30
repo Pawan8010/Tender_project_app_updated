@@ -134,12 +134,6 @@ class GeMScraper(BaseScraper):
                         }
                     )
 
-                    if search_query:
-                        text_to_search = f"{title} {description} {bid_number}".lower()
-                        if search_query.lower() not in text_to_search:
-                            tenders.pop()
-                            continue
-
                     if cfg["max_tenders_per_portal"] and len(tenders) >= cfg["max_tenders_per_portal"]:
                         return tenders
                 if new_on_page == 0:

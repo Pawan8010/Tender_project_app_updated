@@ -1,4 +1,4 @@
-import { ArchiveRestore, CheckCircle2, Database, Download, HardDrive, Mail, Network, PlayCircle, RotateCcw, Save, Server, ShieldCheck, Workflow } from "lucide-react";
+import { ArchiveRestore, Bot, CheckCircle2, Database, Download, HardDrive, Mail, Network, PlayCircle, RotateCcw, Save, Server, ShieldCheck, Workflow } from "lucide-react";
 import { useEffect, useState } from "react";
 import { apiUrl, getToken } from "../lib/api.js";
 import { formatApiDateTime } from "../lib/time.js";
@@ -6,12 +6,12 @@ import { formatApiDateTime } from "../lib/time.js";
 const components = [
   { title: "23 Government Portals", detail: "6 national + 17 state police/eProcurement portals", icon: Network },
   { title: "Scraping Engine", detail: "BeautifulSoup + Playwright, FastAPI scheduler locally, Celery + Redis in Docker", icon: Workflow },
-  { title: "Data Pipeline", detail: "Clean, validate, deduplicate, store tender-like records", icon: CheckCircle2 },
+  { title: "Data Pipeline", detail: "Clean, validate, deduplicate, and store complete tender records", icon: CheckCircle2 },
   { title: "PostgreSQL On-Prem", detail: "Tenders, keywords, alert subscriptions, scrape logs", icon: Database },
-  { title: "Keyword Engine", detail: "50+ defense/surveillance terms with category tagging", icon: ShieldCheck },
-  { title: "FastAPI Backend", detail: "JWT auth, REST APIs, search, filters, exports, alert actions", icon: Server },
-  { title: "React Dashboard", detail: "Responsive HTML/CSS/JavaScript UI for search, filters, exports, alerts", icon: Workflow },
-  { title: "Email Alerts", detail: "SendGrid instant alerts and daily digest for matching tenders", icon: Mail },
+  { title: "AI Semantic Engine", detail: "NLP tagging, summaries, intent search, and recommendations", icon: Bot },
+  { title: "FastAPI Backend", detail: "JWT auth, REST APIs, semantic search, filters, exports, alert actions", icon: Server },
+  { title: "React Dashboard", detail: "Responsive UI for live search, filters, analytics, exports, alerts", icon: Workflow },
+  { title: "Email Alerts", detail: "Gmail SMTP instant alerts and digest-ready tender notifications", icon: Mail },
 ];
 
 const fallbackPortals = [
@@ -80,7 +80,7 @@ function endpointLabel(url = {}) {
 
 function healthBadgeClass(status = "") {
   const normalized = String(status).toLowerCase();
-  if (["ok", "ready", "active", "enabled", "protected"].includes(normalized)) return "success";
+  if (["ok", "ready", "active", "enabled", "protected", "direct", "unlimited"].includes(normalized)) return "success";
   if (["disabled", "not_checked", "optional_offline"].includes(normalized)) return "empty";
   return "retrying";
 }
@@ -195,21 +195,35 @@ export default function System({
       icon: Server,
     },
     {
-      title: "ScraperAPI Proxy",
-      value: connectionData?.proxy?.status || "checking",
-      detail: connectionData?.proxy?.enabled ? "Proxy scraping enabled" : "Direct scraping mode",
-      meta: readyText(connectionData?.proxy?.scraper_api_key_configured),
+      title: "Local Network Scraper",
+      value: connectionData?.proxy?.enabled ? "proxy" : "direct",
+      detail: connectionData?.proxy?.enabled ? "Optional proxy mode enabled" : "Local direct portal requests",
+      meta: connectionData?.proxy?.enabled ? readyText(connectionData?.proxy?.scraper_api_key_configured) : "No cloud tunnel or proxy required",
       icon: Network,
     },
     {
       title: "Playwright Browser",
       value: connectionData?.scraper?.use_playwright ? "enabled" : "disabled",
-      detail: `${health?.scrape_methods?.dynamic_portals || 0} JavaScript portals`,
-      meta: `${connectionData?.scraper?.portal_timeout_seconds || 60}s portal timeout`,
+      detail: `${connectionData?.scraper?.dynamic_portals ?? health?.scrape_methods?.dynamic_portals ?? 0} JavaScript portals`,
+      meta: `${connectionData?.scraper?.browser_pool_size || 3} browsers - ${connectionData?.scraper?.portal_timeout_seconds || 60}s timeout`,
       icon: Workflow,
     },
     {
-      title: "SendGrid Email",
+      title: "Full Crawl Mode",
+      value: connectionData?.scraper?.max_tenders_per_portal === 0 ? "unlimited" : "limited",
+      detail: `${connectionData?.scraper?.max_pages_per_portal || 6000} pages per portal`,
+      meta: connectionData?.scraper?.store_all_tenders ? "Stores every discovered tender" : "Matched tenders only",
+      icon: CheckCircle2,
+    },
+    {
+      title: "AI Semantic Engine",
+      value: connectionData?.ai?.status || "checking",
+      detail: connectionData?.ai?.model || "local semantic fallback",
+      meta: `threshold ${connectionData?.ai?.semantic_threshold ?? 0.45}`,
+      icon: Bot,
+    },
+    {
+      title: "Gmail SMTP",
       value: connectionData?.email?.status || "checking",
       detail: connectionData?.email?.from_email || "No sender",
       meta: `${connectionData?.email?.recipient_count || 0} alert recipients`,
@@ -378,7 +392,7 @@ export default function System({
             <div><dt>Interval</dt><dd>{health?.auto_scrape_interval_minutes || 60} minutes</dd></div>
             <div><dt>Portal catalog</dt><dd>{health?.scraper?.portal_count || portalCatalog.length} portals</dd></div>
             <div><dt>Storage</dt><dd>{endpointLabel(connectionData?.database?.url)} via PostgreSQL</dd></div>
-            <div><dt>Proxy</dt><dd>{connectionData?.proxy?.enabled ? "ScraperAPI enabled" : "Direct portal requests"}</dd></div>
+            <div><dt>Network mode</dt><dd>{connectionData?.proxy?.enabled ? "Optional proxy mode" : "Local direct portal requests"}</dd></div>
             <div><dt>Email</dt><dd>{connectionData?.email?.status || "checking"}</dd></div>
           </dl>
         </div>
